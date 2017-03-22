@@ -1,2 +1,2 @@
 # smile
-first
+npm install
