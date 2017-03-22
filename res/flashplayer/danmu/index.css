@@ -1,0 +1,5 @@
+#danmu #danmuarea{position:relative;background:#222;width:800px;height:445px;margin-left:auto;margin-right:auto;}
+#danmu .center{text-align:center;}
+#danmu .ctr{font-size:1em;line-height:2em;}
+#danmu .danmaku img.emoji{cursor:pointer;height:1em;width:1em;margin:0 3px 0 3px;vertical-align:-3px;}
+#danmu h4{line-height:2em;}
