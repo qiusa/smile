@@ -1,0 +1,99 @@
+<div class="dialog bounceOutUp" id="dialog">
+    <div class="dialog-box" on-click="{this.closeDialog()}">士大夫第三方</div>
+</div>
+<div on-click={this.showDialog()}>点击我 啊</div>
+<div class="m-channel">
+    <div id="j-channel-play" class="m-channel-play u-cb">
+        <!-- 直播模块 -->
+        <div class="m-playmain">
+            <div id="J-livemain" class="m-livemain">
+                <div id="j-flashplayer" class="m-flashplayer" ref=playercomponent></div>
+                <div id="j-danmu" ></div>
+                <!-- 验证状态提示 -->
+                {#if verifyData.status == 0}
+                <div class="m-err n-section-verify">
+                    <div class="verify-lock u-mgt125"><i class="lockIcon1"></i></div>
+                    <div class="verify-message">该摄像机已加密，需要向主人申请方可查看</div>
+                    <div class="verify-btn"><span on-click={this.goVerify()}>我要申请</span></div>
+                </div>
+                {#elseif verifyData.status == 1}
+                <div class="m-err n-section-verify">
+                    <div class="verify-lock u-mgt115"><i class="lockIcon2"></i></div>
+                    <div class="verify-message">等待摄像机主人信息审核中</div>
+                    <div class="verify-message3 u-mgt10">稍后请在浏览器刷新该页面查看申请状态</div>
+                    <div class="verify-btn"><span on-click={this.goVerify()}>重新发送申请</span></div>
+                </div>
+                {/if}
+                <!--直播结束的错误提示-->
+                <div id="j-error-end" class="u-dn m-err">
+                    <div  class="m-error">
+                        <div class="n-top">
+                            <p id="j-error-title" class="u-title {errorMess.message400?'':'u-dn'}">摄像机无法继续观看了，<a class="u-tryagain" on-click={this.setPlayAgain()}>请刷新重试</a> ，找找下面有更多精彩的内容哦～ </p>
+                            <p id="j-error-title" class="u-title {errorMess.message401?'':'u-dn'}">直播已经结束，下次趁早哦～ </p>
+                            <tr class="u-tip">
+                                <td class="{load.playEndCount >= 3?'':'u-dn'}">换一批</td>
+                                <td class="u-hyp {load.playEndCount >= 3?'':'u-dn'} {show.isLoading?'u-search-loading':''}" on-click={this.changeRelatesPlayEnd(deviceId)}></td>
+                            </tr>
+                        </div>
+                        <div class="n-recommendlist u-cb">
+                            <ul>
+                                {#list load.playEndList as item}
+                                <li class="u-pe u-bg-none">
+                                    <a class="n-recommendlist-cell"  href="#/m/channel?id={item.deviceId}" target="_blank" on-click={this.goView(item.deviceId)}>
+                                        <div class="n-img">
+                                            <span class="u-icon-playing"></span>
+                                            <span class="u-icon-play"></span>
+                                            <img  onload="" src={item.snapshot?item.snapshot:item.coverFileName}>
+                                        </div>
+                                        <div class="n-info">
+                                            <div class="u-title u-ellipsis u-color-fff">{item.name}</div>
+                                            <div class="u-info">
+                                                <tr class="u-mr50">
+                                                    <td><span>{(item.playCount+item.viewCount)|parseNum}&nbsp;次观看</span></td>
+                                                </tr>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                {/list}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {#if verifyData.status == 0 || verifyData.status == 1}
+            <div class="m-livechat v-section-verify-chat">
+                <div class="cTitle">直播互动</div>
+                <div class="verify-lock u-mgt125"><i class="lockIcon2"></i></div>
+                <div class="verify-message2">您无权查看该摄像机的评论内容。</div>
+            </div>
+            {/if}
+        </div>
+    </div>
+
+    <div class="m-channel-other u-cb">
+        <!-- 主人信息 -->
+        <div class="m-liveinfo u-cb">
+            <div class="n-liveinfo-left">
+                <div class="avatar"><span class="goNowAnchorInfo"><img height="60" width="60" src="{userData.protrait}"></span></div>
+                <div class="n-name u-ellipsis u-font-yh">{cameraData.cameraDetail?cameraData.cameraDetail.name:''}</div>
+                <div class="n-info u-cb">
+                    <div class="u-nickname emSpan u-cb u-ellipsis u-width300">
+                        <span class="icon_right" title="{cameraData.cameraDetail?cameraData.cameraDetail.nickName:''}">{cameraData.cameraDetail?cameraData.cameraDetail.nickName:''}</span>
+                    </div>
+                    <div class="u-city emSpan u-cb  u-ellipsis u-width300 u-mr0">
+                        <span class="icon_right" id="follow_num" title="{cameraData.cameraDetail?cameraData.cameraDetail.city:''}">位置：{cameraData.cameraDetail?cameraData.cameraDetail.city:''}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 直播介绍 -->
+        <div class="m-livesummary">
+            <div class="u-title u-font-yh">直播介绍</div>
+            <div class="u-content">
+                <p r-html={cameraData.cameraDetail && cameraData.cameraDetail.abstractInfo?cameraData.cameraDetail.abstractInfo:'该用户很懒，什么都没留下...'|urlConvert|emojiConvert}></p>
+            </div>
+        </div>
+    </div>
+</div>
+
