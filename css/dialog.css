@@ -1,0 +1,9 @@
+.m-dialog{position:fixed;top:-450px;right:0;left:0;text-align:center;}
+.m-dialog .dialog-main{display:inline-block;background:#fff;border:1px solid #999;border-radius:5px;}
+.m-dialog .dialog-head{height:24px;line-height:24px;text-align:left;}
+.m-dialog .title{font-size:14px;}
+.m-dialog .icon-close{float:right;width:20px;height:24px;text-align:center;}
+.m-dialog .dialog-body{padding:5px;border:1px solid #e5e5e5;}
+.m-dialog .btn-group{min-width:300px;padding:10px 0;}
+.m-dialog .btn-group .btn{width:100px;height:32px;line-height:32px;text-align:center;border:1px solid transparent;border-radius:4px;background:#6c0;display:inline-block;margin-right:10px;}
+.m-dialog .btn-group .btn-center{margin:0 auto;}

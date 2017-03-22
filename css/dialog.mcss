@@ -1,0 +1,55 @@
+.m-dialog{
+    position: fixed;
+    top: -450px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    .dialog-main{
+        display: inline-block;
+        background: #fff;
+        border: 1px solid #999;
+        border-radius: 5px;
+    }
+    .dialog-head{
+        height: 24px;
+        line-height: 24px;
+        text-align: left;
+    }
+    .title{
+        font-size: 14px;
+    }
+    .icon-close{
+        float: right;
+        width: 20px;
+        height: 24px;
+        text-align: center;
+    }
+    .dialog-body{
+        padding: 5px;
+        border: 1px solid #e5e5e5;
+    }
+    .btn-group{
+        min-width: 300px;
+        padding: 10px 0;
+        .btn{
+            width: 100px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            background: #66cc00;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .btn-cancel{
+            
+        }
+        .btn-ok{
+            
+        }
+        .btn-center{
+            margin: 0 auto;
+        }
+    }
+}

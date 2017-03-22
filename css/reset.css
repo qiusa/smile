@@ -1,0 +1,46 @@
+/** 清除内外边距 **/
+html, body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements */
+dl, dt, dd, ul, ol, li, /* list elements */
+pre, /* text formatting elements */
+form, fieldset, legend, button, input, textarea, /* form elements */
+th, td /* table elements */ {
+    margin: 0;
+    padding: 0;
+}
+
+/** 设置默认字体 **/
+body,
+button, input, select, textarea /* for ie */ {
+    font: 12px/1.5 'Hiragino Sans GB',arial,\5b8b\4f53; /* 添加宋体，解决win7,64位中文显示问题 */
+    color: #333;
+} /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal;}
+caption, th, b { font-weight: normal; font-style: normal; }
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+
+/** 重置文本格式元素 **/
+a { text-decoration: none; }
+
+sup { vertical-align: text-top; } /* 重置，减少对行高的影响 */
+sub { vertical-align: text-bottom; }
+
+/** 重置表单元素 **/
+legend { color: #000; } /* for ie6 */
+fieldset { border: 0; } 
+button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+
+/** 无边框 **/
+html, img { border: 0; } /* 让IE6下页面无边框；让链接里的 img 无边框 */
+
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+
+/** HTML5元素 **/
+section, article, aside, header, footer, nav, dialog, figure { display: block; }
+figure { margin: 0; }

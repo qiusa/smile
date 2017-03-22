@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.m-register{
+    width: 1024px;
+    margin: 0 auto;
+    .dl-line{
+        height: 50px;
+        line-height: 50px;
+        margin-top: 10px;
+        .dt-line{
+            float: left;
+        }
+        .dd-line{
+            float: left;
+        }
+    }
+    .label-checkbox{white-space: nowrap;}
+    .register-btn{width: 100%;height: 50px;background: #4d92d6;color: #fff;line-height: 50px;text-align: center;cursor: pointer;}
+    /* 错误校验样式 */
+    .error-tip{color: red;}
+    .verify-error{border: 1px solid red;}
+}

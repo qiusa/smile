@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors qiusa (qiusa@yixin.im)
+ * @date    2015-02-04 17:19:19
+ * @version 1.0
+ */
+.mt28{margin-top: 28px;}
+.m-head{width: 100%;height: 80px;box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);}
+.m-logo{width: 1000px;margin: 0 auto;padding: 26px 0 0 20px;}
+.m-logo h1{background: url(/res/images/logo.png) no-repeat;width: 213px;height: 29px;}
+/**登录样式**/
+.m-login{width: 322px;height: 242px;padding: 30px;margin: 104px auto 0;color: #333333;border: 1px solid #eeeeee; box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);}
+.m-login .login-head{font-size: 20px;font-weight: normal;}
+.m-login .ui-input{width: 294px;height: 36px;line-height: 36px;border: 0 none;border-bottom: 1px solid #dbdbdb;}
+.m-login .ui-input:focus{border-bottom: 2px solid #30d6b2;}
+.m-login .m-input{height: 56px;}
+.m-login .m-remember{margin-bottom: 20px;color: #666666;font-size: 14px;}
+.m-login .m-remember input{margin: -4px 3px 0 0;vertical-align: middle;}
+.m-login-btn{width: 100%;height: 56px;line-height: 56px;text-align: center;background: #31d5ad;color: #fff;font-size: 20px;cursor: pointer;}
+.m-login-btn:hover{background: #35e6b9;}
+.icon{background: url(/res/images/icon.png) 9999px 9999px no-repeat;display: inline-block;}
+.phone-icon{background-position: 0 -100px;width: 14px;height: 17px;margin: 11px 10px 0 0;}
+.pswd-icon{background-position: -30px -100px;width: 16px;height: 17px;margin: 11px 10px 0 0;}
+
+/****/
+.u-msg1{
+  position:fixed;
+  _position:absolute;
+  z-index:9999;
+  top:-50px;
+  left:50%;
+  min-width:200px;
+  _width:400px;
+  color:#fff;
+  opacity:0;
+  -webkit-transition:0.5s cubic-bezier(1,0,0.5,0);
+  -moz-transition:0.5s cubic-bezier(1,0,0.5,0);
+  transition:0.5s cubic-bezier(1,0,0.5,0);
+}
+.u-msg1 p{
+  position:relative;
+  left:-50%;
+  height:45px;
+  line-height:45px;
+  padding:0 20px;
+  text-align:center;
+  border-radius:0 0 5px 5px;
+}
+.u-msg1 a,.u-msg1 a:hover{
+  color:#fff;
+}
+.u-msg1 .closer{
+  margin-left:10px;
+  font-size:18px;
+}
+.u-msg1-show{
+  top:0;
+  opacity:1;
+  -webkit-transition:0.5s cubic-bezier(0,0.5,0,1);
+  -moz-transition:0.5s cubic-bezier(0,0.5,0,1);
+  transition:0.5s cubic-bezier(0,0.5,0,1);
+}
+.u-msg1-hint p{
+  background-color:#4993c6;
+}
+.u-msg1-error p{
+  background-color:#e74c3c;
+}
+.u-msg1-success p{
+  background-color:#1abc9c;
+}

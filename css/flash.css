@@ -1,0 +1,25 @@
+.m-fplayer .m-liveplayer{position:relative;width:760px;height:428px;background:#000;}
+.m-fplayer .m-liveplayer .m-loading{position:absolute;top:0;left:0;width:760px;height:428px;background:url("/live/res/pc/loading.png") no-repeat;background-size:760px 428px;}
+.m-fplayer .m-liveplayer .u-load-pos{position:absolute;top:204px;left:364px;}
+.m-fplayer .m-liveplayer .danmaku{font-size:24px;}
+.m-fplayer .m-liveplayer .danmaku .emoji{width:30px;height:30px;}
+.m-fplayer .ico{width:48px;position:absolute;left:50%;top:50%;margin-left:-25px;margin-top:-50px;}
+@-webkit-keyframes rotate{0%{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);}
+100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);}
+}
+@-moz-keyframes rotate{0%{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);}
+100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);}
+}
+@-o-keyframes rotate{0%{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);}
+100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);}
+}
+@keyframes rotate{0%{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);}
+100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);}
+}
+.m-fplayer .loading{-webkit-animation-name:rotate;-moz-animation-name:rotate;animation-name:rotate;-webkit-animation-duration:1.5s;-moz-animation-duration:1.5s;animation-duration:1.5s;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-timing-function:linear;-moz-animation-timing-function:linear;animation-timing-function:linear;}
+.m-fplayer .u-search-loading{-webkit-animation-name:rotate;-moz-animation-name:rotate;animation-name:rotate;-webkit-animation-duration:0.5s;-moz-animation-duration:0.5s;animation-duration:0.5s;-webkit-animation-iteration-count:1;-moz-animation-iteration-count:1;animation-iteration-count:1;-webkit-animation-timing-function:linear;-moz-animation-timing-function:linear;animation-timing-function:linear;}
+#danmu #danmuarea{position:relative;background:#222;width:800px;height:445px;margin-left:auto;margin-right:auto;}
+#danmu .center{text-align:center;}
+#danmu .ctr{font-size:1em;line-height:2em;}
+#danmu .danmaku img.emoji{cursor:pointer;height:1em;width:1em;margin:0 3px 0 3px;vertical-align:-3px;}
+#danmu h4{line-height:2em;}

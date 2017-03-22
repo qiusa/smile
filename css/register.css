@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.m-register{width:1024px;margin:0 auto;}
+.m-register .dl-line{height:50px;line-height:50px;margin-top:10px;}
+.m-register .dl-line .dt-line{float:left;}
+.m-register .dl-line .dd-line{float:left;}
+.m-register .label-checkbox{white-space:nowrap;}
+.m-register .register-btn{width:100%;height:50px;background:#4d92d6;color:#fff;line-height:50px;text-align:center;cursor:pointer;}
+.m-register .error-tip{color:#f00;}
+.m-register .verify-error{border:1px solid #f00;}

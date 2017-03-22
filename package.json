@@ -1,0 +1,41 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "--",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "webpack-dev-server --hot --inline",
+    "build": "webpack",
+    "deploy": "cross-env NODE_ENV=production webpack -p --progress --colors"
+  },
+  "author": "qs",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^5.2.0",
+    "clean-webpack-plugin": "^0.1.14",
+    "cross-env": "^3.1.4",
+    "css-loader": "^0.26.1",
+    "expose-loader": "^0.7.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
+    "html-withimg-loader": "^0.1.16",
+    "jquery": "^3.1.1",
+    "jshint": "^2.9.4",
+    "jshint-loader": "^0.8.3",
+    "open-browser-webpack-plugin": "0.0.3",
+    "raw-loader": "^0.5.1",
+    "regularjs": "^0.4.0",
+    "rgl-loader": "^0.4.0",
+    "style-loader": "^0.13.1",
+    "transfer-webpack-plugin": "^0.1.4",
+    "url-loader": "^0.5.7",
+    "webpack": "~1.12.9",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "express": "^4.15.1",
+    "formidable": "^1.1.1"
+  }
+}
