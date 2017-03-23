@@ -6,14 +6,14 @@
 <div class="m-resetpwdphone">
     <!-- 是否从其他验证方式进入 -->
     {#if other != 'yes'}
-        <h2 class="login-head">青果企业帐号安全验证</h2>
+        <h2 class="login-head">未知企业帐号安全验证</h2>
         <p>为了保护帐号安全，需要验证手机有效性</p>
         <p>点击发送短信按钮，将会发送一封有验证码的短信至手机</p>
         <p>{reset.account}</p>
         <div class="m-login-btn" on-click={this.sendPhone()}>发送短信</div>
         <a href="./resetpwdemail.html?type=email&account={reset.account}&other=yes" class="other-text">换用其他验证方式</a>
     {#else}
-        <h2 class="login-head">青果企业帐号安全验证</h2>
+        <h2 class="login-head">未知企业帐号安全验证</h2>
         <p>请选择验证方式：</p>
         <div class="m-input">
             <label><input type="checkbox">通过安全手机接收验证短信</label>

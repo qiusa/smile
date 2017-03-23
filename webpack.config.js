@@ -32,6 +32,12 @@ module.exports = {
         //publicPath: 'http://ww.baidu.com',
         filename: '[name].[hash].js'
     },
+    resolve: {
+        alias: {
+            // Force all modules to use the same jquery version.
+            'jquery': path.join(__dirname, 'node_modules/jquery/src/jquery')
+        }
+    },
     module: {
         loaders: [{
             test: /\.html$/,
