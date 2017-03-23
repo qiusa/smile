@@ -6,7 +6,7 @@
 <div class="m-login">
     <h2 class="login-head">欢迎登录青果云管家</h2>
     <div class="m-input mt28">
-        <input type="text" class="ui-input" placeholder="邮箱" r-model={user.account}>
+        <input type="text" class="ui-input" placeholder="邮箱" r-model={user.email}>
     </div>
     <div class="m-input">
         <input id="password" type="password" class="ui-input" placeholder="请输入密码" r-model={user.pwd}>
@@ -14,8 +14,8 @@
     </div>
     <div class="m-remember">
         <a href="./register.html">注册账号</a>
-        <a href="./reset.html" class="u-ftr">忘记密码</a>
+        <a href="./resetpwd.html" class="u-ftr">忘记密码</a>
     </div>
-    <div class="m-login-btn" on-click={this.login()}>登录</div>
+    <div class="m-login-btn" on-click={this.loginClick()}>登录</div>
 </div>
 

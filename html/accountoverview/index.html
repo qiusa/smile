@@ -1,21 +1,43 @@
-<div class="m-head">
-    <div class="m-logo">
-       <h1 class=""></h1> 
+<div class="m-accountoverview">
+    <div class="u-cb">
+        <div class="account">
+            <h2 class="account-info" on-click={this.change(1)}>账户信息</h2>
+            <dl class="account-list u-cb">
+                <dt>账户名称：</dt>
+                <dd>{user.company}</dd>
+            </dl>
+            <dl class="account-list u-cb">
+                <dt>账户余额：</dt>
+                <dd>{user.company}&nbsp;<a href="./balancewarning.html">余额预警</a></dd>
+            </dl>
+            <dl class="account-list u-cb">
+                <dt>账户入资总额：</dt>
+                <dd>{user.company}</dd>
+            </dl>
+            <dl class="account-list u-cb">
+                <dt>账户消耗总额：</dt>
+                <dd>{user.company}</dd>
+            </dl>
+        </div>
+        <div class="account u-mgl20">
+            <h2 class="account-info" on-click={this.change()}>昨日总览</h2>
+            <dl class="account-list u-cb">
+                <dt>昨日消耗：</dt>
+                <dd>{user.company}</dd>
+            </dl>
+            <dl class="account-list u-cb">
+                <dt>昨日流量：</dt>
+                <dd>{user.company}</dd>
+            </dl>
+            <dl class="account-list u-cb">
+                <dt>账户可用流量：</dt>
+                <dd>{user.company}</dd>
+            </dl>
+            <dl class="account-list u-cb">
+                <dt>预计可用天数：</dt>
+                <dd>{user.company}</dd>
+            </dl>
+        </div>
     </div>
+    <div id="chart" style="width: 600px;height:400px;"></div>
 </div>
-<div class="m-login">
-    <h2 class="login-head">欢迎登录青果云管家</h2>
-    <div class="m-input mt28">
-        <input type="text" class="ui-input" placeholder="邮箱" r-model={user.account}>
-    </div>
-    <div class="m-input">
-        <input id="password" type="password" class="ui-input" placeholder="请输入密码" r-model={user.pwd}>
-        <input type="hidden" name="password">
-    </div>
-    <div class="m-remember">
-        <a href="./register.html">注册账号</a>
-        <span class="u-ftr">忘记密码</span>
-    </div>
-    <div class="m-login-btn" on-click={this.login()}>登录</div>
-</div>
-

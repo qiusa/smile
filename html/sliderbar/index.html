@@ -1,0 +1,19 @@
+<nav class="m-nav">
+    <span class="logo">青果云管家</span>
+    <span class="nav-right">
+        <span>{user.nick}</span>
+        <span on-click={this.loginOut()}>退出登录</span>
+    </span>
+</nav>
+<aside class="m-sliderbar">
+    <ul class="sliderbar-list">
+        <li class={pro.type == 1 ? 'cur' : ''}><a href="./accountoverview.html">账户总览</a></li>
+        <li class={pro.type == 2 ? 'cur' : ''}><a href="./mycamera.html">我的摄像机</a></li>
+        <li class={pro.type == 3 ? 'cur' : ''}><a href="./datastatistics.html">数据统计</a></li>
+        <li class={pro.type == 4 ? 'cur' : ''}><a href="./balancewarning.html">余额预警</a></li>
+        <li class={pro.type == 5 ? 'cur' : ''}><a href="./myaccount.html">我的账户</a></li>
+    </ul>
+</aside>
+<main class="m-content">
+    {#include this.$body}
+</main>

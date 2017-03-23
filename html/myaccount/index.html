@@ -1,21 +1,19 @@
-<div class="m-head">
-    <div class="m-logo">
-       <h1 class=""></h1> 
-    </div>
-</div>
-<div class="m-login">
-    <h2 class="login-head">欢迎登录青果云管家</h2>
-    <div class="m-input mt28">
-        <input type="text" class="ui-input" placeholder="邮箱" r-model={user.account}>
-    </div>
-    <div class="m-input">
-        <input id="password" type="password" class="ui-input" placeholder="请输入密码" r-model={user.pwd}>
-        <input type="hidden" name="password">
-    </div>
-    <div class="m-remember">
-        <a href="./register.html">注册账号</a>
-        <span class="u-ftr">忘记密码</span>
-    </div>
-    <div class="m-login-btn" on-click={this.login()}>登录</div>
-</div>
-
+<nav class="m-nav">
+    <span class="logo">青果云管家</span>
+    <span class="nav-right">
+        <span>游客</span>
+        <span>退出登录</span>
+    </span>
+</nav>
+<aside class="m-sliderbar">
+    <ul class="sliderbar-list">
+        <li><a href="./accountoverview.html">账户总览</a></li>
+        <li><a href="./mycamera.html">我的摄像机</a></li>
+        <li><a href="./datastatistics.html">数据统计</a></li>
+        <li><a href="./balancewarning.html">余额预警</a></li>
+        <li><a href="./myaccount.html">我的账户</a></li>
+    </ul>
+</aside>
+<main class="m-content">
+    
+</main>

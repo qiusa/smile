@@ -1,0 +1,17 @@
+<div class="m-head">
+    <div class="m-logo">
+       <h1 class=""></h1> 
+    </div>
+</div>
+<div class="m-resetpwd">
+    <h2 class="login-head">重置密码</h2>
+    <p>请输入注册企业的邮箱地址或手机号码：</p>
+    <div class="m-input">
+        <input type="text" class="ui-input" placeholder="企业邮箱地址或手机号码" r-model={reset.account}>
+    </div>
+    <div class="m-input">
+        <input type="text" class="ui-input verify-input" placeholder="图片验证码" r-model={reset.verifyCode}>
+        <span class="verify-img" style="background: url({info.verifyImg} no-repeat;background-size: contain;" on-click={this.getVerifyImg()}></span>
+    </div>
+    <div class="m-login-btn" on-click={this.stepClick()}>下一步</div>
+</div>
