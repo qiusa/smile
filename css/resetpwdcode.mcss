@@ -1,0 +1,65 @@
+@charset 'UTF-8';
+.m-head {
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+}
+.m-logo {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 26px 0 0 20px;
+    h1 {
+        width: 213px;
+        height: 29px;
+        background: url(/res/images/logo.png) no-repeat;
+    }
+}
+
+/**登录样式**/
+.m-resetpwdcode {
+    width: 322px;
+    height: 242px;
+    margin: 104px auto 0;
+    padding: 30px;
+    color: #333;
+    .login-head {
+        font-size: 20px;
+        font-weight: normal;
+    }
+    .ui-input {
+        line-height: 36px;
+        width: 294px;
+        height: 36px;
+        border: 0 none;
+        border-bottom: 1px solid #dbdbdb;
+    }
+    .ui-input:focus {
+        border-bottom: 2px solid #30d6b2;
+    }
+    .verify-input{
+        width: 250px;
+    }
+    .m-input {
+        height: 56px;
+    }
+    .send-btn{
+        width: 50px;
+        height: 32px;
+        display: inline-block;
+        background: #eee;
+        cursor: pointer;
+    }
+}
+.m-login-btn {
+    font-size: 20px;
+    line-height: 56px;
+    width: 100%;
+    height: 56px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background: #31d5ad;
+}
+.m-login-btn:hover {
+    background: #35e6b9;
+}

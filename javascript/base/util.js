@@ -142,6 +142,16 @@ define(['jquery'], function($) {
             });
         },
         /**
+         * 获取url链接带的参数
+         * @param  {string} name 参数名
+         */
+        getQueryString: function(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return (r[2]);
+            return null;
+        },
+        /**
          * 对一个LIST中的完全相同的条目进行合并.
          * 并将合并后的条目中的某个属性值更新为合并的总数.
          * @param   {Array}     list        要合并相同项的数组.

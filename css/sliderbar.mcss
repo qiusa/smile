@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+//导航
+.m-nav{
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    .logo{
+        float: left;
+    }
+    .nav-right{
+        float: right;
+        padding-right: 10px;
+    }
+}
+//左侧
+.m-sliderbar{
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    width: 200px;
+    overflow: hidden;
+    .sliderbar-list{
+        li{
+            height: 32px;
+            line-height: 32px;
+            border: 1px solid #dedede;
+        }
+        .cur{
+            background: #eee;
+        }
+    }
+}
+.m-content{
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    right: 0;
+    bottom: 0;
+}

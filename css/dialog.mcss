@@ -1,14 +1,25 @@
 .m-dialog{
     position: fixed;
-    top: -450px;
+    top: 0;
     right: 0;
     left: 0;
+    bottom: 0;
     text-align: center;
+    .m-over{
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        opacity: 0;
+    }
     .dialog-main{
         display: inline-block;
         background: #fff;
         border: 1px solid #999;
         border-radius: 5px;
+        position: relative;
     }
     .dialog-head{
         height: 24px;

@@ -1,5 +1,6 @@
-.m-dialog{position:fixed;top:-450px;right:0;left:0;text-align:center;}
-.m-dialog .dialog-main{display:inline-block;background:#fff;border:1px solid #999;border-radius:5px;}
+.m-dialog{position:fixed;top:0;right:0;left:0;bottom:0;text-align:center;}
+.m-dialog .m-over{position:fixed;left:0;top:0;right:0;bottom:0;background:#000;opacity:0;}
+.m-dialog .dialog-main{display:inline-block;background:#fff;border:1px solid #999;border-radius:5px;position:relative;}
 .m-dialog .dialog-head{height:24px;line-height:24px;text-align:left;}
 .m-dialog .title{font-size:14px;}
 .m-dialog .icon-close{float:right;width:20px;height:24px;text-align:center;}

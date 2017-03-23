@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+.m-accountoverview{
+    .account{
+        width: 500px;
+        float: left;
+        height: 300px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+    }
+    .account-info{
+        font-size: 16px;
+        border-bottom: 1px solid #eee;
+    }
+    .account-list{
+        text-align: left;
+        dt,dd{float: left;}
+        dt{
+            width: 200px;
+            padding-right: 10px;
+            text-align: right;
+        }
+    }
+}
