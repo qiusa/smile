@@ -1,0 +1,17 @@
+<div class="pager-wrapper">
+    <div class="pager-pages">
+        <a on-click={currentPage=22}>上一页</a>
+        <a class="active">1</a>
+        <strong>...</strong>
+        <a>2</a>
+        <strong>...</strong>
+        <a></a>
+        <a on-click={currentPage=233}>下一页</a>
+    </div>
+    <div class="pager-jump">
+        <span>共<em class="jump-total">{totalPage}</em>页 ，跳至</span>
+        <input type="number" min="1" max="{totalPage}" class="jump-input">
+        <span>页</span>
+        <a on-click={currentPage=2}>确定</a>
+    </div>
+</div>
