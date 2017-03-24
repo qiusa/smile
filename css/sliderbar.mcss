@@ -24,6 +24,7 @@
             height: 32px;
             line-height: 32px;
             border: 1px solid #dedede;
+            cursor: pointer;
         }
         .cur{
             background: #eee;

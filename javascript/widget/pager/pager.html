@@ -1,17 +1,17 @@
-<div class="pager-wrapper">
-    <div class="pager-pages">
-        <a on-click={currentPage=22}>上一页</a>
-        <a class="active">1</a>
-        <strong>...</strong>
-        <a>2</a>
-        <strong>...</strong>
-        <a></a>
-        <a on-click={currentPage=233}>下一页</a>
-    </div>
-    <div class="pager-jump">
-        <span>共<em class="jump-total">{totalPage}</em>页 ，跳至</span>
-        <input type="number" min="1" max="{totalPage}" class="jump-input">
-        <span>页</span>
-        <a on-click={currentPage=2}>确定</a>
-    </div>
+<div class='m-page {clazz}'>
+    <a  href='javascript:;' on-click={ this.nav(current-1)} class='pageprv {current==1? "z-dis": ""}'>Prev</a>
+    {#if total - 5 > show * 2}
+        <a href='javascript:;' on-click={ this.nav(1)} class={current==1? 'z-crt': ''}>1</a>
+        {#if begin > 2} <i>...</i>{/if}
+        {#list begin..end as i}
+        <a href='javascript:;'on-click={ this.nav(i)} class={current==i? 'z-crt': ''} >{i}</a>
+        {/list}
+        {#if (end < total-1)} <i>...</i>{/if}
+        <a href='javascript:;' on-click={this.nav(total)} class={current==total? 'z-crt':''}>{total}</a>
+    {#else}
+        {#list 1..total as i}
+        <a href='javascript:;' on-click={ this.nav(i)}  class={current==i? 'z-crt': ''}>{i}</a>
+        {/list}
+    {/if}
+    <a href='javascript:;' on-click={this.nav(current + 1)}  class='pagenxt {current == total? "z-dis": ""}'>Next</a>
 </div>

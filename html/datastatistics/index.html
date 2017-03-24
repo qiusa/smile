@@ -1,25 +1,37 @@
-<div class="col-md-4 col-md-offset-2 demo">
-    <h4>Your Date Range Picker</h4>
-    <input type="text" id="config-demo" class="form-control">
-    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+<div class="m-datastatistics">
+    <h2 class="head">数据走势</h2>
+    <div class="time-select">
+        <span>选择时间：</span>
+        <ul class="time-list">
+            <li on-click={this.selectTime('week')}>最近一周</li>
+            <li on-click={this.selectTime('month')}>最近一月</li>
+        </ul>
+        <div class="col-md-4 col-md-offset-2">
+            <input type="text" id="timeConfig" class="form-control">
+            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+        </div>
+
+    </div>
+    <div id="chart" style="width: 600px;height: 400px;"></div>
+    <h2>数据明细=={pageNumber}</h2>
+    {#if dataList.length}
+    <table>
+        <th>
+            <td>日期</td>
+            <td>流量（GB）</td>
+            <td>消耗（元）</td>
+        </th>
+        {#list dataList as item}
+        <tr>
+            <td>{item.a}</td>
+            <td>{item.b}</td>
+            <td>{item.a}</td>
+        </tr>
+        {/list}
+    </table>
+    {#else}
+    无数据
+    {/if}
+    <div id="pager"></div>
 </div>
-<h2>数据明细</h2>
-{#if dataList.length}
-<table>
-    <th>
-        <td>日期</td>
-        <td>流量（GB）</td>
-        <td>消耗（元）</td>
-    </th>
-    {#list dataList as item}
-    <tr>
-        <td>{item.a}</td>
-        <td>{item.b}</td>
-        <td>{item.a}</td>
-    </tr>
-    {/list}
-</table>
-{#else}
-无数据
-{/if}
-<div id="pager"></div>
+    

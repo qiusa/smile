@@ -1,25 +1,30 @@
 define(['regularjs', 'jquery', '../../base/util', './pager.html'], function(Regular, $, util, index) {
     require('./pager.css');
-    return Regular.extend({
+    var Pager = Regular.extend({
+        name: 'pager',
         template: index,
-        data: {
-            totalPage: 10, //总页数
-            showItems: 5, // 显示出来的页数，如: 1 ... 34[5]67 ... 10
-            showPrev: true, // 是否显示“上一页”
-            showNext: true, // 是否显示“下一页”
-            showJump: true, // 是否显示“跳转”
-            initPage: 1, //初始页
-            currentPage: 1, //当前页
-            callback: function() {}
+        // before init
+        config: function(data) {
+            var count = 5;
+            var show = data.show = Math.floor(count / 2);
+            data.current = data.current || 1;
+            data.total = data.total || 1;
+            this.$watch(['current', 'total'], function(current, total) {
+                data.begin = current - show;
+                data.end = current + show;
+                if (data.begin < 2) data.begin = 2;
+                if (data.end > data.total - 1) data.end = data.total - 1;
+                if (current - data.begin <= 1) data.end = data.end + show + data.begin - current;
+                if (data.end - current <= 1) data.begin = data.begin - show - current + data.end;
+            });
         },
-        init: function() {
-            this.$watch("currentPage", function(newValue, oldValue) {
-                console.info("user.name changed from ", oldValue, " to ", newValue);
-                this.callback(newValue);
-            })
-        },
-        callback: function(newValue) {
-            console.info('call')
+        nav: function(page) {
+            var data = this.data;
+            if (page < 1) return;
+            if (page > data.total) return;
+            if (page === data.current) return;
+            data.current = page;
+            this.$emit('nav', page);
         }
-    });
+    })
 });

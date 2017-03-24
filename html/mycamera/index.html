@@ -1,21 +1,79 @@
-<div class="m-head">
-    <div class="m-logo">
-       <h1 class=""></h1> 
+<div class="m-mycamera">
+    <h2>全部设备</h2>
+    <div class="head u-cb">
+        <div class="u-ftl">
+            <input type="text" placeholder="请输入设备ID搜索"><span>搜索</span>
+        </div>
+        <div class="u-ftl">
+            <span>直播：</span>
+            <ul class="btn-list">
+                <li class="cur">开启</li>
+                <li>关闭</li>
+            </ul>
+        </div>
+        <div class="u-ftl">
+            <span>夜视：</span>
+            <ul class="btn-list">
+                <li class="cur">开启</li>
+                <li>关闭</li>
+            </ul>
+        </div>
+        <div class="u-ftl">
+            <span>声音：</span>
+            <ul class="btn-list">
+                <li class="cur">开启</li>
+                <li>关闭</li>
+            </ul>
+        </div>
+        <div class="u-ftl">
+            <span>码率：</span>
+            <ul class="btn-list">
+                <li class="cur">流畅</li>
+                <li>标清</li>
+                <li>高清</li>
+            </ul>
+        </div>
     </div>
+    <table>
+        <th>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>设备名称</td>
+            <td>状态</td>
+            <td>直播</td>
+            <td>夜视</td>
+            <td>声音</td>
+            <td>清晰度</td>
+            <td>云存储</td>
+            <td>操作</td>
+        </th>
+        {#if dataList.length}
+        {#list dataList as item}
+        <tr>
+            <td>
+                <input type="checkbox">{item.id}
+            </td>
+            <td>
+                <span on-click={this.edit($event)}>{item.name}</span>
+                <input type="text" r-model={item.name} on-blur={this.hide($event)} style="display: none;">
+            </td>
+            <td>{item.status ? '在线' : '不在线'}</td>
+            <td><span>{item.isPlay ? '直播' : '不直播'}</span></td>
+            <td>{item.night ? '开' : '关'}</td>
+            <td>{item.voice ? '开' : '关'}</td>
+            <td>{item.resolution}</td>
+            <td><span>{item.cloud ? '开启' : '关闭'}</span></td>
+            <td>
+                <a href="javascript:;">云存储管理</a>
+                <a href="javascript:;">生成直播链接</a>
+            </td>
+        </tr>
+        {/list}
+        {#else}
+        <tr>
+           <td>无数据</td>
+        </tr>
+        {/if}
+    </table>
 </div>
-<div class="m-login">
-    <h2 class="login-head">欢迎登录未知云管家</h2>
-    <div class="m-input mt28">
-        <input type="text" class="ui-input" placeholder="邮箱" r-model={user.account}>
-    </div>
-    <div class="m-input">
-        <input id="password" type="password" class="ui-input" placeholder="请输入密码" r-model={user.pwd}>
-        <input type="hidden" name="password">
-    </div>
-    <div class="m-remember">
-        <a href="./register.html">注册账号</a>
-        <span class="u-ftr">忘记密码</span>
-    </div>
-    <div class="m-login-btn" on-click={this.login()}>登录</div>
-</div>
-

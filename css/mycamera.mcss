@@ -1,2 +1,18 @@
 @charset 'UTF-8';
-.m-myaccount{font-size: 12px;}
+.m-mycamera{
+    .btn-list{
+        border-radius: 5px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+        color: #ddd;
+        li{
+            float: left;
+            width: 50px;
+            text-align: center;
+        }
+        .cur{
+            background: blue;
+        }
+    }
+}
