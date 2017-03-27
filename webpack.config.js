@@ -102,7 +102,7 @@ if (process.env.NODE_ENV === 'production') {
             new webpack.optimize.OccurenceOrderPlugin() //用了很多hashing，确保有一个一致的模块顺序
         ]);
 } else {
-    module.exports.devtool = 'source-map';
+    module.exports.devtool = 'cheap-module-eval-source-map';
     module.exports.devServer = {
         port: 8090,
         contentBase: './build',

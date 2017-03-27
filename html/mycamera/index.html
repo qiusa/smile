@@ -1,79 +1,149 @@
 <div class="m-mycamera">
-    <h2>全部设备</h2>
+    <h2 class="title">全部设备</h2>
     <div class="head u-cb">
-        <div class="u-ftl">
-            <input type="text" placeholder="请输入设备ID搜索"><span>搜索</span>
+        <div class="search">
+            <input type="text" class="search-input" placeholder="请输入设备ID搜索">
+            <span class="search-icon"></span>
         </div>
-        <div class="u-ftl">
-            <span>直播：</span>
-            <ul class="btn-list">
-                <li class="cur">开启</li>
-                <li>关闭</li>
-            </ul>
-        </div>
-        <div class="u-ftl">
-            <span>夜视：</span>
-            <ul class="btn-list">
-                <li class="cur">开启</li>
-                <li>关闭</li>
-            </ul>
-        </div>
-        <div class="u-ftl">
-            <span>声音：</span>
-            <ul class="btn-list">
-                <li class="cur">开启</li>
-                <li>关闭</li>
-            </ul>
-        </div>
-        <div class="u-ftl">
-            <span>码率：</span>
-            <ul class="btn-list">
-                <li class="cur">流畅</li>
-                <li>标清</li>
-                <li>高清</li>
-            </ul>
-        </div>
+        <ul class="operation-list">
+            <li on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                夜视
+                <span class="icon-more"></span>
+                <ul class="detail-list">
+                    <li>
+                        开启夜视
+                        <hr class="hr"></li>
+                    <li>关闭夜视</li>
+                </ul>
+            </li>
+            <li class="border" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                声音
+                <span class="icon-more"></span>
+                <ul class="detail-list">
+                    <li>
+                        开启声音
+                        <hr class="hr"></li>
+                    <li>关闭声音</li>
+                </ul>
+            </li>
+            <li on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                清晰度
+                <span class="icon-more"></span>
+                <ul class="detail-list">
+                    <li>
+                        开启直播
+                        <hr class="hr"></li>
+                    <li>关闭直播</li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="operation-list u-mgr24 u-mgl26">
+            <li class="live" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                直播
+                <span class="icon-more"></span>
+                <ul class="detail-list">
+                    <li>
+                        流畅
+                        <hr class="hr"></li>
+                    <li>
+                        标清
+                        <hr class="hr"></li>
+                    <li>高清</li>
+                </ul>
+            </li>
+        </ul>
+        <span class="operation-text">摄像机操作：</span>
     </div>
-    <table>
-        <th>
-            <td>
-                <input type="checkbox">
-            </td>
-            <td>设备名称</td>
-            <td>状态</td>
-            <td>直播</td>
-            <td>夜视</td>
-            <td>声音</td>
-            <td>清晰度</td>
-            <td>云存储</td>
-            <td>操作</td>
-        </th>
-        {#if dataList.length}
-        {#list dataList as item}
-        <tr>
-            <td>
-                <input type="checkbox">{item.id}
-            </td>
-            <td>
-                <span on-click={this.edit($event)}>{item.name}</span>
-                <input type="text" r-model={item.name} on-blur={this.hide($event)} style="display: none;">
-            </td>
-            <td>{item.status ? '在线' : '不在线'}</td>
-            <td><span>{item.isPlay ? '直播' : '不直播'}</span></td>
-            <td>{item.night ? '开' : '关'}</td>
-            <td>{item.voice ? '开' : '关'}</td>
-            <td>{item.resolution}</td>
-            <td><span>{item.cloud ? '开启' : '关闭'}</span></td>
-            <td>
-                <a href="javascript:;">云存储管理</a>
-                <a href="javascript:;">生成直播链接</a>
-            </td>
-        </tr>
-        {/list}
-        {#else}
-        <tr>
-           <td>无数据</td>
-        </tr>
-        {/if}
+    <table width="100%" class="camera-list">
+        <thead>
+            <tr>
+                <td class="td1">
+                    <span class="checkbox {showParams.checkboxAll ? 'checkbox-true' : ''}" on-click={showParams.checkboxAll = showParams.checkboxAll ? false : true}></span>
+                    <span class="device-id">设备ID</span>
+                </td>
+                <td class="td2">设备名称</td>
+                <td class="td3" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                    状态<span class="icon-more"></span>
+                    <ul class="index-list">
+                        <li class="self">状态</li>
+                        <li>开</li>
+                        <li>关</li>
+                    </ul>
+                </td>
+                <td class="td4" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                    直播<span class="icon-more"></span>
+                    <ul class="index-list">
+                        <li class="self">直播</li>
+                        <li>开</li>
+                        <li>关</li>
+                    </ul>
+                </td>
+                <td class="td5" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                    夜视<span class="icon-more"></span>
+                    <ul class="index-list">
+                        <li class="self">夜视</li>
+                        <li>开</li>
+                        <li>关</li>
+                    </ul>
+                </td>
+                <td class="td6" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                    声音<span class="icon-more"></span>
+                    <ul class="index-list">
+                        <li class="self">声音</li>
+                        <li>开</li>
+                        <li>关</li>
+                    </ul>
+                </td>
+                <td class="td7" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                    清晰度<span class="icon-more"></span>
+                    <ul class="index-list">
+                        <li class="self">清晰度</li>
+                        <li>流畅</li>
+                        <li>标清</li>
+                        <li>高清</li>
+                    </ul>
+                </td>
+                <td class="td8">云存储</td>
+                <td><p class="u-mgl64">操作</p></td>
+            </tr>
+        </thead>
+        <tbody>
+            {#if dataList.length}
+            {#list dataList as item}
+            <tr>
+                <td class="td1">
+                    <span class="checkbox {item.checkbox ? 'checkbox-true' : ''}" on-click={this.check(item_index)}></span>
+                    <span class="device-id">{item.id}</span></td>
+                <td class="td2">
+                    <span class="device-name" on-click={this.edit($event)}>{item.name ? item.name : "空"}</span>
+                    <div class="device-change" style="display: none;">
+                        <input type="text" class="device-input" r-model={item.name} on-blur={this.hide($event)}>
+                        <span class="close" on-click={item.name = ''}></span>  
+                    </div>
+                </td>
+                <td class="td3">{item.status ? '在线' : '不在线'}</td>
+                <td class="td4">
+                    <p class="u-mgl8 icon-live {item.isPlay ? 'icon-live-on' : ''}"></p>
+                </td>
+                <td class="td5"><p class="u-mgl6">{item.night ? '开' : '关'}</p></td>
+                <td class="td6"><p class="u-mgl6">{item.voice ? '开' : '关'}</p></td>
+                <td class="td7"><p class="u-mgl8">{item.resolution}</p></td>
+                <td class="td8">
+                    <span class="u-mgl8 icon-cloud {item.cloud ? 'icon-cloud-on' : ''}"></span>
+                </td>
+                <td>
+                    <a href="javascript:;" class="operation-link">云存储管理</a>
+                    <span class="vertical-line"></span>
+                    <a href="javascript:;" class="operation-link">生成直播链接</a>
+                </td>
+            </tr>
+            {/list}
+            {#else}
+            <tr>
+                <td align="center" colspan="9">尚未绑定设备</td>
+            </tr>
+            {/if}
+        </tbody>
     </table>
+    <div id="pager" class="pager-box"></div>
 </div>

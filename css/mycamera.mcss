@@ -1,18 +1,313 @@
 @charset 'UTF-8';
 .m-mycamera{
-    .btn-list{
-        border-radius: 5px;
-        height: 24px;
-        line-height: 24px;
-        font-size: 12px;
-        color: #ddd;
-        li{
+    padding: 52px 40px 20px;
+    ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #999;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #999;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #999;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #999;
+    }
+    //标题
+    .title{
+        font-size: 16px;
+        color:#666;
+        line-height: 16px;
+    }
+    //头部信息
+    .head{
+        padding: 24px 0;
+        .search{
+            position: relative;
             float: left;
-            width: 50px;
+            .search-input{
+                font-size: 12px;
+                color: #999;
+                padding-left: 14px;
+                width: 224px;
+                height: 28px;
+                line-height: 28px;
+                border: 1px solid #dedede;
+                border-radius: 3px;
+            }
+            .search-icon{
+                position: absolute;
+                right: 12px;
+                top: 7px;
+                display: inline-block;
+                background: url(../res/images/icon_search.png) no-repeat;
+                background-size: contain;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+        }
+        .operation-text{
+            float: right;
+            font-size: 14px;
+            color: #666;
+            line-height: 30px;
+        }
+        //摄像机操作
+        .operation-list{
+            float: right;
+            height: 28px;
+            line-height: 28px;
+            border: 1px solid #dcdcdc;
+            background: #f7f7f7;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #666;
+            li{
+                position: relative;
+                z-index: 9;
+                padding: 0 28px 0 14px;
+                float: left;
+                cursor: pointer;
+
+            }
+            .border{
+                border-left: 1px solid #dcdcdc;
+                border-right: 1px solid #dcdcdc;
+                height: 28px;
+            }
+            .icon-more{
+                display: inline-block;
+                background: url(../res/images/icon_more.png) no-repeat;
+                background-size: contain;
+                width: 8px;
+                height: 8px;
+                position: absolute;
+                top: 12px;
+                right: 12px;
+            }
+            .detail-list{
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 28px;
+                border: 1px solid #dcdcdc;
+                width: 75px;
+                line-height: 40px;
+                text-align: center;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.08);
+                color: #666;
+                li{
+                    line-height: 40px;
+                    background: #fff;
+                    padding: 0;
+                    float: none;
+                }
+                li:hover{
+                    color: #12a76b;
+                }
+                .hr{
+                    height: 1px;
+                    width: 100%;
+                    background: #f0f0f0;
+                    overflow: hidden;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    border: 0;
+                }
+            }
+            .live{
+                height: 28px;
+                line-height: 28px;
+                //border: 1px solid #0d945e;
+                background: #12a76b;
+                //border-radius: 3px;
+                font-size: 12px;
+                color: #fff;
+                .detail-list{
+                    display: block;
+                }
+            }
+        }
+    }
+    //设备列表
+    .camera-list{
+        font-size: 12px;
+        color: #999;
+        thead{
+            background: #f7f7f7;
+            td{
+                height: 36px;
+                position: relative;
+            }
+        }
+        tbody{
+            background: #fff;
+            td{
+                height: 60px;
+                border-bottom: 1px solid #dcdcdc;
+            }
+        }
+        .td1{
+            padding-left: 16px;
+            width: 122px;
+        }
+
+        .td2{
+            width: 104px;
+        }
+        .td3{
+            width: 72px;
+        }
+        .td4{
+            width: 72px;
+        }
+        .td5{
+            width: 72px;
+        }
+        .td6{
+            width: 72px;
+        }
+        .td7{
+            width: 72px;
+        }
+        .td8{
+            width: 86px;
+        }
+        .icon-more{
+            display: inline-block;
+            background: url(../res/images/icon_more.png) no-repeat;
+            background-size: contain;
+            width: 8px;
+            height: 8px;
+            margin-left: 5px;
+        }
+        .checkbox{
+            background: url(../res/images/checkbox_fall.png) no-repeat;
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .device-id{
+            display: inline-block;
+            width: 60px;
+            padding-left: 16px;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+        .device-name{
+            display: inline-block;
+            width: 68px;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+        .device-change{
+            position: relative;
+        }
+        .device-input{
+            width: 74px;
+            height: 22px;
+            line-height: 22px;
+            margin-left: -12px;
+            padding: 0 16px 0 12px;
+            border: 1px solid #dedede;
+            border-radius: 3px;
+        }
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 4px;
+            display: inline-block;
+            background: #999;
+            color: #fff;
+            border-radius: 12px;
+            line-height: 14px;
             text-align: center;
+            height: 14px;
+            width: 14px;
+            font-size: 12px;
         }
-        .cur{
-            background: blue;
+        .close:before {
+            content: "\2716";
         }
+        .checkbox-true{
+            background: url(../res/images/checkbox_true.png) no-repeat;
+        }
+        .index-list{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: -24px;
+            border: 1px solid #dcdcdc;
+            width: 86px;
+            line-height: 36px;
+            text-align: center;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.08);
+            color: #666;
+            li{
+                line-height: 36px;
+                background: #fff;
+                padding: 0;
+                float: none;
+                cursor: pointer;
+            }
+            li:hover{
+                color: #12a76b;
+            }
+            .self:hover{
+                color: #666;
+            }
+        }  
+        .live{
+            .index-list{
+                display: block;
+            }
+        }
+        .icon-live{
+            background: url(../res/images/icon_live_off.png) no-repeat;
+            background-size: contain;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .icon-live-on{
+            background: url(../res/images/icon_live_on.png) no-repeat;
+        }
+        .icon-cloud{
+            background: url(../res/images/icon_cloud_off.png) no-repeat;
+            background-size: contain;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .icon-cloud-on{
+            background: url(../res/images/icon_cloud_on.png) no-repeat;
+        }
+        .operation-link{
+            color: #548bdc;
+            display: inline-block;
+        }
+        .operation-link:hover{
+            text-decoration: underline;
+        }
+        .vertical-line{
+            margin: 0 12px;
+            background: #dcdcdc;
+            width: 1px;
+            height: 8px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+
+
+    }
+    //分页
+    .pager-box{
+        margin-top: 36px;
     }
 }

@@ -16,6 +16,7 @@ a,button{cursor:pointer;}
 h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
 del,ins,u,s,a,a:hover{text-decoration:none;}
 body,textarea,input,button,select,keygen,legend{font:12px/1.14 "Microsoft YaHei",arial;color:#333;outline:0;}
+input::-ms-clear { display: none; }
 html,body,.g-body{height: 100%;}
 a,a:hover{color:#333;}
 a:focus{outline:none;}
@@ -37,12 +38,17 @@ a:focus{outline:none;}
 .u-mgr10{margin-right:10px;}
 .u-mgr15{margin-right:15px;}
 .u-mgr20{margin-right:20px;}
+.u-mgr24{margin-right:24px;}
 .u-mgr30{margin-right:30px;}
 .u-mgr32{margin-right:32px;}
 .u-mgl4{margin-left:4px;}
+.u-mgl6{margin-left:6px;}
+.u-mgl8{margin-left:8px;}
 .u-mgl20{margin-left:20px;}
+.u-mgl26{margin-left:26px;}
 .u-mgl40{margin-left:40px;}
 .u-mgl15{margin-left:15px;}
+.u-mgl64{margin-left:64px;}
 .u-mgl80{margin-left:80px;}
 .u-mgb4{margin-bottom:4px;}
 .u-mgb15{margin-bottom:15px;}
