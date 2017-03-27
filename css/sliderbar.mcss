@@ -1,40 +1,167 @@
 @charset 'UTF-8';
+body{background: #fafafa;}
 //导航
 .m-nav{
-    height: 60px;
-    line-height: 60px;
+    height: 64px;
+    line-height: 64px;
     position: relative;
-    .logo{
-        float: left;
-    }
-    .nav-right{
-        float: right;
-        padding-right: 10px;
-    }
-}
-//左侧
-.m-sliderbar{
-    position: absolute;
-    top: 60px;
-    bottom: 0;
-    width: 200px;
-    overflow: hidden;
-    .sliderbar-list{
-        li{
-            height: 32px;
-            line-height: 32px;
-            border: 1px solid #dedede;
+    background: #3e3e3e;
+    width: 100%;
+    .nav{
+        width: 1180px;
+        margin: 0 auto;
+        color: #fff;
+        .logo{
+            float: left;
+            background: url(../res/images/icon_logo.png) no-repeat;
+            width: 68px;
+            height: 42px;
+            margin-top: 11px;
+        }
+        .logo-text{
+            float: left;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: '黑体';
+        }
+        
+        .vertical-line{
+            float: left;
+            margin: 24px 10px 0;
+            background: #5c5c5c;
+            width: 1px;
+            height: 18px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .nav-right{
+            float: right;
+            padding-right: 10px;
+        }
+        .avatar{
+            width: 30px;
+            height: 30px;
+            float: right;
+            margin-top: 18px;
+            border-radius: 50%;
+            background: url(../res/images/icon_avatar.png) no-repeat;
+            background-size: contain;
+            vertical-align: middle;
+        }
+        .nick{
+            float: right;
+            padding: 0 14px;
+            max-width: 128px;
+            height: 64px;
+            line-height: 64px;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+        .login-out{
+            float: right;
+            width: 72px;
+            height: 64px;
+            line-height: 64px;
+            padding-left: 14px;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
             cursor: pointer;
         }
-        .cur{
-            background: #eee;
+        .vertical-line2{
+            float: right;
+            margin-top: 26px;
+            background: #5c5c5c;
+            width: 1px;
+            height: 12px;
+            overflow: hidden;
+            display: inline-block;
         }
     }
+        
 }
-.m-content{
-    position: absolute;
-    top: 60px;
-    left: 200px;
-    right: 0;
-    bottom: 0;
+
+.m-main{
+    position: relative;
+    width: 1180px;
+    margin: 0 auto;
+    border: 1px solid #dcdcdc;
+    margin-top: 36px;
+    //左侧
+    .m-sliderbar{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 218px;
+        overflow: hidden;
+        border-right: 1px solid #dcdcdc;
+        .sliderbar-list{
+            padding: 20px 20px 0;
+            li{
+                position: relative;
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                font-size: 14px;
+                color: #333;
+                margin-top: 20px;
+                cursor: pointer;
+                a{
+                    display: block;
+                    padding-left: 68px;
+                    color: #333;
+                }
+            }
+            .icon-pos{
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                position: absolute;
+                left: 34px;
+                top: 9px;
+            }
+            .icon-overview{
+                background: url(../res/images/icon_overview_normal.png) no-repeat;
+            }
+            .icon-camera{
+                background: url(../res/images/icon_camera_normal.png) no-repeat;
+            }
+            .icon-data{
+                background: url(../res/images/icon_data_normal.png) no-repeat;
+            }
+            .icon-alarm{
+                background: url(../res/images/icon_alarm_normal.png) no-repeat;
+            }
+            .icon-account{
+                background: url(../res/images/icon_account_normal.png) no-repeat;
+            }
+            .cur{
+                border: 1px solid #333;
+                color: #fff;
+                background: #555;
+                a{color: #fff;}
+                .icon-overview{
+                    background: url(../res/images/icon_overview_press.png) no-repeat;
+                }
+                .icon-camera{
+                    background: url(../res/images/icon_camera_press.png) no-repeat;
+                }
+                .icon-data{
+                    background: url(../res/images/icon_data_press.png) no-repeat;
+                }
+                .icon-alarm{
+                    background: url(../res/images/icon_alarm_press.png) no-repeat;
+                }
+                .icon-account{
+                    background: url(../res/images/icon_account_press.png) no-repeat;
+                }
+            }
+        }
+    }
+    .m-content{
+        margin-left: 220px;
+    }
 }
+    

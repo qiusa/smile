@@ -1,19 +1,25 @@
 <nav class="m-nav">
-    <span class="logo">未知云管家</span>
-    <span class="nav-right">
-        <span>{user.nick}</span>
-        <span on-click={this.loginOut()}>退出登录</span>
-    </span>
+    <div class="nav">
+        <span class="logo"></span>
+        <span class="vertical-line"></span>
+        <span class="logo-text">云管家</span>    
+        <span class="login-out" on-click={this.loginOut()}>退出登录</span>
+        <span class="vertical-line2"></span>
+        <span class="nick">{user.nick}</span>
+        <span class="avatar"></span> 
+    </div>    
 </nav>
-<aside class="m-sliderbar">
-    <ul class="sliderbar-list">
-        <li class={pro.type == 1 ? 'cur' : ''}><a href="./accountoverview.html">账户总览</a></li>
-        <li class={pro.type == 2 ? 'cur' : ''}><a href="./mycamera.html">我的摄像机</a></li>
-        <li class={pro.type == 3 ? 'cur' : ''}><a href="./datastatistics.html">数据统计</a></li>
-        <li class={pro.type == 4 ? 'cur' : ''}><a href="./balancewarning.html">余额预警</a></li>
-        <li class={pro.type == 5 ? 'cur' : ''}><a href="./myaccount.html">我的账户</a></li>
-    </ul>
-</aside>
-<main class="m-content">
-    {#include this.$body}
+<main class="m-main height-calc100">
+    <aside class="m-sliderbar">
+        <ul class="sliderbar-list">
+            <li class={pro.type == 1 ? 'cur' : ''}><span class="icon-pos icon-overview"></span><a href="./accountoverview.html">账户总览</a></li>
+            <li class={pro.type == 2 ? 'cur' : ''}><span class="icon-pos icon-camera"></span><a href="./mycamera.html">我的摄像机</a></li>
+            <li class={pro.type == 3 ? 'cur' : ''}><span class="icon-pos icon-data"></span><a href="./datastatistics.html">数据统计</a></li>
+            <li class={pro.type == 4 ? 'cur' : ''}><span class="icon-pos icon-alarm"></span><a href="./balancewarning.html">余额预警</a></li>
+            <li class={pro.type == 5 ? 'cur' : ''}><span class="icon-pos icon-account"></span><a href="./myaccount.html">我的账户</a></li>
+        </ul>
+    </aside>
+    <div class="m-content">
+        {#include this.$body}
+    </div>
 </main>
