@@ -1,2 +1,8 @@
 @charset "UTF-8";
-.m-datastatistics{font-size:12px;}
+.m-datastatistics{padding:52px 40px 20px;}
+.m-datastatistics .title{font-size:16px;font-weight:normal;color:#666;line-height:16px;}
+.m-datastatistics .head{padding:24px 0;line-height:30px;border-bottom:1px solid #dcdcdc;}
+.m-datastatistics .time-input{float:left;width:180px;padding-left:12px;margin-left:26px;height:30px;line-height:30px;border-radius:3px;border:1px solid #dcdcdc;color:#666;}
+.m-datastatistics .time-list{float:left;margin-left:30px;}
+.m-datastatistics .time-list li{width:70px;line-height:28px;text-align:center;border:1px solid #dcdcdc;border-radius:3px;background:#f7f7f7;color:#666;float:left;margin-right:12px;}
+.m-datastatistics .time-list .cur{border:1px solid #3e3e3e;background:#535353;color:#fff;}

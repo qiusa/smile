@@ -1,23 +1,78 @@
 @charset 'UTF-8';
 .m-accountoverview{
+    padding: 52px 40px 20px;
     .account{
-        width: 500px;
-        float: left;
-        height: 300px;
-        border: 1px solid #eee;
-        border-radius: 5px;
-    }
-    .account-info{
-        font-size: 16px;
-        border-bottom: 1px solid #eee;
-    }
-    .account-list{
-        text-align: left;
-        dt,dd{float: left;}
-        dt{
-            width: 200px;
-            padding-right: 10px;
-            text-align: right;
+        width: 420px;
+        float: left;  
+        .title{
+            font-size: 16px;
+            font-weight: normal;
+            color: #666;
+        }  
+        .account-list{
+            margin-top: 24px;
+            padding: 40px 0 40px 40px;
+            text-align: left;
+            background: #f7f7f7;
+            .list-info{
+                display: inline-block;
+                width: 160px;
+                .info{
+                    font-family: "SimSun";
+                    font-size: 12px;
+                    color: #666;
+                }
+                .detail{
+                    padding-top: 18px;
+                    .money{
+                        color: #343434;
+                        font-size: 32px;
+                        .spot{font-size: 26px;}
+                        .decimal{font-size: 16px;}
+                    }
+                }
+            }
+            .link{
+                font-family: "SimSun";
+                font-size: 12px;
+                color: #548bdc;
+                margin-left: 20px;
+                display: inline-block;
+            }
+            .hr{
+                margin-top: 24px;
+                border: 0;
+                background: #e6e6e6;
+                height: 1px;
+                width: 100%;
+                overflow: hidden;
+            }
+            .list2{
+                width: 160px;
+                padding-top: 24px;
+                display: inline-block;
+                font-family: "SimSun";
+                font-size: 12px;
+                color: #666;
+                .content{
+                    font-size: 14px;
+                    color: #343434;
+                    padding-top: 14px;
+                }
+            }
         }
+    }
+    //统计
+    .chart{
+        padding: 32px 0 17px;
+        border-bottom: 1px solid #dcdcdc;
+        .head{
+            line-height: 30px;
+            font-size: 16px;
+        }
+    }
+    .chart-box{
+        width: 100%;
+        height: 405px;
     }
 }

@@ -16,6 +16,7 @@
     //标题
     .title{
         font-size: 16px;
+        font-weight: normal;
         color:#666;
         line-height: 16px;
     }
@@ -52,83 +53,6 @@
             font-size: 14px;
             color: #666;
             line-height: 30px;
-        }
-        //摄像机操作
-        .operation-list{
-            float: right;
-            height: 28px;
-            line-height: 28px;
-            border: 1px solid #dcdcdc;
-            background: #f7f7f7;
-            border-radius: 3px;
-            font-size: 12px;
-            color: #666;
-            li{
-                position: relative;
-                z-index: 9;
-                padding: 0 28px 0 14px;
-                float: left;
-                cursor: pointer;
-
-            }
-            .border{
-                border-left: 1px solid #dcdcdc;
-                border-right: 1px solid #dcdcdc;
-                height: 28px;
-            }
-            .icon-more{
-                display: inline-block;
-                background: url(../res/images/icon_more.png) no-repeat;
-                background-size: contain;
-                width: 8px;
-                height: 8px;
-                position: absolute;
-                top: 12px;
-                right: 12px;
-            }
-            .detail-list{
-                display: none;
-                position: absolute;
-                right: 0;
-                top: 28px;
-                border: 1px solid #dcdcdc;
-                width: 75px;
-                line-height: 40px;
-                text-align: center;
-                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.08);
-                color: #666;
-                li{
-                    line-height: 40px;
-                    background: #fff;
-                    padding: 0;
-                    float: none;
-                }
-                li:hover{
-                    color: #12a76b;
-                }
-                .hr{
-                    height: 1px;
-                    width: 100%;
-                    background: #f0f0f0;
-                    overflow: hidden;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    border: 0;
-                }
-            }
-            .live{
-                height: 28px;
-                line-height: 28px;
-                //border: 1px solid #0d945e;
-                background: #12a76b;
-                //border-radius: 3px;
-                font-size: 12px;
-                color: #fff;
-                .detail-list{
-                    display: block;
-                }
-            }
         }
     }
     //设备列表

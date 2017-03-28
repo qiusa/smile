@@ -1,43 +1,82 @@
 <div class="m-accountoverview">
     <div class="u-cb">
         <div class="account">
-            <h2 class="account-info" on-click={this.change(1)}>账户信息</h2>
-            <dl class="account-list u-cb">
-                <dt>账户名称：</dt>
-                <dd>{user.company}</dd>
-            </dl>
-            <dl class="account-list u-cb">
-                <dt>账户余额：</dt>
-                <dd>{user.company}&nbsp;<a href="./balancewarning.html">余额预警</a></dd>
-            </dl>
-            <dl class="account-list u-cb">
-                <dt>账户入资总额：</dt>
-                <dd>{user.company}</dd>
-            </dl>
-            <dl class="account-list u-cb">
-                <dt>账户消耗总额：</dt>
-                <dd>{user.company}</dd>
-            </dl>
+            <h2 class="title" on-click={this.change(1)}>账户信息</h2>
+            <div class="account-list u-cb">
+                <div>
+                    <div class="list-info">
+                        <p class="info">账户余额</p>
+                        <div class="detail">
+                            <p class="money">
+                                <span>223</span><span class="spot">.333</span> <span class="decimal">元</span>
+                            </p>
+                        </div>
+                            
+                    </div>
+                    <a class="link" href="./balancewarning.html">余额预警 ></a>  
+                </div>
+                <hr class="hr">
+                <div>
+                    <div class="list2">
+                        <p>消耗总额</p>
+                        <p class="content">2342342元</p>
+                    </div>
+                    <div class="list2 u-mgl20">
+                        <p>入资总额</p>
+                        <p class="content">2342342元</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="account u-mgl20">
-            <h2 class="account-info" on-click={this.change()}>昨日总览</h2>
-            <dl class="account-list u-cb">
-                <dt>昨日消耗：</dt>
-                <dd>{user.company}</dd>
-            </dl>
-            <dl class="account-list u-cb">
-                <dt>昨日流量：</dt>
-                <dd>{user.company}</dd>
-            </dl>
-            <dl class="account-list u-cb">
-                <dt>账户可用流量：</dt>
-                <dd>{user.company}</dd>
-            </dl>
-            <dl class="account-list u-cb">
-                <dt>预计可用天数：</dt>
-                <dd>{user.company}</dd>
-            </dl>
+        <div class="account u-mgl40">
+            <h2 class="title" on-click={this.change()}>昨日总览</h2>
+            <div class="account-list u-cb">
+                <div>
+                    <div class="list-info">
+                        <p class="info">昨日消耗</p>
+                        <div class="detail">
+                            <p class="money">
+                                <span>223</span><span class="spot">.3</span> <span class="decimal">元</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="list-info u-mgl40">
+                        <p class="info">昨日流量</p>
+                        <div class="detail">
+                            <p class="money">
+                                <span>2232</span><span class="spot">.23</span> <span class="decimal">GB</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr">
+                <div>
+                    <div class="list2">
+                        <p>预计可用天数</p>
+                        <p class="content">5.5 天</p>
+                    </div>
+                    <div class="list2 u-mgl40">
+                        <p>账户可用流量</p>
+                        <p class="content">2342342 GB</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="chart" style="width: 600px;height:400px;"></div>
+    <div class="chart">
+        <span class="head">最近七天统计</span>
+        <ul class="operation-list u-mgr24 u-mgl26">
+            <li class="live" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                金额（元）
+                <span class="icon-more"></span>
+                <ul class="detail-list">
+                    <li>
+                        金额（元）
+                        <hr class="hr"></li>
+                    <li>流量（GB）</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="chart" class="chart-box"></div>
 </div>

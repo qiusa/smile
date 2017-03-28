@@ -11,6 +11,7 @@ body{background: #fafafa;}
         width: 1180px;
         margin: 0 auto;
         color: #fff;
+        background: #3e3e3e;
         .logo{
             float: left;
             background: url(../res/images/icon_logo.png) no-repeat;

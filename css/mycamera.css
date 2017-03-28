@@ -4,22 +4,12 @@
 .m-mycamera :-moz-placeholder{color:#999;}
 .m-mycamera ::-moz-placeholder{color:#999;}
 .m-mycamera :-ms-input-placeholder{color:#999;}
-.m-mycamera .title{font-size:16px;color:#666;line-height:16px;}
+.m-mycamera .title{font-size:16px;font-weight:normal;color:#666;line-height:16px;}
 .m-mycamera .head{padding:24px 0;}
 .m-mycamera .head .search{position:relative;float:left;}
 .m-mycamera .head .search .search-input{font-size:12px;color:#999;padding-left:14px;width:224px;height:28px;line-height:28px;border:1px solid #dedede;border-radius:3px;}
 .m-mycamera .head .search .search-icon{position:absolute;right:12px;top:7px;display:inline-block;background:url("../res/images/icon_search.png") no-repeat;background-size:contain;width:20px;height:20px;cursor:pointer;}
 .m-mycamera .head .operation-text{float:right;font-size:14px;color:#666;line-height:30px;}
-.m-mycamera .head .operation-list{float:right;height:28px;line-height:28px;border:1px solid #dcdcdc;background:#f7f7f7;border-radius:3px;font-size:12px;color:#666;}
-.m-mycamera .head .operation-list li{position:relative;z-index:9;padding:0 28px 0 14px;float:left;cursor:pointer;}
-.m-mycamera .head .operation-list .border{border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc;height:28px;}
-.m-mycamera .head .operation-list .icon-more{display:inline-block;background:url("../res/images/icon_more.png") no-repeat;background-size:contain;width:8px;height:8px;position:absolute;top:12px;right:12px;}
-.m-mycamera .head .operation-list .detail-list{display:none;position:absolute;right:0;top:28px;border:1px solid #dcdcdc;width:75px;line-height:40px;text-align:center;box-shadow:0 2px 2px 0 rgba(0,0,0,0.08);color:#666;}
-.m-mycamera .head .operation-list .detail-list li{line-height:40px;background:#fff;padding:0;float:none;}
-.m-mycamera .head .operation-list .detail-list li:hover{color:#12a76b;}
-.m-mycamera .head .operation-list .detail-list .hr{height:1px;width:100%;background:#f0f0f0;overflow:hidden;position:absolute;bottom:0;left:0;border:0;}
-.m-mycamera .head .operation-list .live{height:28px;line-height:28px;background:#12a76b;font-size:12px;color:#fff;}
-.m-mycamera .head .operation-list .live .detail-list{display:block;}
 .m-mycamera .camera-list{font-size:12px;color:#999;}
 .m-mycamera .camera-list thead{background:#f7f7f7;}
 .m-mycamera .camera-list thead td{height:36px;position:relative;}

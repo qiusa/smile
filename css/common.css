@@ -16,11 +16,11 @@ a,button{cursor:pointer;}
 h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
 del,ins,u,s,a,a:hover{text-decoration:none;}
 body,textarea,input,button,select,keygen,legend{font:12px/1.14 "Microsoft YaHei",arial;color:#333;outline:0;}
-input::-ms-clear { display: none; }
-html,body,.g-body{height: 100%;}
+input::-ms-clear{display:none;}
+html,body,.g-body{height:100%;}
 a,a:hover{color:#333;}
 a:focus{outline:none;}
-.height-calc100{min-height: calc(100% - 100px);}
+.height-calc102{min-height:calc(-2%);}
 .u-pdl4{padding-left:4px;}
 .u-pdt4{padding-top:4px;}
 .u-pdt15{padding-top:15px;}
@@ -185,6 +185,16 @@ a:focus{outline:none;}
 .u-horizontal-list.has-separator li:after{content:"|";color:#dfdfdf;}
 .u-horizontal-list.has-separator li:last-child:after{content:none;}
 .u-font-yh{font-family:"Microsoft YaHei";}
+.operation-list{float:right;height:28px;line-height:28px;border:1px solid #dcdcdc;background:#f7f7f7;border-radius:3px;font-size:12px;color:#666;}
+.operation-list li{position:relative;z-index:9;padding:0 28px 0 14px;float:left;cursor:pointer;}
+.operation-list .border{border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc;height:28px;}
+.operation-list .icon-more{display:inline-block;background:url("../res/images/icon_more.png") no-repeat;background-size:contain;width:8px;height:8px;position:absolute;top:12px;right:12px;}
+.operation-list .detail-list{display:none;position:absolute;right:0;top:28px;border:1px solid #dcdcdc;width:75px;line-height:40px;text-align:center;box-shadow:0 2px 2px 0 rgba(0,0,0,0.08);color:#666;}
+.operation-list .detail-list li{line-height:40px;background:#fff;padding:0;float:none;}
+.operation-list .detail-list li:hover{color:#12a76b;}
+.operation-list .detail-list .hr{height:1px;width:100%;background:#f0f0f0;overflow:hidden;position:absolute;bottom:0;left:0;border:0;}
+.operation-list .live{height:28px;line-height:28px;background:#12a76b;font-size:12px;color:#fff;}
+.operation-list .live .detail-list{display:block;}
 .load-container{width:100px;height:100px;float:left;position:relative;overflow:hidden;-moz-box-sizing:border-box;box-sizing:border-box;}
 .load5 .loader{margin:4em auto;font-size:25px;width:1em;height:1em;border-radius:50%;position:relative;text-indent:-9999em;-webkit-animation:load5 1.1s infinite ease;animation:load5 1.1s infinite ease;}
 @-webkit-keyframes load5{0%,100%{box-shadow:0em -2.6em 0em 0em #fff,1.8em -1.8em 0 0em rgba(255,255,255,0.2),2.5em 0em 0 0em rgba(255,255,255,0.2),1.75em 1.75em 0 0em rgba(255,255,255,0.2),0em 2.5em 0 0em rgba(255,255,255,0.2),-1.8em 1.8em 0 0em rgba(255,255,255,0.2),-2.6em 0em 0 0em rgba(255,255,255,0.5),-1.8em -1.8em 0 0em rgba(255,255,255,0.7);}

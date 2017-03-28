@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body{background:#fafafa;}
 .m-nav{height:64px;line-height:64px;position:relative;background:#3e3e3e;width:100%;}
-.m-nav .nav{width:1180px;margin:0 auto;color:#fff;}
+.m-nav .nav{width:1180px;margin:0 auto;color:#fff;background:#3e3e3e;}
 .m-nav .nav .logo{float:left;background:url("../res/images/icon_logo.png") no-repeat;width:68px;height:42px;margin-top:11px;}
 .m-nav .nav .logo-text{float:left;font-size:20px;font-weight:bold;font-family:"黑体";}
 .m-nav .nav .vertical-line{float:left;margin:24px 10px 0;background:#5c5c5c;width:1px;height:18px;overflow:hidden;display:inline-block;}
