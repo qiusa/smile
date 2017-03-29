@@ -2,3 +2,6 @@
 .m-tip p{font-size: 14px;line-height: 45px;display: inline-block;height: 45px;padding: 0 20px;color: #fff;border-radius: 0 0 5px 5px;background-color: #1abc9c;}
 .m-tip.error-tip p{background: #e74c3c;}
 .m-tip.success-tip p{background: #1abc9c;}
+
+.m-toast{position: fixed;top: 50%;right: 0;left: 0;display: none;margin-top: -22px;text-align: center;}
+.m-toast p{font-size: 14px;line-height: 45px;display: inline-block;height: 45px;padding: 0 20px;color: #fff;border-radius: 5px;background: rgba(0, 0, 0, .6);}

@@ -20,7 +20,7 @@ input::-ms-clear{display:none;}
 html,body,.g-body{height:100%;}
 a,a:hover{color:#333;}
 a:focus{outline:none;}
-.height-calc102{min-height:calc(-2%);}
+@import  url("./com.css");
 .u-pdl4{padding-left:4px;}
 .u-pdt4{padding-top:4px;}
 .u-pdt15{padding-top:15px;}

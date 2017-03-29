@@ -8,7 +8,7 @@ define(['jquery'], function($) {
             };
             return locationHost;
         },
-        trim: function(str){ //删除左右两端的空格
+        trim: function(str) { //删除左右两端的空格
             return str.replace(/(^\s*)|(\s*$)/g, "");
         },
         //滚动条在Y轴上的滚动距离
@@ -64,9 +64,7 @@ define(['jquery'], function($) {
          * @return  {Void}
          */
         showError: function(message) {
-            var html = '<div class="dialog bounceOutUp" id="dialog">'
-                     + '<div class="dialog-box" on-click="{this.closeDialog()}">士大夫第三方</div>'
-                     + '</div>';
+            var html = '<div class="dialog bounceOutUp" id="dialog">' + '<div class="dialog-box" on-click="{this.closeDialog()}">士大夫第三方</div>' + '</div>';
             obj.doMessage({
                 show: true,
                 message: message,
@@ -128,7 +126,7 @@ define(['jquery'], function($) {
                 }
                 // 这里直接判断状态，如果非200则触发onerror.
                 if (data.code != 200) {
-                    console.error('获取数据失败！',data);
+                    console.error('获取数据失败！', data);
                     fer ? fer.call(this, data) : 0;
                 } else {
                     fld ? fld.call(this, data) : 0;
@@ -150,6 +148,20 @@ define(['jquery'], function($) {
             var r = window.location.search.substr(1).match(reg);
             if (r != null) return (r[2]);
             return null;
+        },
+        mergeRecursive: function(obj1, obj2) {
+            //iterate over all the properties in the object which is being consumed
+            for (var p in obj2) {
+                // Property in destination object set; update its value.
+                if (obj2.hasOwnProperty(p) && typeof obj1[p] !== "undefined") {
+                    this.mergeRecursive(obj1[p], obj2[p]);
+
+                } else {
+                    //We don't have that level in the heirarchy so add it
+                    obj1[p] = obj2[p];
+
+                }
+            }
         },
         /**
          * 对一个LIST中的完全相同的条目进行合并.

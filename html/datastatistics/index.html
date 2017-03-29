@@ -1,49 +1,51 @@
 <div class="m-datastatistics">
     <h2 class="title">数据走势</h2>
     <div class="head u-cb">
-        <div class="time-select">
-            <span class="u-ftl">选择日期：</span>
-            <input type="text" id="timeConfig" class="time-input">
-            <ul class="time-list">
-                <li class="cur" on-click={this.selectTime('week')}>最近一周</li>
-                <li on-click={this.selectTime('month')}>最近一月</li>
-            </ul>
-            <ul class="operation-list u-ftr">
-                <li class="live" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
-                    金额（元）
-                    <span class="icon-more"></span>
-                    <ul class="detail-list">
-                        <li>
-                            金额（元）
-                            <hr class="hr"></li>
-                        <li>流量（GB）</li>
-                    </ul>
-                </li>
-            </ul>
-
-        </div>
+        <span class="u-ftl">选择日期：</span>
+        <input type="text" id="timeConfig" class="time-input">
+        <ul class="time-list">
+            <li class="{navIndex == 1 ? 'cur' : ''}" on-click={this.selectTime('week')}>最近一周</li>
+            <li class="{navIndex == 2 ? 'cur' : ''}" on-click={this.selectTime('month')}>最近一月</li>
+        </ul>
+        <ul class="operation-list">
+            <li class="live" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                金额（元）
+                <span class="icon-more"></span>
+                <ul class="detail-list">
+                    <li>
+                        金额（元）
+                        <hr class="hr"></li>
+                    <li>流量（GB）</li>
+                </ul>
+            </li>
+        </ul>
     </div>
-        
-    <div id="chart" style="width: 600px;height: 400px;"></div>
-    <h2>数据明细=={pageNumber}</h2>
-    {#if dataList.length}
-    <table>
-        <th>
-            <td>日期</td>
-            <td>流量（GB）</td>
-            <td>消耗（元）</td>
-        </th>
-        {#list dataList as item}
-        <tr>
-            <td>{item.a}</td>
-            <td>{item.b}</td>
-            <td>{item.a}</td>
-        </tr>
-        {/list}
+    <div id="chart" class="chart-box"></div>
+    <h2 class="title">数据明细</h2>
+    <table width="100%" class="data-list">
+        <thead>
+            <tr>
+                <td>日期</td>
+                <td>流量（GB）</td>
+                <td >金额（元）</td>
+            </tr>
+        </thead>
+        <tbody>
+            {#if dataList.length}
+            {#list dataList as item}
+            <tr>
+                <td>{item.a}</td>
+                <td>{item.b}</td>
+                <td>{item.a}</td>
+            </tr>
+            {/list}
+            {#else}
+            <tr>
+                <td align="center" colspan="9">尚未绑定设备</td>
+            </tr>
+            {/if}
+        </tbody>
     </table>
-    {#else}
-    无数据
-    {/if}
-    <div id="pager"></div>
+    <div id="pager" class="pager-box"></div>
 </div>
     

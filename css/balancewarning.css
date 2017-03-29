@@ -1,2 +1,3 @@
 @charset "UTF-8";
-.m-balancewarning{font-size:12px;}
+.m-balancewarning{padding:52px 40px 20px;}
+.m-balancewarning .title{font-size:16px;font-weight:normal;color:#666;line-height:16px;}
