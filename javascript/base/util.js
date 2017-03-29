@@ -140,6 +140,24 @@ define(['jquery'], function($) {
             });
         },
         /**
+         * 删除数组某一项
+         * @param  {string} val 需要删除的元素
+         */
+        indexOfArray: function(arr, val) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == val) return i;
+            }
+            return -1;
+        },
+        removeArray: function(arr, val) {
+            var index = this.indexOfArray(arr, val);
+            console.info('jjj',index)
+            if (index > -1) {
+                console.info('iii',index)
+                arr.splice(index, 1);
+            }
+        },
+        /**
          * 获取url链接带的参数
          * @param  {string} name 参数名
          */

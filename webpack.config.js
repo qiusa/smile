@@ -50,7 +50,7 @@ module.exports = {
             loader: 'rgl'
         }, {
             test: /\.js$/,
-            loader: 'babel?cacheDirectory=true'
+            loader: 'babel?cacheDirectory=false'
         }, {
             test: /\.css$/,
             loader: ExtractTextPlugin.extract("style-loader", "css-loader")
