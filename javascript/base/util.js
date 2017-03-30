@@ -64,7 +64,7 @@ define(['jquery'], function($) {
          * @return  {Void}
          */
         showError: function(message) {
-            var html = '<div class="dialog bounceOutUp" id="dialog">' + '<div class="dialog-box" on-click="{this.closeDialog()}">士大夫第三方</div>' + '</div>';
+            var html = '<div class="dialog bounceOutUp" id="dialog">' + '<div class="dialog-box" on-click="{this.closeDialog()}"></div>' + '</div>';
             obj.doMessage({
                 show: true,
                 message: message,
@@ -158,6 +158,22 @@ define(['jquery'], function($) {
             }
         },
         /**
+         * 隐藏名称 中间部分以星号替代
+         * @param  {String} str    需要隐藏的名称
+         * @param  {Number} start  显示前几位
+         * @param  {Number} end    显示后几位
+         * @param  {Number} length 隐藏中间几位
+         */
+        hideName: function(str, start, end, length) {
+            var st = str.slice(0, start),
+                hide = '',
+                ed = str.slice(0-end);
+            for (var i = 0;i < length; i++) {
+                hide += '*';
+            }
+            return st + hide + ed;
+        },
+        /**
          * 获取url链接带的参数
          * @param  {string} name 参数名
          */
@@ -167,6 +183,9 @@ define(['jquery'], function($) {
             if (r != null) return (r[2]);
             return null;
         },
+        /**
+         * 合并JSON
+         */
         mergeRecursive: function(obj1, obj2) {
             //iterate over all the properties in the object which is being consumed
             for (var p in obj2) {
@@ -180,6 +199,28 @@ define(['jquery'], function($) {
 
                 }
             }
+        },
+        /**
+         * 校验账号密码输入
+         * @param  {String} type  校验类型
+         * @param  {String} value 校验值
+         */
+        verify: function(type, value) {
+            if (!util.trim(value)) {
+                return true;
+            }
+            var regPhone = /^1[3578]\d{9}$/, //匹配手机号
+                regEmail = /^([\w-_]+(?:\.[\w-_]+)*)@((?:[a-z0-9]+(?:-[a-zA-Z0-9]+)*)+\.[a-z]{2,6})$/i; //匹配邮箱;
+            if (type == 'phone') {
+                if (!regPhone.test(util.trim(value))) {
+                    return true;
+                }
+            } else if (type == 'email') {
+                if (!regEmail.test(util.trim(value))) {
+                    return true
+                }
+            }
+            return false;
         },
         /**
          * 对一个LIST中的完全相同的条目进行合并.
