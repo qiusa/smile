@@ -1,0 +1,4 @@
+@charset "UTF-8";
+.m-404 .img-404{background:url("../res/images/img_404.png") no-repeat;width:312px;height:322px;display:block;margin:216px auto 0;}
+.m-404 p{padding:36px 0 50px;line-height:24px;font-size:24px;color:#666;text-align:center;}
+.m-404 .btn{width:148px;height:38px;line-height:38px;text-align:center;background:#f7f7f7;border:1px solid #dcdcdc;border-radius:3px;color:#666;font-size:14px;display:block;margin:0 auto;cursor:pointer;}

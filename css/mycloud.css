@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.m-mycloud{padding:36px 40px 20px;}
+.m-mycloud .nav{height:40px;border-bottom:1px solid #dcdcdc;}
+.m-mycloud .nav li{float:left;margin-right:8px;width:120px;height:39px;line-height:39px;border-radius:3px 3px 0 0;font-size:14px;color:#666;border:1px solid #dcdcdc;border-bottom:0;text-align:center;cursor:pointer;}
+.m-mycloud .nav .cur{border-bottom:1px solid #fff;color:#12a76b;}
+.m-mycloud .device{margin-top:24px;height:336px;}
+.m-mycloud .device .play-box{width:600px;height:336px;float:left;}
+.m-mycloud .device .info{width:280px;height:336px;background:#f7f7f7;float:left;}
+.m-mycloud .device .info .title{font-size:18px;color:#343434;height:48px;line-height:48px;text-align:center;background:#ebebeb;}
+.m-mycloud .title{font-size:16px;font-weight:normal;color:#666;line-height:16px;}
+.m-mycloud .head{padding:24px 0;}
+.m-mycloud .head .search{position:relative;float:left;}
+.m-mycloud .head .search .search-input{font-size:12px;color:#999;padding-left:14px;width:224px;height:28px;line-height:28px;border:1px solid #dedede;border-radius:3px;}
+.m-mycloud .head .search .search-icon{position:absolute;right:12px;top:7px;display:inline-block;background:url("../res/images/icon_search.png") no-repeat;background-size:contain;width:20px;height:20px;cursor:pointer;}
+.m-mycloud .head .operation-text{float:right;font-size:14px;color:#666;line-height:30px;}

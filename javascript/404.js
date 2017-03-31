@@ -1,0 +1,1 @@
+define(['regularjs', '../html/404/index.js'], function(Regular, page) {    require('../css/reset.css');    var main = new page({});    main.$inject('#app');});

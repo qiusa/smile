@@ -20,6 +20,7 @@
 .m-login .m-login-dialog .remember{padding:16px 0 22px;color:#999;font-size:12px;}
 .m-login .m-login-dialog .btn{width:100%;height:34px;line-height:34px;text-align:center;background:#00ab65;border:1px solid #00ab65;border-radius:3px;color:#fff;font-size:16px;cursor:pointer;}
 .m-login .m-login-dialog .register-text{padding:20px 0 36px;text-align:center;font-size:12px;color:#999;}
+.m-login .m-login-dialog .register-text a{color:#548adc;}
 .u-msg1{position:fixed;z-index:9999;top:-50px;left:50%;min-width:200px;-webkit-transition:0.5s cubic-bezier(1,0,0.5,0);-moz-transition:0.5s cubic-bezier(1,0,0.5,0);transition:0.5s cubic-bezier(1,0,0.5,0);opacity:0;color:#fff;_position:absolute;_width:400px;}
 .u-msg1 p{line-height:45px;position:relative;left:-50%;height:45px;padding:0 20px;text-align:center;border-radius:0 0 5px 5px;}
 .u-msg1 a,.u-msg1 a:hover{color:#fff;}
