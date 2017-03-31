@@ -1,16 +1,26 @@
 <div class="m-balancewarning">
     <h2 class="title">余额报警</h2>
-    <div>
-        <span>余额预警阈值（元）：200</span>
-        <span on-click={this.setInfo('balance')}>设置</span>
-    </div>
-    <div>
-        <span>手机号：158******35</span>
-        <span on-click={this.setInfo('phone')}>设置</span>
-    </div>
-    <div>
-        <span>邮箱：未设置</span>
-        <span on-click={this.setInfo('email')}>设置</span>
-    </div>
+    <ul class="list">
+        <li class="u-cb">
+            <span class="name">余额预警阈值（元）</span>
+            <span class="company">222</span>
+            <span class="btn" on-click={this.setInfo('balance')}>设置</span>
+        </li>
+        <li class="u-cb">
+            <span class="name">账户名：</span>
+            <span class="company">寂静都市</span>
+            <span class="btn" on-click={this.setInfo('phone')}>设置</span>
+        </li>
+        <li class="u-cb">
+            <span class="name">手机号码：</span>
+            <span class="company">158******35</span>
+            <span class="btn" on-click={this.setPhone()}>设置</span>
+        </li>
+        <li class="u-cb">
+            <span class="name">邮箱：</span>
+            <span class="company">****</span>
+            <span class="btn" on-click={this.setInfo('email')}>设置</span>
+        </li>
+    </ul>
 </div>
 

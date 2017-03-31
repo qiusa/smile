@@ -1,84 +1,81 @@
+<nav class="register-nav"></nav>
 <div class="m-register">
+    <h2 class="title">注册青果账号</h2>
     <form>
-        <dl class="dl-line {error.emailError ? 'verify-error' : ''}">
+        <dl class="dl-line u-cb {error.emailError ? 'verify-error' : ''}">
             <dt class="dt-line">
                 邮箱
             </dt>
             <dd class="dd-line">
-                <input type="text" placeholder="请输入邮箱" r-model={user.email} on-focus={error.emailError=''} on-blur={this.verifyEmail(true)}>
+                <input type="text" class="register-input" placeholder="请输入邮箱" r-model={user.email} on-focus={error.emailError=''} on-blur={this.verifyEmail(true)}>
             </dd>
-            <dd class="error-tip">{error.emailError}</dd>
+            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.emailError}</span></dd>
         </dl>
-        <dl class="dl-line {error.pwdError ? 'verify-error' : ''}">
+        <dl class="dl-line u-cb {error.pwdError ? 'verify-error' : ''}">
             <dt class="dt-line">
                 设置密码
             </dt>
             <dd class="dd-line">
-                <input type="text" placeholder="请输入6-16位的数字、字母组合密码" r-model={user.pwd} on-focus={error.pwdError=''} on-blur={this.verifyPwd(true)}>
+                <input type="text" class="register-input" placeholder="请输入6-16位的数字、字母组合密码" r-model={user.pwd} on-focus={error.pwdError=''} on-blur={this.verifyPwd(true)}>
             </dd>
-            <dd class="error-tip">{error.pwdError}</dd>
+            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.pwdError}</span></dd>
         </dl>
-        <dl class="dl-line {error.pwdSecondError ? 'verify-error' : ''}">
+        <dl class="dl-line u-cb {error.pwdSecondError ? 'verify-error' : ''}">
             <dt class="dt-line">
                 确认密码
             </dt>
             <dd class="dd-line">
-                <input type="text" placeholder="请再次输入密码" r-model={user.pwdSecond} on-focus={error.pwdSecondError=''} on-blur={this.verifyPwdSecond(true)}>
+                <input type="text" class="register-input" placeholder="请再次输入密码" r-model={user.pwdSecond} on-focus={error.pwdSecondError=''} on-blur={this.verifyPwdSecond(true)}>
             </dd>
-            <dd class="error-tip">{error.pwdSecondError}</dd>
+            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.pwdSecondError}</span></dd>
         </dl>
-        <dl class="dl-line {error.companyError ? 'verify-error' : ''}">
+        <dl class="dl-line u-cb {error.companyError ? 'verify-error' : ''}">
             <dt class="dt-line">
                 企业名称
             </dt>
             <dd class="dd-line">
-                <input type="text" placeholder="请输入企业名称" r-model={user.company} on-focus={error.companyError=''} on-blur={this.verifyCompany(true)}>
+                <input type="text" class="register-input" placeholder="请输入企业名称" r-model={user.company} on-focus={error.companyError=''} on-blur={this.verifyCompany(true)}>
             </dd>
-            <dd class="error-tip">{error.companyError}</dd>
+            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.companyError}</span></dd>
         </dl>
-        <dl class="dl-line {error.phoneError ? 'verify-error' : ''}">
+        <dl class="dl-line u-cb {error.phoneError ? 'verify-error' : ''}">
             <dt class="dt-line">
                 手机号
             </dt>
             <dd class="dd-line">
-                <input type="text" placeholder="请输入手机号" r-model={user.phone} on-focus={error.phoneError=''} on-blur={this.verifyPhone(true)}>
+                <input type="text" class="register-input" placeholder="请输入手机号" r-model={user.phone} on-focus={error.phoneError=''} on-blur={this.verifyPhone(true)}>
             </dd>
-            <dd class="error-tip">{error.phoneError}</dd>
+            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.phoneError}</span></dd>
         </dl>
-        <dl class="dl-line {error.messageError ? 'verify-error' : ''}">
+        <dl class="dl-line u-cb {error.messageError ? 'verify-error' : ''}">
             <dt class="dt-line">
                 短信验证码
             </dt>
             <dd class="dd-line">
-                <input type="text" placeholder="请输入收到的验证码" r-model={user.message} on-focus={error.messageError=''} on-blur={this.verifyMessage(true)}>
+                <input type="text" class="register-input small" placeholder="请输入收到的验证码" r-model={user.message} on-focus={error.messageError=''} on-blur={this.verifyMessage(true)}>
             </dd>
             <dd class="dd-line">
-                <div class="register-btn" data-send="uyghur" on-click={this.sendMessage($event)}>{#if !show.sendMessage}获取验证码{#else}{timeOut}{/if}</div>
+                <div class="send-btn" data-send="uyghur" on-click={this.sendMessage($event)}>{#if !show.sendMessage}获取验证码{#else}{timeOut}{/if}</div>
             </dd>
-            <dd class="error-tip">{error.messageError}</dd>
+            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.messageError}</span></dd>
         </dl>
-        <dl class="dl-line {error.verifyCodeError ? 'verify-error' : ''}">
+        <dl class="dl-line u-cb {error.verifyCodeError ? 'verify-error' : ''}">
             <dt class="dt-line">
                 图片验证码
             </dt>
             <dd class="dd-line">
-                <input type="text" placeholder="请输入右侧验证码" r-model={user.verifyCode} on-focus={error.verifyCodeError=''} on-blur={this.verifyVerifyCode(true)}>
+                <input type="text" class="register-input small" placeholder="请输入右侧验证码" r-model={user.verifyCode} on-focus={error.verifyCodeError=''} on-blur={this.verifyVerifyCode(true)}>
             </dd>
             <dd class="dd-line">
-                <div class="register-btn">图片验证码</div>
+                <div class="verify-code">图片验证码</div>
+                <span class="code-text">换一个</span>
             </dd>
-            <dd class="error-tip">{error.verifyCodeError}</dd>
-        </dl>
-        <dl class="dl-line">
-            <dt class="dt-line">
-                
-            </dt>
-            <dd class="dd-line">
-                <label class="label-checkbox">
-                    <input type="checkbox">同意并遵守<a href="#" target="_bank">《服务条款》</a>
-                </label>
-            </dd>
+            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.verifyCodeError}</span></dd>
         </dl>
         <div class="register-btn" on-click={this.register()}>注册</div>
+        <div class="service">
+            <span class="checkbox {show.check ? 'checkbox-true' : ''}" on-click={show.check = show.check ? false : true}></span>
+            <span on-click={show.check = show.check ? false : true}>同意并遵守</span><a href="#" target="_bank">《服务条款》</a>
+        </div>
     </form>
 </div>

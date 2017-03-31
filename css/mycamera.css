@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.m-mycamera{padding:52px 40px 20px;}
+.m-mycamera{padding:54px 40px 20px;}
 .m-mycamera ::-webkit-input-placeholder{color:#999;}
 .m-mycamera :-moz-placeholder{color:#999;}
 .m-mycamera ::-moz-placeholder{color:#999;}
@@ -24,14 +24,12 @@
 .m-mycamera .camera-list .td7{width:72px;}
 .m-mycamera .camera-list .td8{width:86px;}
 .m-mycamera .camera-list .icon-more{display:inline-block;background:url("../res/images/icon_more.png") no-repeat;background-size:contain;width:8px;height:8px;margin-left:5px;}
-.m-mycamera .camera-list .checkbox{background:url("../res/images/checkbox_fall.png") no-repeat;width:12px;height:12px;display:inline-block;cursor:pointer;}
 .m-mycamera .camera-list .device-id{display:inline-block;width:60px;padding-left:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .m-mycamera .camera-list .device-name{display:inline-block;width:68px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .m-mycamera .camera-list .device-change{position:relative;}
 .m-mycamera .camera-list .device-input{width:74px;height:22px;line-height:22px;margin-left:-12px;padding:0 16px 0 12px;border:1px solid #dedede;border-radius:3px;}
 .m-mycamera .camera-list .close{position:absolute;right:15px;top:4px;display:inline-block;background:#999;color:#fff;border-radius:12px;line-height:14px;text-align:center;height:14px;width:14px;font-size:12px;}
 .m-mycamera .camera-list .close:before{content:"\2716";}
-.m-mycamera .camera-list .checkbox-true{background:url("../res/images/checkbox_true.png") no-repeat;}
 .m-mycamera .camera-list .index-list{display:none;position:absolute;top:0;left:-24px;border:1px solid #dcdcdc;width:86px;line-height:36px;text-align:center;box-shadow:0 2px 2px 0 rgba(0,0,0,0.08);color:#666;}
 .m-mycamera .camera-list .index-list li{line-height:36px;background:#fff;padding:0;float:none;cursor:pointer;}
 .m-mycamera .camera-list .index-list li:hover{color:#12a76b;}

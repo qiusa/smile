@@ -1,2 +1,9 @@
 @charset "UTF-8";
-.m-myaccount{font-size:12px;}
+.m-myaccount{padding:54px 40px 20px;}
+.m-myaccount .title{font-size:16px;font-weight:normal;color:#666;line-height:16px;padding-left:12px;}
+.m-myaccount .list{margin-top:24px;border-top:1px solid #ebebeb;}
+.m-myaccount .list li{border-bottom:1px dashed #dcdcdc;}
+.m-myaccount .list li .name{font-size:14px;float:left;height:60px;line-height:60px;width:80px;text-align:right;color:#666;}
+.m-myaccount .list li .company{font-size:14px;color:#333;float:left;line-height:60px;padding-left:76px;}
+.m-myaccount .list li .btn{width:72px;height:30px;line-height:30px;border-radius:3px;border:1px solid #dcdcdc;color:#666;background:#f7f7f7;text-align:center;margin:14px 18px 0 0;float:right;cursor:pointer;}
+.m-myaccount .list li .disabled-btn{float:right;color:#999;line-height:60px;padding-right:28px;}

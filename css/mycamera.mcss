@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 .m-mycamera{
-    padding: 52px 40px 20px;
+    padding: 54px 40px 20px;
     ::-webkit-input-placeholder { /* WebKit browsers */
     color: #999;
     }
@@ -107,13 +107,6 @@
             height: 8px;
             margin-left: 5px;
         }
-        .checkbox{
-            background: url(../res/images/checkbox_fall.png) no-repeat;
-            width: 12px;
-            height: 12px;
-            display: inline-block;
-            cursor: pointer;
-        }
         .device-id{
             display: inline-block;
             width: 60px;
@@ -157,9 +150,6 @@
         }
         .close:before {
             content: "\2716";
-        }
-        .checkbox-true{
-            background: url(../res/images/checkbox_true.png) no-repeat;
         }
         .index-list{
             display: none;

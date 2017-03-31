@@ -1,0 +1,206 @@
+@charset 'UTF-8';
+//登陆导航栏
+.m-login-nav {
+    width: 100%;
+    height: 120px;
+    background: #fff;
+    .nav{
+        width: 1180px;
+        margin: 0 auto;
+        color: #fff;
+        background: #fff;
+        .logo{
+            float: left;
+            background: url(../res/images/icon_logo_2.png) no-repeat;
+            width: 214px;
+            height: 70px;
+            margin-top: 27px;
+        }
+    }
+}
+/**登录样式**/
+.m-login {
+    a{
+        color: #999;
+    }
+    a:hover{
+        color: #548adc;
+    }
+    ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ccc;
+        font-size: 12px;
+        font-family: "SimSUn";
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #ccc;
+        font-size: 12px;
+        font-family: "SimSUn";
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #ccc;
+        font-size: 12px;
+        font-family: "SimSUn";
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #ccc;
+        font-size: 12px;
+        font-family: "SimSUn";
+    }
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #eee;
+    .m-login-dialog{
+        position: absolute;
+        top: 118px;
+        left: 50%;
+        margin-left: 240px;
+        width: 276px;
+        min-height: 360px;
+        padding: 0 24px;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+        background: #fff;
+        .title{
+            font-size: 20px;
+            color: #333;
+            line-height: 20px;
+            text-align: center;
+            padding: 36px 0;
+        }
+        .input-pos{
+            position: relative;
+            .icon-account{
+                position: absolute;
+                left: 12px;
+                top: 8px;
+                display: inline-block;
+                background: url(../res/images/icon_account_normal.png) no-repeat;
+                background-size: contain;
+                width: 24px;
+                height: 24px;
+            }
+            .icon-pwd{
+                position: absolute;
+                left: 12px;
+                top: 8px;
+                display: inline-block;
+                background: url(../res/images/icon_account_normal.png) no-repeat;
+                background-size: contain;
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .login-input{
+            border: 1px solid #dcdcdc;
+            border-radius: 3px;
+            width: 230px;
+            height: 36px;
+            line-height: 36px;
+            padding-left: 42px;
+        }
+        //验证码
+        .verify-input{
+            border: 1px solid #dcdcdc;
+            border-radius: 3px;
+            width: 146px;
+            height: 34px;
+            line-height: 34px;
+            padding-left: 12px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .verify-code{
+            display: inline-block;
+            width: 74px;
+            height: 29px;
+            background: #eee;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+        .remember{
+            padding: 16px 0 22px;
+            color: #999;
+            font-size: 12px;
+        }
+        .btn{
+            width: 100%;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            background: #00ab65;
+            border: 1px solid #00ab65;
+            border-radius: 3px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .register-text{
+            padding: 20px 0 36px;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+    }
+    
+}
+
+
+/****/
+.u-msg1 {
+    position: fixed;
+    z-index: 9999;
+    top: -50px;
+    left: 50%;
+
+    min-width: 200px;
+
+    -webkit-transition: .5s cubic-bezier(1,0,.5,0);
+       -moz-transition: .5s cubic-bezier(1,0,.5,0);
+            transition: .5s cubic-bezier(1,0,.5,0);
+
+    opacity: 0;
+    color: #fff;
+
+    _position: absolute;
+    _width: 400px;
+}
+.u-msg1 p {
+    line-height: 45px;
+
+    position: relative;
+    left: -50%;
+
+    height: 45px;
+    padding: 0 20px;
+
+    text-align: center;
+
+    border-radius: 0 0 5px 5px;
+}
+.u-msg1 a,
+.u-msg1 a:hover {
+    color: #fff;
+}
+.u-msg1 .closer {
+    font-size: 18px;
+
+    margin-left: 10px;
+}
+.u-msg1-show {
+    top: 0;
+
+    -webkit-transition: .5s cubic-bezier(0,.5,0,1);
+       -moz-transition: .5s cubic-bezier(0,.5,0,1);
+            transition: .5s cubic-bezier(0,.5,0,1);
+
+    opacity: 1;
+}
+.u-msg1-hint p {
+    background-color: #4993c6;
+}
+.u-msg1-error p {
+    background-color: #e74c3c;
+}
+.u-msg1-success p {
+    background-color: #1abc9c;
+}
