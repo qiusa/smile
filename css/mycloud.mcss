@@ -23,6 +23,7 @@
             color: #12a76b;
         }
     }
+    //设备信息
     .device{
         margin-top: 24px;
         height: 336px;
@@ -30,6 +31,7 @@
             width: 600px;
             height: 336px;
             float: left;
+            background: #eee;
         }
         .info{
             width: 280px;
@@ -44,48 +46,221 @@
                 text-align: center;
                 background: #ebebeb;
             }
+            .dl-line{
+                margin-top: 24px;
+                font-size: 12px;
+                color: #666;
+                dt{
+                    float: left;
+                    width: 80px;
+                    line-height: 12px;
+                    text-align: right; 
+                }
+                dd{
+                    float: left;
+                    margin-left: 42px;
+                    width: 146px;
+                    height: 12px;
+                    line-height: 12px;
+                    white-space:nowrap;
+                    overflow:hidden;
+                    text-overflow:ellipsis;
+                }
+            }
+            .dl-on{
+                margin-top: 18px;
+                margin-top: 24px;
+                font-size: 12px;
+                color: #666;
+                dt{
+                    float: left;
+                    width: 80px;
+                    line-height: 24px;
+                    text-align: right;  
+                }
+                dd{
+                    float: left;
+                    margin-left: 42px;
+                    width: 146px;
+                    height: 24px;
+                    line-height: 24px;
+                    white-space:nowrap;
+                    overflow:hidden;
+                    text-overflow:ellipsis;
+                }
+            }
         }
     }
-    //标题
-    .title{
+    .cloud-title{
+        padding-top: 36px;
+        height: 28px;
+        line-height: 28px;
         font-size: 16px;
-        font-weight: normal;
-        color:#666;
-        line-height: 16px;
+        color: #666;
+        .cloud-icon{
+            background: url(../res/images/icon_live_on.png) left center no-repeat;
+            width: 28px;
+            height: 28px;
+            display: inline-block;
+            margin-right: 2px;
+            float: left
+        }
+        .cloud-text{
+            padding-left: 30px;
+            font-size: 14px;
+        }
     }
-    //头部信息
-    .head{
-        padding: 24px 0;
-        .search{
-            position: relative;
-            float: left;
-            .search-input{
-                font-size: 12px;
-                color: #999;
-                padding-left: 14px;
-                width: 224px;
-                height: 28px;
-                line-height: 28px;
-                border: 1px solid #dedede;
-                border-radius: 3px;
-            }
-            .search-icon{
-                position: absolute;
-                right: 12px;
-                top: 7px;
+    //云录像片段
+    .cloud-list{
+        margin-top: 18px;
+        font-size: 14px;
+        color: #666;
+        .list-title{
+            line-height: 14px;
+            .cloud-list-icon{
+                background: url(../res/images/icon_mycamare_dian.png) no-repeat;
+                width: 10px;
+                height: 10px;
                 display: inline-block;
-                background: url(../res/images/icon_search.png) no-repeat;
-                background-size: contain;
-                width: 20px;
-                height: 20px;
+                vertical-align: top;
+                margin: 1px 6px 0 0;
+            }
+            .list-text{
+                padding: 0 38px 0 16px;
+            }
+            .shrink{
                 cursor: pointer;
             }
+            .show-list{
+                display: none;
+            }
+            .hide-list{
+                display: inline-block;
+            }
+            .more-icon{
+                background: url(../res/images/icon_more.png) no-repeat;
+                width: 8px;
+                height: 8px;
+                display: inline-block;
+                vertical-align: top;
+                margin: 3px 0 0 8px;
+                -webkit-transform: rotate(0);
+                   -moz-transform: rotate(0);
+                    -ms-transform: rotate(0);
+                     -o-transform: rotate(0);
+                        transform: rotate(0);
+                -webkit-transition: all 0.5s ease-in-out;
+                   -moz-transition: all 0.5s ease-in-out;
+                    -ms-transition: all 0.5s ease-in-out;
+                     -o-transition: all 0.5s ease-in-out;
+                        transition: all 0.5s ease-in-out;
+            }
         }
-        .operation-text{
-            float: right;
-            font-size: 14px;
+        .record-list{
+            margin-left: -15px;
+            display: none;
+            li{
+                margin: 24px 0 0 25px;
+                width: 156px;
+                float: left;
+                .record-box{
+                    position: relative;
+                    overflow: hidden;
+                    cursor: pointer;
+                    .record{
+                        width: 156px;
+                        height: 88px;
+                        background: #666;
+                        -webkit-transition: all 0.5s ease-in-out;
+                           -moz-transition: all 0.5s ease-in-out;
+                            -ms-transition: all 0.5s ease-in-out;
+                             -o-transition: all 0.5s ease-in-out;
+                                transition: all 0.5s ease-in-out;
+                    }
+                    .record-icon{
+                        background: url(../res/images/play.png) center center no-repeat rgba(0,0,0,0.5);
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        opacity: 0;
+                        position: absolute;
+                        display: block;
+                        -webkit-transition: all 0.5s ease-in-out;
+                           -moz-transition: all 0.5s ease-in-out;
+                            -ms-transition: all 0.5s ease-in-out;
+                             -o-transition: all 0.5s ease-in-out;
+                                transition: all 0.5s ease-in-out;
+                    }
+                }
+                .record-box:hover{
+                    .record{
+                        -webkit-transform: scale(1.1);
+                        -ms-transform: scale(1.1);
+                        -o-transform: scale(1.1);
+                        transform: scale(1.1); 
+                    }
+                    .record-icon{
+                        opacity: 1;
+                    }
+                }
+                .record-text{
+                    padding-top: 12px;
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+            }
+        }
+    }
+    .cloud-show{
+        .show-list{
+            display: inline-block!important;
+        }
+        .hide-list{
+            display: none!important;
+        }
+        .record-list{
+            display: block!important;
+        }
+        .more-icon{
+            -webkit-transform: rotate(180deg)!important;
+               -moz-transform: rotate(180deg)!important;
+                -ms-transform: rotate(180deg)!important;
+                 -o-transform: rotate(180deg)!important;
+                    transform: rotate(180deg)!important;
+        }
+    }
+    .buy-agreement{
+        .title, .title2{
+            padding: 24px 0 18px;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 16px;
             color: #666;
-            line-height: 30px;
+        }
+        .title2{
+            padding-top: 48px;
+        }
+        .text{
+            font-size: 12px;
+            line-height: 24px;
+            color: #666;
+        }
+        .price-say{
+            width: 480px;
+            margin: 18px 0 36px;
+            border: 1px solid #dcdcdc;
+            border-right: 0;
+            thead{
+                background: #f7f7f7;
+            }
+            th, td{
+                width: 158px;
+                height: 40px;
+                border-right: 1px solid #dcdcdc;
+                border-bottom: 1px solid #dcdcdc;
+                text-align: center;
+            }
         }
     }
 }

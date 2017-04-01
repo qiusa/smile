@@ -3,12 +3,97 @@
         <li class="{show.nav == 1 ? 'cur' : ''}" on-click={this.nav(1)}>云存储查看</li>
         <li class="{show.nav == 2 ? 'cur' : ''}" on-click={this.nav(2)}>服务购买</li>
     </ul>
-    <div class="device">
-        <div class="play-box">
-            
+    <div r-hide={show.nav != 1}>
+        <div class="device">
+            <div class="play-box">
+                
+            </div>
+            <div class="info">
+                <h2 class="title">设备信息</h2>
+                <dl class="dl-line u-cb">
+                    <dt>设备名：</dt>
+                    <dd>外围</dd>
+                </dl>
+                <dl class="dl-line u-cb">
+                    <dt>设备ID：</dt>
+                    <dd>外围</dd>
+                </dl>
+                <dl class="dl-line u-cb">
+                    <dt>开通时间：</dt>
+                    <dd>外围</dd>
+                </dl>
+                <dl class="dl-line u-cb">
+                    <dt>有效期至：</dt>
+                    <dd>外围</dd>
+                </dl>
+                <dl class="dl-on u-cb">
+                    <dt>云存储：</dt>
+                    <dd>
+                        <a href="#">如何开通</a>
+                    </dd>
+                </dl>
+            </div>
         </div>
-        <div class="info">
-            
+        <!-- 云录像 -->
+        <div class="cloud-title u-cb">
+            <span class="cloud-icon"></span>
+            <span>云录像片段</span>
+            <span class="cloud-text">您当前拥有的是7天云录像服务，青果只对动态画面进行录制，连续静态画面不进行录制。</span>
         </div>
+        <div class="cloud-list cloud-show">
+            <div class="list-title">
+                <span class="cloud-list-icon"></span>
+                <span>2016年3月11日</span>
+                <span class="list-text">19:00-20:00</span>
+                <span class="shrink" on-click={this.showCloud($event)}>
+                    <span class="show-list">收起</span>
+                    <span class="hide-list">展开</span>
+                    <span class="more-icon"></span>
+                </span>
+            </div>
+            <ul class="record-list u-cb">
+            {#list record as item}
+                <li>
+                    <div class="record-box">
+                        <div class="record" style="background: url(https://nos.netease.com/smartcamera/163161607301111_cover_img_1491025113.h264?NOSAccessKeyId=1faa1d9d8a7b427788c2c44af518cf3c&Expires=1506577408&Signature=Z6783%2BZ74yMV%2FWrjjWyoRgGCEe7iCwOv56H%2FJ3vNrf4%3D&vframe=1&resize=320x180) no-repeat #666;background-size: contain;"></div>
+                        <span class="record-icon"></span>
+                    </div>
+                        
+                    <p class="record-text">{item.time}</p>
+                </li>
+            {/list}
+            </ul>
+        </div>
+    </div>
+    <div class="buy-agreement" r-hide={show.nav != 2}>
+        <h2 class="title">收费标准及说明</h2>
+        <p class="text">尊敬的青果用户：</p>
+        <p class="text">云存储为单独付费项目，收费标准及服务说明如下</p>
+        <table class="price-say">
+            <thead>
+                <th>服务内容</th>
+                <th>价格</th>
+                <th>期限</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>7天循环云存储</td>
+                    <td>109元/台</td>
+                    <td>1年</td>
+                </tr>
+                <tr>
+                    <td>30天循环云存储</td>
+                    <td>289元/台</td>
+                    <td>1年</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="title">服务说明：</h2>
+        <p class="text"> 青果云存储服务，可实时侦测识别摄制过程中的动态画面，并将动态画面以录像形式安全地存储在网易云端。</p>
+        <p class="text">青果同时提供7天/30天的循环录制两种服务，方便管理者随时回溯、查看和下载近7天/30天的动态录像。</p>
+        <h2 class="title title2">欢迎洽询客服，按需选择7天或30天云存储服务：</h2>
+        <p class="text">电话：0571-89852694</p>
+        <p class="text">Q Q：237087854</p>
+        <p class="text">感谢您对青果的支持和信赖，我们竭诚为您提供更贴心的服务，谢谢！</p>
     </div>
 </div>
