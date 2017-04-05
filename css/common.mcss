@@ -395,7 +395,7 @@ img.emoji{cursor:pointer;height:1em;width:1em;margin:0 0.1em 0 0.1em;vertical-al
 .lightComment .err-show{height:30px;visibility:visible;-moz-transition:height 0.3s;-webkit-transition:height 0.3s;-o-transition:height 0.3s;}
 .lightComment .err-hide{visibility:hidden;height:0;transition:height 0.3s;-moz-transition:height 0.3s;-webkit-transition:height 0.3s;-o-transition:height 0.3s;}
 
-
+//复选框样式
 .checkbox{
     background: url(../res/images/checkbox_fall.png) no-repeat;
     width: 12px;
@@ -405,4 +405,27 @@ img.emoji{cursor:pointer;height:1em;width:1em;margin:0 0.1em 0 0.1em;vertical-al
 }
 .checkbox-true{
     background: url(../res/images/checkbox_true.png) no-repeat;
+}
+
+.checkbox-big{
+    background: url(../res/images/checkbox_b_off.png) no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    cursor: pointer;
+}
+.checkbox-big-true{
+    background: url(../res/images/checkbox_b_on.png) no-repeat;
+}
+//单选框样式
+.radio{
+    background: url(../res/images/radiobutton_off.png) no-repeat;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.radio-true{
+    background: url(../res/images/radiobutton_ON.png) no-repeat;
 }

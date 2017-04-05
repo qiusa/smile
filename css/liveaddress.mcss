@@ -9,14 +9,75 @@
         line-height: 16px;
         padding-left: 12px;
     }
+    .title2{
+        font-size: 16px;
+        font-weight: normal;
+        color:#666;
+        line-height: 16px;
+        padding: 54px 0 0 12px;
+    }
+    .ve-bottom{
+        vertical-align: bottom;
+    }
+    .text{
+        line-height: 24px;
+    }
+    .text2{
+        line-height: 24px;
+        padding-left: 36px;
+    }
+    .text3{
+        color: #666;
+        padding: 24px 0 0 12px;
+    }
+    .text4{
+        color: #999;
+        padding: 20px 0 63px 12px;
+        line-height: 12px;
+    }
+    .text5{
+        padding-left: 12px;
+    }
+    .text6{
+        line-height: 40px;
+    }
+    .text7{
+        font-family: 'SimSun';
+        color: #999;
+        font-size: 12px;
+        line-height: 40px;
+    }
+    .text8{
+        color: #666;
+        font-size: 12px;
+        padding-top: 108px;
+        text-align: center;
+    }
+    .text9{
+        font-family: 'SimSun';
+        color: #999;
+        font-size: 12px;
+        padding-bottom: 16px;
+    }
+    .text10{
+        padding: 0 36px 0 8px;
+        display: inline-block;
+        float: left
+    }
+    .radio-pos{
+        float: left;
+        margin-top: 13px;
+    }
     .info{
         margin-top: 24px;
         border-top: 1px solid #ebebeb;
         .dl-line{
+            margin-top: 18px;
+            color: #666;
             dt{
                 float: left;
                 width: 60px;
-
+                text-align: right;
             }
             .dd-list1{
                 float: left;
@@ -27,6 +88,73 @@
                 float: left;
                 padding-left: 16px;
             }
+        }
+        .info-btn{
+            width: 98px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            color: #fff;
+            background: #00ab65;
+            border: 1px solid #009759;
+            border-radius: 3px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .info-btn-wd{
+            width: 178px;
+        }
+        
+        .info-btn2{
+            width: 98px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            color: #666;
+            background: #f7f7f7;
+            border: 1px solid #dcdcdc;
+            border-radius: 3px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .info-line{
+            padding: 20px 0 0 12px;
+
+        }
+        .info-input{
+            width: 358px;
+            height: 38px;
+            line-height: 38px;
+            color: #959595;
+            border: 1px solid #dcdcdc;
+            border-radius: 3px;
+            padding: 0 6px 0 12px;
+            margin-right: 16px;
+        }
+        .info-input2{
+            width: 300px;
+            margin-right: 0;
+        }
+        .info-textarea{
+            width: 296px;
+            min-height: 91px;
+            color: #666;
+            border: 1px solid #dcdcdc;
+            border-radius: 3px;
+            padding: 12px;
+            resize: vertical;
+        }
+        .upload{
+            width: 318px;
+            height: 178px;
+            border: 1px solid #dcdcdc;
+            border-radius: 3px;
+            background: url(../res/images/icon_mycamare_update.png) center 56px no-repeat;
+        }
+        .info-clear{
+            padding-left: 46px;
+            cursor: pointer;
         }
         li{
             border-bottom: 1px dashed #dcdcdc;

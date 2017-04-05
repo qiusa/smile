@@ -210,13 +210,18 @@ define(['jquery'], function($) {
                 return true;
             }
             var regPhone = /^1[3578]\d{9}$/, //匹配手机号
-                regEmail = /^([\w-_]+(?:\.[\w-_]+)*)@((?:[a-z0-9]+(?:-[a-zA-Z0-9]+)*)+\.[a-z]{2,6})$/i; //匹配邮箱;
+                regEmail = /^([\w-_]+(?:\.[\w-_]+)*)@((?:[a-z0-9]+(?:-[a-zA-Z0-9]+)*)+\.[a-z]{2,6})$/i, //匹配邮箱
+                regPwd = /(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^.{6,16}$/;//匹配密码6-16位的数字、字母、特殊字符至少2种组合密码
             if (type == 'phone') {
                 if (!regPhone.test(util.trim(value))) {
                     return true;
                 }
             } else if (type == 'email') {
                 if (!regEmail.test(util.trim(value))) {
+                    return true
+                }
+            } else if (type == 'pwd') {
+                if (!regPwd.test(util.trim(value))) {
                     return true
                 }
             }

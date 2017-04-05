@@ -24,12 +24,31 @@
                 color: #666;
                 overflow: hidden;
             }
+            .yj-icon{
+                background: url(../res/images/yj.png) 30px 25px no-repeat;
+            }
+            .yj-phone-icon{
+                background: url(../res/images/yj-phone.png) 30px 25px no-repeat;
+            }
+            .yj-email-icon{
+                background: url(../res/images/yj-email.png) 30px 25px no-repeat;
+            }
             .company{
                 font-size: 14px;
                 color: #333;
                 float: left;
-                line-height: 60px;
-                padding-left: 76px;
+                padding: 32px 0 0 20px;
+            }
+            .text1{
+                font-size: 14px;
+                line-height: 14px;
+                color: #333;
+            }
+            .text2{
+                font-size: 12px;
+                line-height: 12px;
+                color: #999;
+                padding-top: 16px;
             }
             .btn{
                 width: 72px;

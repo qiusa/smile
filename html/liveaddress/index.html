@@ -1,41 +1,99 @@
 <div class="m-liveaddress">
     <h2 class="title">设备信息</h2>
     <div class="info">
-        <dl class="dl-line">
-            <dt>
+        <dl class="dl-line u-cb">
+            <dt class="text">
                 <p>设备名：</p>
                 <p>设备ID：</p>
             </dt>
             <dd class="dd-list1">
-                <p>企业一号机</p>
-                <p>add32342342345</p>
+                <p class="text2">企业一号机</p>
+                <p class="text2">add32342342345</p>
             </dd>
             <dd class="dd-list2">
-                <span class="btn" on-click={this.setPhone()}>设置</span>
+                <span class="info-btn" on-click={this.setPhone()}>暂停直播</span>
             </dd>
         </dl>
     </div>
-    <ul class="info">
-        <li class="u-cb">
-            <span class="name">余额预警阈值（元）</span>
-            <span class="company">222</span>
-            <span class="btn" on-click={this.setInfo('balance')}>设置</span>
-        </li>
-        <li class="u-cb">
-            <span class="name">账户名：</span>
-            <span class="company">寂静都市</span>
-            <span class="btn" on-click={this.setInfo('phone')}>设置</span>
-        </li>
-        <li class="u-cb">
-            <span class="name">手机号码：</span>
-            <span class="company">158******35</span>
-            <span class="btn" on-click={this.setPhone()}>设置</span>
-        </li>
-        <li class="u-cb">
-            <span class="name">邮箱：</span>
-            <span class="company">****</span>
-            <span class="btn" on-click={this.setInfo('email')}>设置</span>
-        </li>
-    </ul>
+    <h2 class="title2">直播地址</h2>
+    <div class="info">
+        <p class="text3">直播源地址HLS：支持网页端直接播放</p>
+        <div class="info-line u-cb">
+            <input type="text" id="foo" class="info-input" readonly="true" value="http:ewewew.jh">
+            <span class="info-btn2" id="copyAddress" data-clipboard-action="copy" data-clipboard-target="#foo">复制地址</span>
+        </div>
+        <p class="text4">下方设置保存后，内容会即时更新，地址不会变化</p>
+    </div>
+    <h2 class="title">
+        <span class="checkbox-big ve-bottom {show.check ? 'checkbox-big-true' : ''}" on-click={show.check = show.check ? false : true}></span>
+        <span class="text5">直播设置（可选）</span>
+    </h2>
+    <div class="info">
+        <dl class="dl-line u-cb">
+            <dt>
+                <p class="text6">标题：</p>
+            </dt>
+            <dd class="dd-list1">
+                <input type="text" class="info-input info-input2" value="http:ewewew.jh">
+            </dd>
+            <dd class="dd-list2">
+                <span class="text7">请输入不超过20字的标题</span>
+            </dd>
+        </dl>
+        <dl class="dl-line u-cb">
+            <dt>
+                <p class="text6">封面：</p>
+            </dt>
+            <dd class="dd-list1">
+                <div class="upload" id="upload" on-click={this.upload()}>
+                    <p class="text8">点击这里上传</p>
+                </div>
+                <div id="uploadForm" style="display: none;">
+                    <input id="file" type="file" on-change={this.imgChange($event)}>
+                </div>
+            </dd>
+            <dd class="dd-list2">
+                <p class="text9">支持格式： .jpg .png</p>
+                <p class="text9">支持大小： 200k以内</p>
+            </dd>
+        </dl>
+        <dl class="dl-line u-cb">
+            <dt>
+                <p class="text6">简介：</p>
+            </dt>
+            <dd class="dd-list1">
+                <textarea class="info-textarea" placeholder="请输入不超过200字的简介"></textarea>
+            </dd>
+        </dl>
+        <dl class="dl-line u-cb">
+            <dt>
+                <p class="text6">播放密码：</p>
+            </dt>
+            <dd class="dd-list1 text6">
+                <span class="radio radio-pos {show.radioCheck ? 'radio-true' : ''}" on-click={show.radioCheck = true}></span>
+                <span class="text10">无密码</span>
+                <span class="radio radio-pos {!show.radioCheck ? 'radio-true' : ''}" on-click={show.radioCheck = false}></span>
+                <span class="text10">需要密码</span>
+            </dd>
+        </dl>
+        <dl class="dl-line u-cb">
+            <dt>&nbsp;</dt>
+            <dd class="dd-list1">
+                <input type="password" class="info-input info-input2" placeholder="请输入不超过6位的纯数字密码" r-model={config.pwd}>
+            </dd>
+            <dd class="dd-list2">
+                <span class="text7">请输入不超过6位的纯数字密码</span>
+            </dd>
+        </dl>
+        <dl class="dl-line u-cb">
+            <dt>&nbsp;</dt>
+            <dd class="dd-list1">
+                <span class="info-btn info-btn-wd" on-click={this.save()}>保存设置</span>
+                <span class="info-clear">清除设置</span>
+            </dd>
+            <dd class="dd-list2">
+            </dd>
+        </dl>
+    </div>
 </div>
 
