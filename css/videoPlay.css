@@ -1,0 +1,92 @@
+.m-video-play {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    text-align: center;
+}
+.m-video-play .m-over {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    opacity: 0;
+    background: #000;
+}
+.m-video-play .video-play-main {
+    position: relative;
+
+    display: inline-block;
+
+    width: 760px;
+	color: #fff;
+    border-radius: 3px;
+    background: #303030;
+}
+.m-video-play .video-play-head {
+    line-height: 40px;
+
+    height: 40px;
+
+    text-align: left;
+}
+.m-video-play .title {
+    font-size: 14px;
+}
+.m-video-play .c1 {
+    color: #12a86b;
+}
+.m-video-play .icon-close {
+    float: right;
+
+    width: 20px;
+    height: 24px;
+
+    text-align: center;
+}
+
+.video-end {
+    position: absolute;
+    top: 40px;
+    left: 0;
+
+    width: 760px;
+    height: 426px;
+
+    background: rgba(0, 0, 0, .8);
+    z-index: 100;
+}
+.video-repeat {
+    position: absolute;
+    top: 150px;
+    left: 276px;
+
+    display: inline-block;
+
+    width: 86px;
+    height: 81px;
+
+    background: url(../res/images/mycamera.png) -28px -29px;
+}
+.video-repeat:hover {
+    background: url(../res/images/mycamera.png) -28px -120px;
+}
+.video-next {
+    position: absolute;
+    top: 150px;
+    left: 398px;
+
+    display: inline-block;
+
+    width: 86px;
+    height: 81px;
+
+    background: url(../res/images/mycamera.png) -120px -29px;
+}
+.video-next:hover {
+    background: url(../res/images/mycamera.png) -120px -120px;
+}
