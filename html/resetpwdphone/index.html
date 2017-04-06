@@ -1,25 +1,24 @@
-<div class="m-head">
-    <div class="m-logo">
-       <h1 class=""></h1> 
-    </div>
-</div>
 <div class="m-resetpwdphone">
     <!-- 是否从其他验证方式进入 -->
     {#if other != 'yes'}
-        <h2 class="login-head">未知企业帐号安全验证</h2>
-        <p>为了保护帐号安全，需要验证手机有效性</p>
-        <p>点击发送短信按钮，将会发送一封有验证码的短信至手机</p>
-        <p>{reset.account}</p>
-        <div class="m-login-btn" on-click={this.sendPhone()}>发送短信</div>
-        <a href="./resetpwdemail.html?type=email&account={reset.account}&other=yes" class="other-text">换用其他验证方式</a>
-    {#else}
-        <h2 class="login-head">未知企业帐号安全验证</h2>
-        <p>请选择验证方式：</p>
-        <div class="m-input">
-            <label><input type="checkbox">通过安全手机接收验证短信</label>
+        <h2 class="head">青果企业帐号安全验证</h2>
+        <p class="send-dialog-code-text1">为了保护帐号安全，需要验证手机有效性</p>
+        <p class="send-dialog-code-text2">
+            点击发送短信按钮，将会发送一封有验证码的短信至手机
+            <span class="send-dialog-code-text3">{reset.account}</span>
+        </p>
+        <div class="btn" on-click={this.sendPhone()}>发送短信</div>
+        <div class="other-text">
+            <a href="./resetpwdemail.html?type=email&account={reset.account}&other=yes">换用其他验证方式</a>
         </div>
-        <p>验证您的企业手机</p>
-        <div class="m-login-btn" on-click={this.sendPhone()}>下一步</div>
-        <div class="m-login-btn" on-click={this.goBack()}>返回</div>
+    {#else}
+        <h2 class="head">青果企业帐号安全验证</h2>
+        <p class="send-dialog-code-text1">请选择验证方式：</p>
+        <p class="send-dialog-code-text4">通过安全手机接收验证短信</p>
+        <p class="send-dialog-code-text2">验证您的企业手机</p>
+        <div class="btn" on-click={this.sendPhone()}>下一步</div>
+        <div class="other-text">
+            <a href="javascript:;" class="m-login-btn" on-click={this.goBack()()}>返回</a>
+        </div>
     {/if}
 </div>

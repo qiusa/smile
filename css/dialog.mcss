@@ -35,6 +35,7 @@
         width: 9px;
         height: 9px;
         overflow: hidden;
+        cursor: pointer;
     }
     .dialog-body{
         text-align: center;
@@ -43,7 +44,7 @@
         width: 480px;
         margin: 36px auto 0;
         .btn{
-            width: 291px;
+            width: 290px;
             height: 38px;
             line-height: 38px;
             text-align: center;
@@ -66,4 +67,238 @@
             margin: 0 auto;
         }
     }
+    //弹出框
+.yj-text{
+    width: 291px;
+    margin: 86px auto 24px;
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+}
+.yj-box{
+    position: relative;
+    width: 291px;
+    margin: 0 auto;
+    .yj-input{
+        width: 269px;
+        border: 1px solid #dcdcdc;
+        border-radius: 3px;
+        height: 38px;
+        line-height: 38px;
+        padding: 0 10px;
+    }
+    .yj-unit{
+        position: absolute;
+        right: 10px;
+        top: 16px;
+        font-size: 12px;
+        color: #333;
+        background: #fff;
+    }
+}
+//添加成功
+.success-icon{
+    background: url(../res/images/success.png) no-repeat;
+    width: 84px;
+    height: 84px;
+    display: block;
+    margin: 70px auto 0;
+}
+.success-text2{
+    text-align: center;
+    padding-top: 24px;
+    font-size: 14px;
+    color: #999;
+}
+.success-text3{
+    color: #333;
+}
+//邮箱/手机修改弹窗样式
+.dialog-text{
+    font-size: 14px;
+    color: #666;
+    width: 290px;
+    margin: 48px auto 10px;
+    text-align: left;
+}
+.dialog-list-box{
+    text-align: left;
+    width: 290px;
+    margin: 0 auto;
+}
+.dialog-list{
+    margin-top: 14px;
+    border: 1px solid #e4e4e4;
+    border-radius: 3px;
+    color: #999;
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 8px 0 10px;
+    display: inline-block;
+    cursor: pointer;
+    .lisy-close-icon{
+        background: url(../res/images/X.png) no-repeat;
+        width: 14px;
+        height: 14px;
+        float: left;
+        margin: 6px 0 0 10px;
+        cursor: pointer;
+        visibility: hidden;
+    }
+}
+.cur{
+    border: 1px solid #12a76b;
+    color: #666;
+    .lisy-close-icon{
+        visibility: visible;
+    }
+}
+
+//设置手机号
+.set-phone-text{
+    font-size: 24px;
+    color: #666;
+    padding-top: 46px;
+    text-align: center;
+}
+.set-phone-text2{
+    font-size: 12px;
+    color: #333;
+    width: 290px;
+    margin: 50px auto 19px;
+    text-align: left;
+}
+.phone-list{
+    width: 290px;
+    margin: 0 auto;
+    li{
+        width: 122px;
+        height: 26px;
+        line-height: 26px;
+        border: 1px solid #e4e4e4;
+        color: #999;
+        padding-left: 16px;
+        margin-top: 5px;
+        float: left;
+        text-align: left;
+        cursor: pointer;
+    }
+    .phone-wd{
+        min-width: 78px;
+    }
+    .phone-close-icon{
+        background: url(../res/images/X.png) no-repeat;
+        width: 14px;
+        height: 14px;
+        margin: 6px 0 0 10px;
+        float: left;
+        display: none;
+    }
+    .cur{
+        border: 1px solid #12a76b;
+        color: #666;
+        .phone-close-icon{
+            display: inline-block;
+        }
+    }
+}
+
+    //添加邮箱/手机
+    .add-dialog-text{
+        font-size: 14px;
+        color: #666;
+        width: 290px;
+        margin: 56px auto 8px;
+        text-align: left;
+    }
+    .add-dialog-text2{
+        font-size: 12px;
+        color: #999;
+        line-height: 40px;
+        float: left;
+        font-family: 'SimSun';
+        cursor: pointer;
+    }
+    .add-dialog-box{
+        width: 290px;
+        margin: 16px auto 0;
+    }
+    .add-dialog-input{
+        width: 274px;
+        height: 38px;
+        line-height: 38px;
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+        padding-left: 14px;
+    }
+    .add-dialog-input-width{
+        width: 144px;
+        float: left;
+    }
+    .add-dialog-verify{
+        width: 75px;
+        height: 30px;
+        background: #eee;
+        margin: 5px 8px 0 10px;
+        float: left;
+    }
+    //发送邮箱/手机验证码
+    .send-dialog-code-text1{
+        width: 290px;
+        margin: 96px auto 0;
+        font-size: 16px;
+        line-height: 16px;
+        color: #333;
+        text-align: left;
+    }
+    .send-dialog-code-text2{
+        width: 290px;
+        margin: 6px auto 0;
+        font-size: 12px;
+        line-height: 16px;
+        color: #999;
+        text-align: left;
+    }
+    .send-dialog-code-text3{
+        color: #333;
+    }
+    //输入邮箱/手机验证码
+    .add-dialog-code-text1{
+        width: 290px;
+        margin: 96px auto 0;
+        font-size: 14px;
+        line-height: 14px;
+        color: #666;
+        text-align: left;
+    }
+    .add-dialog-code-text2{
+        color: #333;
+    }
+    .add-dialog-code-box{
+        width: 290px;
+        margin: 24px auto 0;
+        .code-input{
+            width: 144px;
+            height: 38px;
+            line-height: 38px;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            padding-left: 14px;
+        }
+        .verify-btn{
+            width: 116px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            border: 1px solid #dcdcdc;
+            border-radius: 3px;
+            background: #f7f7f7;
+            color: #666;
+            font-size: 14px;
+            display: inline-block;
+            margin-left: 12px;
+            cursor: pointer;
+        }
+    }    
 }

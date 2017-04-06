@@ -1,17 +1,11 @@
-<div class="m-head">
-    <div class="m-logo">
-       <h1 class=""></h1> 
-    </div>
-</div>
 <div class="m-resetpwdenter">
-    <h2 class="login-head">重置密码</h2>
-    <p>请输入您的新密码</p>
-    <div class="m-input">
-        <input type="password" class="ui-input" placeholder="请输入新密码" r-model={reset.pwd}>
+    <h2 class="head">重置密码</h2>
+    <p class="add-dialog-text add-dialog-text-mg">请输入您的新密码：</p>
+    <div class="add-dialog-box">
+        <input type="text" class="add-dialog-input" placeholder="请输入新密码" r-model={reset.pwd}></div>
+    <div class="add-dialog-code-box">
+        <input type="password" class="add-dialog-input" placeholder="请再次输入密码" r-model={reset.pwdSecond}>
     </div>
-    <div class="m-input">
-        <input type="password" class="ui-input" placeholder="请再次输入密码" r-model={reset.pwdSecond}>
-    </div>
-    <p>密码长度6~16位，数字、字母、字符至少包含两种</p>
-    <div class="m-login-btn" on-click={this.submitClick()}>提交</div>
+    <p class="add-dialog-text3">密码长度6~16位，数字、字母、字符至少包含两种</p>
+    <div class="btn" on-click={this.submitClick()}>提交</div>
 </div>

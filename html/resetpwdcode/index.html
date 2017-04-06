@@ -1,14 +1,13 @@
-<div class="m-head">
-    <div class="m-logo">
-       <h1 class=""></h1> 
-    </div>
-</div>
 <div class="m-resetpwdcode">
-    <h2 class="login-head">未知企业帐号安全验证</h2>
-    <p>请输入{reset.account}收到的验证码</p>
-    <div class="m-input">
-        <input type="text" class="ui-input verify-input" placeholder="请输入收到的验证码" r-model={reset.verifyCode}>
-        <span class="send-btn" on-click={this.sendCode()}>{#if reset.timeOut}{reset.timeOut}{#else}发送{/if}</span>
-    </div>    
-    <div class="m-login-btn" on-click={this.sureClick()}>确定</div>
+    <h2 class="head">青果企业帐号安全验证</h2>
+    <p class="add-dialog-code-text1 add-dialog-code-text1-mg">
+        <span>请输入</span>
+        <span class="add-dialog-code-text2">{reset.account}</span>
+        收到的验证码
+    </p>
+    <div class="add-dialog-code-box u-cb">
+        <input type="text" class="code-input u-ftl" placeholder="请输入收到的验证码" r-model={reset.verifyCode}>
+        <span class="verify-btn u-ftl" on-click={this.sendCode()}>{#if reset.timeOut}{reset.timeOut}{#else}发送{/if}</span>
+    </div>
+    <div class="btn" on-click={this.sureClick()}>确定</div>
 </div>

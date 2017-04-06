@@ -1,17 +1,12 @@
-<div class="m-head">
-    <div class="m-logo">
-       <h1 class=""></h1> 
-    </div>
-</div>
 <div class="m-resetpwd">
-    <h2 class="login-head">重置密码</h2>
-    <p>请输入注册企业的邮箱地址或手机号码：</p>
-    <div class="m-input">
-        <input type="text" class="ui-input" placeholder="企业邮箱地址或手机号码" r-model={reset.account}>
+    <h2 class="head">重置密码</h2>
+    <p class="text">请输入注册企业的邮箱地址或手机号码：</p>
+    <div class="add-dialog-box">
+        <input type="text" class="add-dialog-input" placeholder="企业邮箱地址或手机号码" r-model={reset.account}>
     </div>
-    <div class="m-input">
-        <input type="text" class="ui-input verify-input" placeholder="图片验证码" r-model={reset.verifyCode}>
-        <span class="verify-img" style="background: url({info.verifyImg} no-repeat;background-size: contain;" on-click={this.getVerifyImg()}></span>
-    </div>
-    <div class="m-login-btn" on-click={this.stepClick()}>下一步</div>
+    <div class="add-dialog-box u-cb">
+        <input type="text" class="add-dialog-input add-dialog-input-width" placeholder="图片验证码" r-model={reset.verifyCode}>
+        <span class="add-dialog-verify" style="background: url({info.verifyImg} no-repeat;background-size: contain;" on-click={this.getVerifyImg()}>图片验证码</span>
+        <span class="add-dialog-text2" on-click={this.getVerifyImg()}>换一个</span>
+    </div>    <div class="btn" on-click={this.stepClick()}>下一步</div>
 </div>
