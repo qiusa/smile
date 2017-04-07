@@ -62,7 +62,8 @@
     .text10{
         padding: 0 36px 0 8px;
         display: inline-block;
-        float: left
+        float: left;
+        cursor: pointer;
     }
     .radio-pos{
         float: left;
@@ -151,6 +152,7 @@
             border: 1px solid #dcdcdc;
             border-radius: 3px;
             background: url(../res/images/icon_mycamare_update.png) center 56px no-repeat;
+            cursor: pointer;
         }
         .info-clear{
             padding-left: 46px;

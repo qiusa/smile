@@ -12,7 +12,7 @@
 .m-liveaddress .text7{font-family:"SimSun";color:#999;font-size:12px;line-height:40px;}
 .m-liveaddress .text8{color:#666;font-size:12px;padding-top:108px;text-align:center;}
 .m-liveaddress .text9{font-family:"SimSun";color:#999;font-size:12px;padding-bottom:16px;}
-.m-liveaddress .text10{padding:0 36px 0 8px;display:inline-block;float:left;}
+.m-liveaddress .text10{padding:0 36px 0 8px;display:inline-block;float:left;cursor:pointer;}
 .m-liveaddress .radio-pos{float:left;margin-top:13px;}
 .m-liveaddress .info{margin-top:24px;border-top:1px solid #ebebeb;}
 .m-liveaddress .info .dl-line{margin-top:18px;color:#666;}
@@ -26,7 +26,7 @@
 .m-liveaddress .info .info-input{width:358px;height:38px;line-height:38px;color:#959595;border:1px solid #dcdcdc;border-radius:3px;padding:0 6px 0 12px;margin-right:16px;}
 .m-liveaddress .info .info-input2{width:300px;margin-right:0;}
 .m-liveaddress .info .info-textarea{width:296px;min-height:91px;color:#666;border:1px solid #dcdcdc;border-radius:3px;padding:12px;resize:vertical;}
-.m-liveaddress .info .upload{width:318px;height:178px;border:1px solid #dcdcdc;border-radius:3px;background:url("../res/images/icon_mycamare_update.png") center 56px no-repeat;}
+.m-liveaddress .info .upload{width:318px;height:178px;border:1px solid #dcdcdc;border-radius:3px;background:url("../res/images/icon_mycamare_update.png") center 56px no-repeat;cursor:pointer;}
 .m-liveaddress .info .info-clear{padding-left:46px;cursor:pointer;}
 .m-liveaddress .info li{border-bottom:1px dashed #dcdcdc;}
 .m-liveaddress .info li .name{font-size:14px;float:left;height:60px;line-height:60px;width:80px;text-align:right;color:#666;overflow:hidden;}

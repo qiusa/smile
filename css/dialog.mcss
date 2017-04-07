@@ -90,8 +90,11 @@
     .yj-unit{
         position: absolute;
         right: 10px;
-        top: 16px;
+        top: 1px;
         font-size: 12px;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
         color: #333;
         background: #fff;
     }

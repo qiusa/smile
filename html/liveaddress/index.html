@@ -49,7 +49,7 @@
                     <p class="text8">点击这里上传</p>
                 </div>
                 <div id="uploadForm" style="display: none;">
-                    <input id="file" type="file" on-change={this.imgChange($event)}>
+                    <input id="file" type="file" accept="image/jpg,image/jpeg,image/png" hidden="hidden" on-change={this.imgChange($event)}>
                 </div>
             </dd>
             <dd class="dd-list2">
@@ -71,9 +71,9 @@
             </dt>
             <dd class="dd-list1 text6">
                 <span class="radio radio-pos {show.radioCheck ? 'radio-true' : ''}" on-click={show.radioCheck = true}></span>
-                <span class="text10">无密码</span>
+                <span class="text10" on-click={show.radioCheck = true}>无密码</span>
                 <span class="radio radio-pos {!show.radioCheck ? 'radio-true' : ''}" on-click={show.radioCheck = false}></span>
-                <span class="text10">需要密码</span>
+                <span class="text10" on-click={show.radioCheck = false}>需要密码</span>
             </dd>
         </dl>
         <dl class="dl-line u-cb">
