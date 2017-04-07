@@ -6,49 +6,49 @@
             <span class="search-icon"></span>
         </div>
         <ul class="operation-list">
-            <li on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+            <li class="first j-select" on-click={this.onShow($event)}>
                 夜视
-                <span class="icon-more"></span>
-                <ul class="detail-list">
+                <span class="icon-more icon-more-white"></span>
+                <ul class="detail-list detail-list-wd">
                     <li>
-                        开启夜视
+                        <span class="select-icon"></span>开启夜视
                         <hr class="hr"></li>
-                    <li>关闭夜视</li>
+                    <li><span class="select-icon"></span>关闭夜视</li>
                 </ul>
             </li>
-            <li class="border" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+            <li class="second j-select" on-click={this.onShow($event)}>
                 声音
-                <span class="icon-more"></span>
-                <ul class="detail-list">
+                <span class="icon-more icon-more-white"></span>
+                <ul class="detail-list detail-list-wd">
                     <li>
-                        开启声音
+                        <span class="select-icon"></span>开启声音
                         <hr class="hr"></li>
-                    <li>关闭声音</li>
+                    <li><span class="select-icon"></span>关闭声音</li>
                 </ul>
             </li>
-            <li on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+            <li class="third j-select" on-click={this.onShow($event)}>
                 清晰度
-                <span class="icon-more"></span>
-                <ul class="detail-list">
+                <span class="icon-more icon-more-white"></span>
+                <ul class="detail-list detail-list-wd">
                     <li>
-                        开启直播
+                        <span class="select-icon"></span>开启直播
                         <hr class="hr"></li>
-                    <li>关闭直播</li>
+                    <li><span class="select-icon"></span>关闭直播</li>
                 </ul>
             </li>
         </ul>
         <ul class="operation-list u-mgr24 u-mgl26">
-            <li class="live" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+            <li class="light j-select" on-click={this.onShow($event)}>
                 直播
-                <span class="icon-more"></span>
+                <span class="icon-more icon-more-white"></span>
                 <ul class="detail-list">
                     <li>
-                        流畅
+                        <span class="select-icon"></span>流畅
                         <hr class="hr"></li>
                     <li>
-                        标清
+                        <span class="select-icon"></span>标清
                         <hr class="hr"></li>
-                    <li>高清</li>
+                    <li><span class="select-icon"></span>高清</li>
                 </ul>
             </li>
         </ul>
@@ -63,7 +63,7 @@
                 </td>
                 <td class="td2">设备名称</td>
                 <td class="td3" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
-                    状态<span class="icon-more"></span>
+                    状态<span class="icon-more icon-more-white"></span>
                     <ul class="index-list">
                         <li class="self">状态</li>
                         <li>开</li>
@@ -72,7 +72,7 @@
                     </ul>
                 </td>
                 <td class="td4" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
-                    直播<span class="icon-more"></span>
+                    直播<span class="icon-more icon-more-white"></span>
                     <ul class="index-list">
                         <li class="self">直播</li>
                         <li>开</li>
@@ -81,7 +81,7 @@
                     </ul>
                 </td>
                 <td class="td5" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
-                    夜视<span class="icon-more"></span>
+                    夜视<span class="icon-more icon-more-white"></span>
                     <ul class="index-list">
                         <li class="self">夜视</li>
                         <li>开</li>
@@ -90,7 +90,7 @@
                     </ul>
                 </td>
                 <td class="td6" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
-                    声音<span class="icon-more"></span>
+                    声音<span class="icon-more icon-more-white"></span>
                     <ul class="index-list">
                         <li class="self">声音</li>
                         <li>开</li>
@@ -99,7 +99,7 @@
                     </ul>
                 </td>
                 <td class="td7" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
-                    清晰度<span class="icon-more"></span>
+                    清晰度<span class="icon-more icon-more-white"></span>
                     <ul class="index-list">
                         <li class="self">清晰度</li>
                         <li>流畅</li>

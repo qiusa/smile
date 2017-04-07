@@ -1,0 +1,202 @@
+//绿色按钮（登录）
+.u-btn{
+    width: 118px;
+    height: 38px;
+    border-radius: 3px;
+    border: 1px solid #0d945e;
+    color: #fff;
+    font-size: 16px;
+}
+.u-btn:hover{
+    background: #0f9961;
+    border: 1px solid #0a8956;
+}
+.u-btn:active{
+    background: #0c8957;
+    border: 1px solid #098050;
+}
+.u-btn-disabled{
+    width: 118px;
+    height: 38px;
+    border-radius: 3px;
+    border: 1px solid #0d945e;
+    color: #fff;
+    font-size: 16px;
+    opacity: 0.2;
+}
+//白色按钮（发送验证码）
+.u-white-btn{
+    width: 118px;
+    height: 38px;
+    border-radius: 3px;
+    border: 1px solid #dcdcdc;
+    color: #666;
+    font-size: 16px;
+}
+.u-white-btn:hover{
+    background: #14af17;
+    border: 1px solid #0d945e;
+}
+.u-white-btn:active{
+    background: #0f9961;
+    border: 1px solid #0a8956;
+
+}
+.u-white-btn-disabled{
+    width: 118px;
+    height: 38px;
+    border-radius: 3px;
+    border: 1px solid #dcdcdc;
+    color: #fff;
+    font-size: 16px;
+    opacity: 0.2;
+}
+//a标签状态样式
+.u-a{
+    font-size: 16px;
+    color: #666;
+    text-decoration: none;
+}
+.u-a:hover{
+    text-decoration: underline;
+}
+.u-a:active{
+    color: #444;
+    text-decoration: underline;
+}
+.u-a-disabled{
+    color: #ccc;
+}
+.u-a-disabled:hover, .u-a-disabled:active{
+    color: #ccc;
+    text-decoration: none;
+}
+//下拉按钮
+//摄像机操作
+.operation-list{
+    float: right;
+    height: 30px;
+    li{
+        background: #f7f7f7;
+        border: 1px solid #dcdcdc;
+        border-radius: 3px;
+        font-size: 12px;
+        color: #666;
+        height: 28px;
+        line-height: 28px;
+        position: relative;
+        z-index: 9;
+        padding: 0 28px 0 14px;
+        float: left;
+        cursor: pointer;
+        
+    }
+    li:hover{
+        background: #ebebeb;
+        border-color: #ccc;
+        z-index: 11;
+    }
+    .light{
+        border: 1px solid #0d945e;
+        background: #12a76b;
+        color: #fff;
+        .icon-more-white{
+            background: url(../res/images/icon_more_white.png) no-repeat;
+            background-size: contain;
+        }
+    }
+    .light:hover{
+        border: 1px solid #0a8956;
+        background: #0f9961;
+    }
+    .first{
+        border-radius: 3px 0 0 3px;
+        margin-right: -1px;
+    }
+    .second{
+        border-radius: 0;
+    }
+
+    .third{
+        border-radius: 0 3px 3px 0;
+        margin-left: -1px;
+    }
+    .border{
+        margin-left: -1px;
+        border-radius: 0;
+    }
+    .icon-more{
+        display: inline-block;
+        background: url(../res/images/icon_more.png) no-repeat;
+        background-size: contain;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 11px;
+        right: 12px;
+    }
+    .detail-list{
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 28px;
+        border: 1px solid #dcdcdc;
+        width: 122px;
+        line-height: 40px;
+        text-align: center;
+        box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.1);
+        color: #666;
+        li{
+            height: 40px;
+            line-height: 40px;
+            background: #fff;
+            padding: 0;
+            float: none;
+            border: 0;
+            border-radius: 0;
+            position: relative;
+            .select-icon{
+                background: url(../res/images/icon_drop_select.png) no-repeat;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                left: 14px;
+                top: 15px;
+                display: none;
+            }
+        }
+        li:hover{
+            background: #eee;
+            .select-icon{
+                display: inline-block;
+            }
+        }
+        .hr{
+            height: 1px;
+            width: 100%;
+            background: #f0f0f0;
+            overflow: hidden;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border: 0;
+        }
+    }
+    .detail-list-wd{
+        width: 118px;
+    }
+    .live{
+        background: #ebebeb;
+        border: 1px solid #ccc;
+        color: #4c4c4c;
+        z-index: 11;
+        .detail-list{
+            display: block;
+        }
+    }
+    .light.live{
+        border: 1px solid #0d945e;
+        background: #12a76b;
+        color: #fff;
+    }
+}
