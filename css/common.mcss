@@ -20,6 +20,26 @@ input::-ms-clear { display: none; }
 html,body,.g-body{height: 100%;}
 a,a:hover{color:#333;}
 a:focus{outline:none;}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #dcdcdc;
+    font-size: 12px;
+    font-family: "SimSUn";
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #dcdcdc;
+    font-size: 12px;
+    font-family: "SimSUn";
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #dcdcdc;
+    font-size: 12px;
+    font-family: "SimSUn";
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #dcdcdc;
+    font-size: 12px;
+    font-family: "SimSUn";
+}
 @import './com.css';
 @import './ui.css';
 
@@ -326,13 +346,16 @@ img.emoji{cursor:pointer;height:1em;width:1em;margin:0 0.1em 0 0.1em;vertical-al
     height: 12px;
     display: inline-block;
     cursor: pointer;
+    background-size: contain;
 }
 .checkbox-true{
     background: url(../res/images/checkbox_true.png) no-repeat;
+    background-size: contain;
 }
 
 .checkbox-big{
     background: url(../res/images/checkbox_b_off.png) no-repeat;
+    background-size: contain;
     width: 18px;
     height: 18px;
     display: inline-block;
@@ -340,6 +363,7 @@ img.emoji{cursor:pointer;height:1em;width:1em;margin:0 0.1em 0 0.1em;vertical-al
 }
 .checkbox-big-true{
     background: url(../res/images/checkbox_b_on.png) no-repeat;
+    background-size: contain;
 }
 //单选框样式
 .radio{
@@ -351,5 +375,5 @@ img.emoji{cursor:pointer;height:1em;width:1em;margin:0 0.1em 0 0.1em;vertical-al
     vertical-align: middle;
 }
 .radio-true{
-    background: url(../res/images/radiobutton_ON.png) no-repeat;
+    background: url(../res/images/radiobutton_on.png) no-repeat;
 }

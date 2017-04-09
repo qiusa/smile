@@ -1,8 +1,8 @@
-.u-btn{width:118px;height:38px;border-radius:3px;border:1px solid #0d945e;color:#fff;font-size:16px;}
+.u-btn{width:118px;height:38px;border-radius:3px;background:#12a76b;border:1px solid #0d945e;color:#fff;font-size:16px;text-align:center;}
 .u-btn:hover{background:#0f9961;border:1px solid #0a8956;}
 .u-btn:active{background:#0c8957;border:1px solid #098050;}
 .u-btn-disabled{width:118px;height:38px;border-radius:3px;border:1px solid #0d945e;color:#fff;font-size:16px;opacity:0.2;}
-.u-white-btn{width:118px;height:38px;border-radius:3px;border:1px solid #dcdcdc;color:#666;font-size:16px;}
+.u-white-btn{width:118px;height:38px;border-radius:3px;border:1px solid #dcdcdc;color:#666;font-size:16px;text-align:center;}
 .u-white-btn:hover{background:#14af17;border:1px solid #0d945e;}
 .u-white-btn:active{background:#0f9961;border:1px solid #0a8956;}
 .u-white-btn-disabled{width:118px;height:38px;border-radius:3px;border:1px solid #dcdcdc;color:#fff;font-size:16px;opacity:0.2;}

@@ -26,6 +26,7 @@
     }
     .title{
         font-size: 16px;
+        font-weight: normal;
         line-height: 16px;
         color: #333;
     }
@@ -41,30 +42,22 @@
         text-align: center;
     }
     .btn-group{
-        width: 480px;
-        margin: 36px auto 0;
-        .btn{
-            width: 290px;
-            height: 38px;
-            line-height: 38px;
-            text-align: center;
-            border: 1px solid transparent;
-            border-radius: 3px;
-            background: #12a76b;
-            color: #fff;
-            font-size: 15px;
-            display: inline-block;
-            margin-right: 10px;
-
-        }
+        margin-top: 36px;
         .btn-cancel{
-            
+            width: 88px;
+            height: 28px;
+            line-height: 28px;
+            font-size: 14px;
         }
         .btn-ok{
-            
+            width: 88px;
+            height: 28px;
+            line-height: 28px;
+            font-size: 14px;
         }
         .btn-center{
             margin: 0 auto;
+            width: 290px;
         }
     }
     //弹出框

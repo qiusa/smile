@@ -2,14 +2,23 @@
 <div class="m-register">
     <h2 class="title">注册青果账号</h2>
     <form>
-        <dl class="dl-line u-cb {error.emailError ? 'verify-error' : ''}">
+        <dl class="dl-line u-cb {error.emailError.msg ? 'verify-error' : ''}">
             <dt class="dt-line">
                 邮箱
             </dt>
             <dd class="dd-line">
-                <input type="text" class="register-input" placeholder="请输入邮箱" r-model={user.email} on-focus={error.emailError=''} on-blur={this.verifyEmail(true)}>
+                <input type="text" class="register-input" placeholder="请输入邮箱" r-model={user.email} on-focus={error.emailError={msg: '', code: ''}} on-blur={this.verifyEmail(true)}>
             </dd>
-            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.emailError}</span></dd>
+            <dd class="dd-line {error.emailError.msg ? 'error-tip' : ''}">
+                {#if error.emailError.code == 0}
+                <span class="register-icon icon-fail"></span>
+                {#elseif error.emailError.code == 1 || error.emailError.code == 2}
+                <span class="register-icon icon-fail"></span>
+                {#elseif error.emailError.code == 3}
+                <span class="register-icon icon-caveat"></span>
+                {#else}
+                <span class="register-icon icon-true"></span>
+                {/if}<span class="fail-text">{error.emailError.msg}--{error.emailError.code}</span></dd>
         </dl>
         <dl class="dl-line u-cb {error.pwdError ? 'verify-error' : ''}">
             <dt class="dt-line">
@@ -18,7 +27,7 @@
             <dd class="dd-line">
                 <input type="text" class="register-input" placeholder="请输入6-16位的数字、字母组合密码" r-model={user.pwd} on-focus={error.pwdError=''} on-blur={this.verifyPwd(true)}>
             </dd>
-            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.pwdError}</span></dd>
+            <dd class="dd-line {error.pwdError ? 'error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.pwdError}</span></dd>
         </dl>
         <dl class="dl-line u-cb {error.pwdSecondError ? 'verify-error' : ''}">
             <dt class="dt-line">
@@ -27,7 +36,7 @@
             <dd class="dd-line">
                 <input type="password" class="register-input" placeholder="请再次输入密码" r-model={user.pwdSecond} on-focus={error.pwdSecondError=''} on-blur={this.verifyPwdSecond(true)}>
             </dd>
-            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.pwdSecondError}</span></dd>
+            <dd class="dd-line {error.pwdError ? 'error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.pwdSecondError}</span></dd>
         </dl>
         <dl class="dl-line u-cb {error.companyError ? 'verify-error' : ''}">
             <dt class="dt-line">
@@ -36,7 +45,7 @@
             <dd class="dd-line">
                 <input type="text" class="register-input" placeholder="请输入企业名称" r-model={user.company} on-focus={error.companyError=''} on-blur={this.verifyCompany(true)}>
             </dd>
-            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.companyError}</span></dd>
+            <dd class="dd-line {error.pwdError ? 'error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.companyError}</span></dd>
         </dl>
         <dl class="dl-line u-cb {error.phoneError ? 'verify-error' : ''}">
             <dt class="dt-line">
@@ -45,7 +54,7 @@
             <dd class="dd-line">
                 <input type="text" class="register-input" placeholder="请输入手机号" r-model={user.phone} on-focus={error.phoneError=''} on-blur={this.verifyPhone(true)}>
             </dd>
-            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.phoneError}</span></dd>
+            <dd class="dd-line {error.pwdError ? 'error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.phoneError}</span></dd>
         </dl>
         <dl class="dl-line u-cb {error.messageError ? 'verify-error' : ''}">
             <dt class="dt-line">
@@ -57,7 +66,7 @@
             <dd class="dd-line">
                 <div class="send-btn" on-click={this.sendCode()}>{#if show.timeOut}{show.sendMsg}（{show.timeOut}）{#else}{show.sendMsg}{/if}</div>
             </dd>
-            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.messageError}</span></dd>
+            <dd class="dd-line {error.pwdError ? 'error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.messageError}</span></dd>
         </dl>
         <dl class="dl-line u-cb {error.verifyCodeError ? 'verify-error' : ''}">
             <dt class="dt-line">
@@ -70,7 +79,7 @@
                 <div class="verify-code" style="background: url({verify.verifyImg}) no-repeat #eee;background-size: contain;" on-click={this.getVerifyImg()}>图片验证码</div>
                 <span class="code-text" on-click={this.getVerifyImg()}>换一个</span>
             </dd>
-            <dd class="dd-line error-tip"><span class="icon-wrong"></span><span class="wrong-text">{error.verifyCodeError}</span></dd>
+            <dd class="dd-line {error.pwdError ? 'error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.verifyCodeError}</span></dd>
         </dl>
         <div class="register-btn" on-click={this.register()}>注册</div>
         <div class="service">

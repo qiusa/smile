@@ -1,6 +1,9 @@
 @charset 'UTF-8';
 .m-datastatistics{
     padding: 54px 40px 20px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
     //标题
     .title{
         font-size: 16px;

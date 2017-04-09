@@ -168,9 +168,22 @@
                 padding: 0;
                 float: none;
                 cursor: pointer;
+                position: relative;
+                .select-icon{
+                    background: url(../res/images/icon_drop_select.png) no-repeat;
+                    width: 10px;
+                    height: 10px;
+                    position: absolute;
+                    left: 14px;
+                    top: 15px;
+                    display: none;
+                }
             }
             li:hover{
                 color: #12a76b;
+                .select-icon{
+                    display: inline-block;
+                }
             }
             .self:hover{
                 color: #666;

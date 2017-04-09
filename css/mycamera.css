@@ -31,8 +31,10 @@
 .m-mycamera .camera-list .close{position:absolute;right:15px;top:4px;display:inline-block;background:#999;color:#fff;border-radius:12px;line-height:14px;text-align:center;height:14px;width:14px;font-size:12px;}
 .m-mycamera .camera-list .close:before{content:"\2716";}
 .m-mycamera .camera-list .index-list{display:none;position:absolute;top:0;left:-24px;border:1px solid #dcdcdc;width:86px;line-height:36px;text-align:center;box-shadow:0 2px 2px 0 rgba(0,0,0,0.08);color:#666;}
-.m-mycamera .camera-list .index-list li{line-height:36px;background:#fff;padding:0;float:none;cursor:pointer;}
+.m-mycamera .camera-list .index-list li{line-height:36px;background:#fff;padding:0;float:none;cursor:pointer;position:relative;}
+.m-mycamera .camera-list .index-list li .select-icon{background:url("../res/images/icon_drop_select.png") no-repeat;width:10px;height:10px;position:absolute;left:14px;top:15px;display:none;}
 .m-mycamera .camera-list .index-list li:hover{color:#12a76b;}
+.m-mycamera .camera-list .index-list li:hover .select-icon{display:inline-block;}
 .m-mycamera .camera-list .index-list .self:hover{color:#666;}
 .m-mycamera .camera-list .live .index-list{display:block;}
 .m-mycamera .camera-list .icon-live{background:url("../res/images/icon_live_off.png") no-repeat;background-size:contain;display:inline-block;width:24px;height:24px;}
