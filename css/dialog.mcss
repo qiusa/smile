@@ -42,19 +42,26 @@
         text-align: center;
     }
     .btn-group{
-        margin-top: 36px;
+        margin: 30px 0;
         .btn-cancel{
             width: 88px;
             height: 28px;
             line-height: 28px;
             font-size: 14px;
+            float: right;
+            margin-right: 12px;
         }
         .btn-ok{
             width: 88px;
             height: 28px;
             line-height: 28px;
             font-size: 14px;
+            float: right;
+            margin-right: 30px;
         }
+    }
+    .btn-group-center{
+        margin-top: 30px;
         .btn-center{
             margin: 0 auto;
             width: 290px;
@@ -287,10 +294,6 @@
             height: 38px;
             line-height: 38px;
             text-align: center;
-            border: 1px solid #dcdcdc;
-            border-radius: 3px;
-            background: #f7f7f7;
-            color: #666;
             font-size: 14px;
             display: inline-block;
             margin-left: 12px;

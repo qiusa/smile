@@ -5,6 +5,6 @@
 .m-resetpwdemail .send-dialog-code-text2{width:290px;margin:6px auto 0;font-size:12px;line-height:16px;color:#999;text-align:left;}
 .m-resetpwdemail .send-dialog-code-text3{color:#333;}
 .m-resetpwdemail .send-dialog-code-text4{width:290px;margin:16px auto 0;font-size:16px;line-height:16px;color:#333;text-align:left;}
-.m-resetpwdemail .btn{width:290px;height:38px;line-height:38px;text-align:center;border:1px solid transparent;border-radius:3px;background:#12a76b;color:#fff;font-size:15px;display:block;margin:36px auto 0;cursor:pointer;}
+.m-resetpwdemail .btn{width:290px;height:38px;line-height:38px;display:block;margin:36px auto 0;cursor:pointer;}
 .m-resetpwdemail .other-text{width:290px;margin:20px auto 0;text-align:left;display:block;}
 .m-resetpwdemail .other-text a{color:#548adc;}

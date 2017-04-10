@@ -2,16 +2,25 @@
 .u-btn{
     width: 118px;
     height: 38px;
+    line-height: 38px;
     border-radius: 3px;
     background: #12a76b;
     border: 1px solid #0d945e;
     color: #fff;
     font-size: 16px;
     text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 .u-btn:hover{
     background: #0f9961;
     border: 1px solid #0a8956;
+    text-decoration: none;
 }
 .u-btn:active{
     background: #0c8957;
@@ -20,39 +29,68 @@
 .u-btn-disabled{
     width: 118px;
     height: 38px;
+    line-height: 38px;
     border-radius: 3px;
     border: 1px solid #0d945e;
     color: #fff;
     font-size: 16px;
     opacity: 0.2;
+    text-align: center;
+    display: inline-block;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 //白色按钮（发送验证码）
 .u-white-btn{
     width: 118px;
     height: 38px;
+    line-height: 38px;
     border-radius: 3px;
     border: 1px solid #dcdcdc;
+    background: #f7f7f7;
     color: #666;
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 .u-white-btn:hover{
-    background: #14af17;
-    border: 1px solid #0d945e;
+    background: #ebebeb;
+    border: 1px solid #ccc;
+    text-decoration: none;
 }
 .u-white-btn:active{
-    background: #0f9961;
-    border: 1px solid #0a8956;
+    background: #ccc;
+    border: 1px solid #b3b3b3;
 
 }
 .u-white-btn-disabled{
     width: 118px;
     height: 38px;
+    line-height: 38px;
     border-radius: 3px;
     border: 1px solid #dcdcdc;
-    color: #fff;
+    background: #f7f7f7;
+    color: #666;
     font-size: 16px;
     opacity: 0.2;
+    text-align: center;
+    display: inline-block;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 //a标签状态样式
 .u-a{
@@ -73,6 +111,16 @@
 .u-a-disabled:hover, .u-a-disabled:active{
     color: #ccc;
     text-decoration: none;
+}
+//蓝色链接
+.u-blue-a{
+    font-size: 12px;
+    color: #4aaff8;
+    text-decoration: none;
+
+}
+.u-blue-a:hover{
+    text-decoration: underline;
 }
 //下拉按钮
 //摄像机操作
@@ -201,5 +249,66 @@
         border: 1px solid #0d945e;
         background: #12a76b;
         color: #fff;
+    }
+}
+//输入框错误
+.icon-right{
+    background: url(../res/images/checkbox_b_on.png) no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.register-icon{
+    display: none;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin: 11px 0 0 5px;
+    float: left;  
+}
+.icon-fail{
+    background: url(../res/images/icon_enter_fail.png) no-repeat;
+}
+.icon-caveat{
+    background: url(../res/images/icon_enter_caveat.png) no-repeat;
+    display: inline-block;
+}
+.icon-true{
+    background: url(../res/images/icon_enter_true.png) no-repeat;
+    display: inline-block;
+}
+.fail-text{
+    padding-left: 5px;
+    height: 40px;
+    line-height: 40px;
+}
+/* 错误校验样式 */
+.u-error-tip{
+    display: none;
+}
+.u-error-pos{
+    display: none;
+}
+.u-verify-error{
+    position: relative;
+    .u-error-pos{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 290px;
+    }
+    .u-error-tip{
+        display: block;
+        color: #d76360;
+        white-space: nowrap;
+        .register-icon{
+            display: inline-block!important;  
+        }   
+    }
+    input{
+        border: 1px solid #d76369!important;
+        background: #fbefef!important;
     }
 }

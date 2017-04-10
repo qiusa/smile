@@ -1,18 +1,6 @@
 @charset 'UTF-8';
 .m-balancewarning{
     padding: 54px 40px 20px;
-    ::-webkit-input-placeholder { /* WebKit browsers */
-        color: #b3b3b3;
-    }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color: #b3b3b3;
-    }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color: #b3b3b3;
-    }
-    :-ms-input-placeholder { /* Internet Explorer 10+ */
-        color: #b3b3b3;
-    }
     //标题
     .title{
         font-size: 16px;
@@ -75,20 +63,10 @@
                 width: 72px;
                 height: 30px;
                 line-height: 30px;
-                border-radius: 3px;
-                border: 1px solid #dcdcdc;
-                color: #666;
-                background: #f7f7f7;
-                text-align: center;
+                font-size: 12px;
                 margin: 14px 18px 0 0;
                 float: right;
                 cursor: pointer;
-            }
-            .disabled-btn{
-                float: right;
-                color: #999;
-                line-height: 60px;
-                padding-right: 28px;
             }
         }
     }

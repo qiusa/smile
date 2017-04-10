@@ -43,27 +43,15 @@
             width: 116px;
             height: 38px;
             line-height: 38px;
-            text-align: center;
-            border: 1px solid #dcdcdc;
-            border-radius: 3px;
-            background: #f7f7f7;
-            color: #666;
             font-size: 14px;
             display: inline-block;
             margin-left: 12px;
-            cursor: pointer;
         }
     }
     .btn{
         width: 290px;
         height: 38px;
         line-height: 38px;
-        text-align: center;
-        border: 1px solid transparent;
-        border-radius: 3px;
-        background: #12a76b;
-        color: #fff;
-        font-size: 15px;
         display: block;
         margin: 36px auto 0;
         cursor: pointer;

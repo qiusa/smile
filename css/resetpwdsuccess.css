@@ -4,4 +4,4 @@
 .m-resetpwdsuccess .success-icon{background:url("../res/images/success.png") no-repeat;width:84px;height:84px;display:block;margin:0 auto;}
 .m-resetpwdsuccess .success-text2{text-align:center;padding-top:14px;font-size:14px;color:#999;}
 .m-resetpwdsuccess .success-text3{color:#333;}
-.m-resetpwdsuccess .btn{width:290px;height:38px;line-height:38px;text-align:center;border:1px solid transparent;border-radius:3px;background:#12a76b;color:#fff;font-size:15px;display:block;margin:36px auto 0;cursor:pointer;}
+.m-resetpwdsuccess .btn{width:290px;height:38px;line-height:38px;display:block;margin:36px auto 0;cursor:pointer;}

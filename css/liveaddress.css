@@ -19,9 +19,10 @@
 .m-liveaddress .info .dl-line dt{float:left;width:60px;text-align:right;}
 .m-liveaddress .info .dl-line .dd-list1{float:left;padding-left:12px;width:320px;}
 .m-liveaddress .info .dl-line .dd-list2{float:left;padding-left:16px;}
-.m-liveaddress .info .info-btn{width:98px;height:38px;line-height:38px;text-align:center;color:#fff;background:#00ab65;border:1px solid #009759;border-radius:3px;display:inline-block;cursor:pointer;}
-.m-liveaddress .info .info-btn-wd{width:178px;}
-.m-liveaddress .info .info-btn2{width:98px;height:38px;line-height:38px;text-align:center;color:#666;background:#f7f7f7;border:1px solid #dcdcdc;border-radius:3px;display:inline-block;cursor:pointer;}
+.m-liveaddress .info .dl-line .dd-list3{float:left;}
+.m-liveaddress .info .info-btn{width:98px;height:38px;line-height:38px;font-size:12px;display:inline-block;cursor:pointer;}
+.m-liveaddress .info .info-btn2{width:98px;height:38px;line-height:38px;font-size:12px;display:inline-block;cursor:pointer;}
+.m-liveaddress .info .info-btn3{width:178px;display:inline-block;cursor:pointer;}
 .m-liveaddress .info .info-line{padding:20px 0 0 12px;}
 .m-liveaddress .info .info-input{width:358px;height:38px;line-height:38px;color:#959595;border:1px solid #dcdcdc;border-radius:3px;padding:0 6px 0 12px;margin-right:16px;}
 .m-liveaddress .info .info-input2{width:300px;margin-right:0;}

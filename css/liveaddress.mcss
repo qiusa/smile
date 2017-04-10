@@ -89,36 +89,31 @@
                 float: left;
                 padding-left: 16px;
             }
+            .dd-list3{
+                float: left;
+            }
         }
         .info-btn{
             width: 98px;
             height: 38px;
             line-height: 38px;
-            text-align: center;
-            color: #fff;
-            background: #00ab65;
-            border: 1px solid #009759;
-            border-radius: 3px;
+            font-size: 12px;
             display: inline-block;
             cursor: pointer;
         }
-        .info-btn-wd{
-            width: 178px;
-        }
-        
         .info-btn2{
             width: 98px;
             height: 38px;
             line-height: 38px;
-            text-align: center;
-            color: #666;
-            background: #f7f7f7;
-            border: 1px solid #dcdcdc;
-            border-radius: 3px;
+            font-size: 12px;
             display: inline-block;
             cursor: pointer;
         }
-
+        .info-btn3{
+            width: 178px;
+            display: inline-block;
+            cursor: pointer;
+        }
         .info-line{
             padding: 20px 0 0 12px;
 

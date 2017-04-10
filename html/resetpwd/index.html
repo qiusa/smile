@@ -1,12 +1,15 @@
 <div class="m-resetpwd">
     <h2 class="head">重置密码</h2>
     <p class="text">请输入注册企业的邮箱地址或手机号码：</p>
-    <div class="add-dialog-box">
-        <input type="text" class="add-dialog-input" placeholder="企业邮箱地址或手机号码" r-model={reset.account}>
+    <div class="add-dialog-box {error.accountError ? 'u-verify-error' : ''}">
+        <input type="text" class="add-dialog-input" placeholder="企业邮箱地址或手机号码" r-model={reset.account} on-focus={error.accountError=''} >
+        <div class="u-error-pos u-cb {error.accountError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.accountError}</span></div>
     </div>
-    <div class="add-dialog-box u-cb">
-        <input type="text" class="add-dialog-input add-dialog-input-width" placeholder="图片验证码" r-model={reset.verifyCode}>
+    <div class="add-dialog-box u-cb {error.verifyError ? 'u-verify-error' : ''}">
+        <input type="text" class="add-dialog-input add-dialog-input-width" placeholder="图片验证码" r-model={reset.verifyCode} on-focus={error.verifyError=''}>
         <span class="add-dialog-verify" style="background: url({info.verifyImg} no-repeat;background-size: contain;" on-click={this.getVerifyImg()}>图片验证码</span>
         <span class="add-dialog-text2" on-click={this.getVerifyImg()}>换一个</span>
-    </div>    <div class="btn" on-click={this.stepClick()}>下一步</div>
+        <div class="u-error-pos u-cb {error.verifyError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.verifyError}</span></div>
+    </div>
+    <div class="u-btn btn" on-click={this.stepClick()}>下一步</div>
 </div>

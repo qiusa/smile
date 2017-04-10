@@ -90,6 +90,45 @@
                 }
             }
         }
+        .switch{
+            width: 58px;
+            height: 22px;
+            line-height: 22px;
+            border-radius: 12px;
+            background: #12a76b;
+            border: 1px solid #0d945e;
+            color: #fff;
+            font-size: 12px;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            .switch-text{
+                float: right;
+                padding-right: 9px;
+            }
+            .switch-icon{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: #fff;
+                display: inline-block;
+                position: absolute;
+                top: 1px;
+                left: 37px;
+                -webkit-transition: 0.2s ease;
+                   -moz-transition: 0.2s ease;
+                    -ms-transition: 0.2s ease;
+                     -o-transition: 0.2s ease;
+                        transition: 0.2s ease;
+            }
+            .switch-pos{
+                left: 1px;
+            }
+        }
+        .cloud-link{
+            vertical-align: top;
+            margin-left: 10px;
+        }
     }
     .cloud-title{
         padding-top: 36px;

@@ -7,7 +7,7 @@
             点击发送短信按钮，将会发送一封有验证码的短信至手机
             <span class="send-dialog-code-text3">{reset.account}</span>
         </p>
-        <div class="btn" on-click={this.sendPhone()}>发送短信</div>
+        <div class="u-btn btn" on-click={this.sendPhone()}>发送短信</div>
         <div class="other-text">
             <a href="./resetpwdemail.html?type=email&account={reset.account}&other=yes">换用其他验证方式</a>
         </div>
@@ -16,7 +16,7 @@
         <p class="send-dialog-code-text1">请选择验证方式：</p>
         <p class="send-dialog-code-text4">通过安全手机接收验证短信</p>
         <p class="send-dialog-code-text2">验证您的企业手机</p>
-        <div class="btn" on-click={this.sendPhone()}>下一步</div>
+        <div class="u-btn btn" on-click={this.sendPhone()}>下一步</div>
         <div class="other-text">
             <a href="javascript:;" class="m-login-btn" on-click={this.goBack()()}>返回</a>
         </div>

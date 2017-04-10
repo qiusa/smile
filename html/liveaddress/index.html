@@ -11,7 +11,7 @@
                 <p class="text2">add32342342345</p>
             </dd>
             <dd class="dd-list2">
-                <span class="info-btn" on-click={this.setPhone()}>暂停直播</span>
+                <span class="u-btn info-btn" on-click={this.setPhone()}>暂停直播</span>
             </dd>
         </dl>
     </div>
@@ -20,7 +20,7 @@
         <p class="text3">直播源地址HLS：支持网页端直接播放</p>
         <div class="info-line u-cb">
             <input type="text" id="foo" class="info-input" readonly="true" value="http:ewewew.jh">
-            <span class="info-btn2" id="copyAddress" data-clipboard-action="copy" data-clipboard-target="#foo">复制地址</span>
+            <span class="u-white-btn info-btn2" id="copyAddress" data-clipboard-action="copy" data-clipboard-target="#foo">复制地址</span>
         </div>
         <p class="text4">下方设置保存后，内容会即时更新，地址不会变化</p>
     </div>
@@ -29,16 +29,14 @@
         <span class="text5">直播设置（可选）</span>
     </h2>
     <div class="info">
-        <dl class="dl-line u-cb">
+        <dl class="dl-line u-cb {error.titleError.msg ? 'u-error-tip' : ''}">
             <dt>
                 <p class="text6">标题：</p>
             </dt>
             <dd class="dd-list1">
-                <input type="text" class="info-input info-input2" value="http:ewewew.jh">
+                <input type="text" class="info-input info-input2" value="http:ewewew.jh" placeholder="请输入不超过20字的标题">
             </dd>
-            <dd class="dd-list2">
-                <span class="text7">请输入不超过20字的标题</span>
-            </dd>
+            <dd class="dd-list3 {error.titleError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.titleError}</span></dd>
         </dl>
         <dl class="dl-line u-cb">
             <dt>
@@ -57,13 +55,14 @@
                 <p class="text9">支持大小： 200k以内</p>
             </dd>
         </dl>
-        <dl class="dl-line u-cb">
+        <dl class="dl-line u-cb {error.infoError.msg ? 'u-error-tip' : ''}">
             <dt>
                 <p class="text6">简介：</p>
             </dt>
             <dd class="dd-list1">
                 <textarea class="info-textarea" placeholder="请输入不超过200字的简介"></textarea>
             </dd>
+            <dd class="dd-list3 {error.infoError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.infoError}</span></dd>
         </dl>
         <dl class="dl-line u-cb">
             <dt>
@@ -76,20 +75,18 @@
                 <span class="text10" on-click={show.radioCheck = false}>需要密码</span>
             </dd>
         </dl>
-        <dl class="dl-line u-cb">
+        <dl class="dl-line u-cb {error.pwdError.msg ? 'u-error-tip' : ''}">
             <dt>&nbsp;</dt>
             <dd class="dd-list1">
                 <input type="password" class="info-input info-input2" placeholder="请输入不超过6位的纯数字密码" r-model={config.pwd}>
             </dd>
-            <dd class="dd-list2">
-                <span class="text7">请输入不超过6位的纯数字密码</span>
-            </dd>
+            <dd class="dd-list3 {error.pwdError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.pwdError}</span></dd>
         </dl>
         <dl class="dl-line u-cb">
             <dt>&nbsp;</dt>
             <dd class="dd-list1">
-                <span class="info-btn info-btn-wd" on-click={this.save()}>保存设置</span>
-                <span class="info-clear">清除设置</span>
+                <span class="u-btn info-btn3" on-click={this.save()}>保存设置</span>
+                <span class="info-clear u-a">清除设置</span>
             </dd>
             <dd class="dd-list2">
             </dd>

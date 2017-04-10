@@ -13,12 +13,15 @@
             <input class="verify-input" type="text" placeholder="请输入验证码" r-model={user.verifyCode}>
             <span class="verify-code" on-click={this.getVerifyImg()}></span>
         </div>
+        <div class="error-tip" r-hide={!show.errmsg}>
+            <p class="error-icon">{show.errmsg}</p>
+        </div>
         <div class="remember">
             <span class="checkbox {show.check ? 'checkbox-true' : ''}" on-click={show.check = show.check ? false : true}></span>
             <span>记住登陆状态</span>
             <a href="./resetpwd.html" class="u-ftr">忘记密码</a>
         </div>
-        <div class="btn" on-click={this.loginClick()}>登 录</div>
+        <div class="u-btn btn" on-click={this.loginClick()}>登 录</div>
         <div class="register-text">
             还没有青果账号？ <a href="./register.html">立即注册</a>
         </div>

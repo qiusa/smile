@@ -13,6 +13,11 @@
 .m-mycloud .device .info .dl-on{margin-top:18px;margin-top:24px;font-size:12px;color:#666;}
 .m-mycloud .device .info .dl-on dt{float:left;width:80px;line-height:24px;text-align:right;}
 .m-mycloud .device .info .dl-on dd{float:left;margin-left:42px;width:146px;height:24px;line-height:24px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.m-mycloud .device .switch{width:58px;height:22px;line-height:22px;border-radius:12px;background:#12a76b;border:1px solid #0d945e;color:#fff;font-size:12px;display:inline-block;position:relative;cursor:pointer;}
+.m-mycloud .device .switch .switch-text{float:right;padding-right:9px;}
+.m-mycloud .device .switch .switch-icon{width:20px;height:20px;border-radius:50%;background:#fff;display:inline-block;position:absolute;top:1px;left:37px;-webkit-transition:0.2s ease;-moz-transition:0.2s ease;-ms-transition:0.2s ease;-o-transition:0.2s ease;transition:0.2s ease;}
+.m-mycloud .device .switch .switch-pos{left:1px;}
+.m-mycloud .device .cloud-link{vertical-align:top;margin-left:10px;}
 .m-mycloud .cloud-title{padding-top:36px;height:28px;line-height:28px;font-size:16px;color:#666;}
 .m-mycloud .cloud-title .cloud-icon{background:url("../res/images/icon_live_on.png") left center no-repeat;width:28px;height:28px;display:inline-block;margin-right:2px;float:left;}
 .m-mycloud .cloud-title .cloud-text{padding-left:30px;font-size:14px;}

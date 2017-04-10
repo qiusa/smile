@@ -18,7 +18,8 @@ del,ins,u,s,a,a:hover{text-decoration:none;}
 body,textarea,input,button,select,keygen,legend{font:12px/1.14 "Microsoft YaHei",arial;color:#333;outline:0;}
 input::-ms-clear { display: none; }
 html,body,.g-body{height: 100%;}
-a,a:hover{color:#333;}
+a{color: #666;}
+a:hover{text-decoration: underline;}
 a:focus{outline:none;}
 ::-webkit-input-placeholder { /* WebKit browsers */
     color: #dcdcdc;
@@ -44,6 +45,7 @@ a:focus{outline:none;}
 @import './ui.css';
 
 .u-pdl4{padding-left:4px;}
+.u-pdl9{padding-left:9px;}
 .u-pdt4{padding-top:4px;}
 .u-pdt15{padding-top:15px;}
 .u-pdl15{padding-left:15px;}

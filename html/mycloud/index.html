@@ -29,7 +29,12 @@
                 <dl class="dl-on u-cb">
                     <dt>云存储：</dt>
                     <dd>
-                        <a href="#">如何开通</a>
+                        <div class="switch u-cb" on-click={show.switch = show.switch ? 0 : 1}>
+                            <span class="u-pdl9" r-hide={!show.switch}>开启</span>
+                            <span class="switch-icon {!show.switch ? 'switch-pos' : ''}"></span>
+                            <span class="switch-text" r-hide={show.switch}>关闭</span>
+                        </div>
+                        <a href="javascript:;" class="u-blue-a cloud-link" on-click={this.nav(2)}>如何开通？</a>
                     </dd>
                 </dl>
             </div>

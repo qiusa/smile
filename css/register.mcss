@@ -1,7 +1,4 @@
 @charset "UTF-8";
-body{
-    background: #f7f7f7;
-}
 .register-nav{
     background: url(../res/images/icon_logo_2.png) top left no-repeat;
     width: 860px;
@@ -30,6 +27,7 @@ body{
         }
         .dd-line{
             float: left;
+            white-space:nowrap;
             .register-input{
                 width: 306px;
                 height: 38px;
@@ -45,11 +43,6 @@ body{
                 width: 134px;
                 height: 38px;
                 line-height: 38px;
-                border-radius: 3px;
-                border: 1px solid #dcdcdc;
-                color: #666;
-                background: #f7f7f7;
-                text-align: center;
                 margin-left: 12px;
                 cursor: pointer;
             }
@@ -70,51 +63,13 @@ body{
                 color: #999;
                 cursor: pointer;
             }
-            .icon-right{
-                background: url(../res/images/checkbox_b_on.png) no-repeat;
-                width: 18px;
-                height: 18px;
-                display: inline-block;
-                vertical-align: middle;
-                margin-left: 5px;
-            }
-            .register-icon{
-                display: none;
-                width: 18px;
-                height: 18px;
-                vertical-align: middle;
-                margin: 10px 0 0 5px;
-                float: left;  
-            }
-            .icon-fail{
-                background: url(../res/images/icon_enter_fail.png) no-repeat;
-            }
-            .icon-caveat{
-                background: url(../res/images/icon_enter_caveat.png) no-repeat;
-                display: inline-block;
-            }
-            .icon-true{
-                background: url(../res/images/icon_enter_true.png) no-repeat;
-                display: inline-block;
-            }
-            .fail-text{
-                padding-left: 5px;
-                height: 40px;
-                line-height: 40px;
-            }
+            
         }
     }
     .register-btn{
         width: 320px;
-        height: 34px;
-        line-height: 34px;
-        text-align: center;
-        background: #00ab65;
-        border: 1px solid #00ab65;
-        border-radius: 3px;
-        color: #fff;
-        font-size: 16px;
         cursor: pointer;
+        display: block;
         margin: 36px auto 24px;
     }
     .service{
@@ -123,23 +78,6 @@ body{
         cursor: pointer;
         a{
             color: #548adc;
-        }
-    }
-    /* 错误校验样式 */
-    .error-tip{
-        display: none;
-    }
-    .verify-error{
-        .error-tip{
-            display: block;
-            color: #d76360;
-            .register-icon{
-                display: inline-block!important;  
-            }   
-        }
-        input{
-            border: 1px solid #d76369!important;
-            background: #fbefef!important;
         }
     }
 }

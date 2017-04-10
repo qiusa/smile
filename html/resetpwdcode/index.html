@@ -1,13 +1,14 @@
 <div class="m-resetpwdcode">
     <h2 class="head">青果企业帐号安全验证</h2>
-    <p class="add-dialog-code-text1 add-dialog-code-text1-mg">
+    <p class="add-dialog-code-text1 add-dialog-code-text1-mg {error.verifyError ? 'u-verify-error' : ''}">
         <span>请输入</span>
         <span class="add-dialog-code-text2">{reset.account}</span>
         收到的验证码
     </p>
-    <div class="add-dialog-code-box u-cb">
-        <input type="text" class="code-input u-ftl" placeholder="请输入收到的验证码" r-model={reset.verifyCode}>
-        <span class="verify-btn u-ftl" on-click={this.sendCode()}>{#if reset.timeOut}{reset.timeOut}{#else}发送{/if}</span>
+    <div class="add-dialog-code-box u-cb {error.verifyError ? 'u-verify-error' : ''}">
+        <input type="text" class="code-input u-ftl" placeholder="请输入收到的验证码" r-model={reset.verifyCode} on-focus={error.verifyError = ''}>
+        <span class="verify-btn u-ftl {reset.timeOut ? 'u-white-btn-disabled' : 'u-white-btn'}" on-click={this.sendCode()}>{#if reset.timeOut}{reset.timeOut}{#else}发送{/if}</span>
+        <div class="u-error-pos u-cb {error.verifyError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.verifyError}</span></div>
     </div>
-    <div class="btn" on-click={this.sureClick()}>确定</div>
+    <div class="u-btn btn" on-click={this.sureClick()}>确定</div>
 </div>

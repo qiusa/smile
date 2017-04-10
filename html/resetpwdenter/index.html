@@ -1,11 +1,14 @@
 <div class="m-resetpwdenter">
     <h2 class="head">重置密码</h2>
     <p class="add-dialog-text add-dialog-text-mg">请输入您的新密码：</p>
-    <div class="add-dialog-box">
-        <input type="text" class="add-dialog-input" placeholder="请输入新密码" r-model={reset.pwd}></div>
-    <div class="add-dialog-code-box">
+    <div class="add-dialog-box {error.pwdError ? 'u-verify-error' : ''}">
+        <input type="text" class="add-dialog-input" placeholder="请输入新密码" r-model={reset.pwd}>
+        <div class="u-error-pos u-cb {error.pwdError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.pwdError}</span></div>
+    </div>
+    <div class="add-dialog-code-box {error.pwdSecondError ? 'u-verify-error' : ''}">
         <input type="password" class="add-dialog-input" placeholder="请再次输入密码" r-model={reset.pwdSecond}>
+        <div class="u-error-pos u-cb {error.pwdSecondError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.pwdSecondError}</span></div>
     </div>
     <p class="add-dialog-text3">密码长度6~16位，数字、字母、字符至少包含两种</p>
-    <div class="btn" on-click={this.submitClick()}>提交</div>
+    <div class="u-btn btn" on-click={this.submitClick()}>提交</div>
 </div>

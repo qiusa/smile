@@ -7,4 +7,4 @@
 .m-resetpwd .add-dialog-input{width:274px;height:38px;line-height:38px;border:1px solid #ccc;border-radius:3px;padding-left:14px;}
 .m-resetpwd .add-dialog-input-width{width:144px;float:left;}
 .m-resetpwd .add-dialog-verify{width:75px;height:30px;background:#eee;margin:5px 8px 0 10px;float:left;}
-.m-resetpwd .btn{width:290px;height:38px;line-height:38px;text-align:center;border:1px solid transparent;border-radius:3px;background:#12a76b;color:#fff;font-size:15px;display:block;margin:36px auto 0;cursor:pointer;}
+.m-resetpwd .btn{width:290px;height:38px;line-height:38px;text-align:center;display:block;margin:36px auto 0;cursor:pointer;}
