@@ -4,12 +4,12 @@
 .m-register .title{font-size:20px;font-weight:bold;padding:48px 0 32px;text-align:center;}
 .m-register .dl-line{margin-top:16px;}
 .m-register .dl-line .dt-line{float:left;width:254px;padding-right:16px;text-align:right;line-height:40px;}
-.m-register .dl-line .dd-line{float:left;white-space:nowrap;}
+.m-register .dl-line .dd-line{float:left;white-space:nowrap;position:relative;}
 .m-register .dl-line .dd-line .register-input{width:306px;height:38px;line-height:38px;padding-left:12px;border:1px solid #dcdcdc;border-radius:3px;}
 .m-register .dl-line .dd-line .small{width:158px;}
-.m-register .dl-line .dd-line .send-btn{width:134px;height:38px;line-height:38px;margin-left:12px;cursor:pointer;}
+.m-register .dl-line .dd-line .send-btn{width:134px;height:38px;font-size:12px;line-height:38px;margin-left:12px;}
 .m-register .dl-line .dd-line .verify-code{display:inline-block;width:74px;height:29px;background:#eee;vertical-align:middle;margin-left:12px;cursor:pointer;}
 .m-register .dl-line .dd-line .code-text{padding-left:14px;line-height:40px;width:44px;display:inline-block;color:#999;cursor:pointer;}
-.m-register .register-btn{width:320px;cursor:pointer;display:block;margin:36px auto 24px;}
-.m-register .service{width:320px;margin:24px auto;cursor:pointer;}
+.m-register .register-btn{width:320px;cursor:pointer;display:block;margin:36px auto 0;}
+.m-register .service{width:320px;line-height:40px;cursor:pointer;}
 .m-register .service a{color:#548adc;}

@@ -7,6 +7,7 @@
             </dt>
             <dd class="dd-line">
                 <input type="text" class="register-input" placeholder="请输入邮箱" r-model={user.email} on-focus={error.emailError={msg: '', code: ''}} on-blur={this.verifyEmail(true)}>
+                <span class="icon-x" r-hide={!user.email} on-click={user.email=''}></span>
             </dd>
             <dd class="dd-line {error.emailError.msg ? 'u-error-tip' : ''}">
                 {#if error.emailError.code == 0}
@@ -25,6 +26,7 @@
             </dt>
             <dd class="dd-line">
                 <input type="text" class="register-input" placeholder="请输入6-16位的数字、字母组合密码" r-model={user.pwd} on-focus={error.pwdError=''} on-blur={this.verifyPwd(true)}>
+                <span class="icon-x" r-hide={!user.pwd} on-click={user.pwd=''}></span>
             </dd>
             <dd class="dd-line {error.pwdError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.pwdError}</span></dd>
         </dl>
@@ -34,6 +36,7 @@
             </dt>
             <dd class="dd-line">
                 <input type="password" class="register-input" placeholder="请再次输入密码" r-model={user.pwdSecond} on-focus={error.pwdSecondError=''} on-blur={this.verifyPwdSecond(true)}>
+                <span class="icon-x" r-hide={!user.pwdSecond} on-click={user.pwdSecond=''}></span>
             </dd>
             <dd class="dd-line {error.pwdSecondError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.pwdSecondError}</span></dd>
         </dl>
@@ -43,6 +46,7 @@
             </dt>
             <dd class="dd-line">
                 <input type="text" class="register-input" placeholder="请输入企业名称" r-model={user.company} on-focus={error.companyError=''} on-blur={this.verifyCompany(true)}>
+                <span class="icon-x" r-hide={!user.company} on-click={user.company=''}></span>
             </dd>
             <dd class="dd-line {error.companyError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.companyError}</span></dd>
         </dl>
@@ -52,6 +56,7 @@
             </dt>
             <dd class="dd-line">
                 <input type="text" class="register-input" placeholder="请输入手机号" r-model={user.phone} on-focus={error.phoneError=''} on-blur={this.verifyPhone(true)}>
+                <span class="icon-x" r-hide={!user.phone} on-click={user.phone=''}></span>
             </dd>
             <dd class="dd-line {error.phoneError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.phoneError}</span></dd>
         </dl>
@@ -61,9 +66,10 @@
             </dt>
             <dd class="dd-line">
                 <input type="text" class="register-input small" placeholder="请输入收到的验证码" r-model={user.message} on-focus={error.messageError=''} on-blur={this.verifyMessage(true)}>
+                <span class="icon-x" r-hide={!user.message} on-click={user.message=''}></span>
             </dd>
             <dd class="dd-line">
-                <div class="u-white-btn send-btn" on-click={this.sendCode()}>{#if show.timeOut}{show.sendMsg}（{show.timeOut}）{#else}{show.sendMsg}{/if}</div>
+                <div class="{show.timeOut ? 'u-white-btn-disabled' : 'u-white-btn'} send-btn" on-click={this.sendCode()}>{#if show.timeOut}{show.sendMsg}（{show.timeOut}）{#else}{show.sendMsg}{/if}</div>
             </dd>
             <dd class="dd-line {error.messageError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.messageError}</span></dd>
         </dl>
@@ -73,17 +79,24 @@
             </dt>
             <dd class="dd-line">
                 <input type="text" class="register-input small" placeholder="请输入右侧验证码" r-model={user.verifyCode} on-focus={error.verifyCodeError=''} on-blur={this.verifyVerifyCode(true)}>
+                <span class="icon-x" r-hide={!user.verifyCode} on-click={user.verifyCode=''}></span>
             </dd>
             <dd class="dd-line">
-                <div class="verify-code" style="background: url({verify.verifyImg}) no-repeat #eee;background-size: contain;" on-click={this.getVerifyImg()}>图片验证码</div>
+                <div class="verify-code" on-click={this.getVerifyImg()}>
+                    <img src="{show.imgCodeUrl}" width="74" height="29">
+                </div>
                 <span class="code-text" on-click={this.getVerifyImg()}>换一个</span>
             </dd>
             <dd class="dd-line {error.verifyCodeError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.verifyCodeError}</span></dd>
         </dl>
         <div class="u-btn register-btn" on-click={this.register()}>注册</div>
-        <div class="service">
-            <span class="checkbox {show.check ? 'checkbox-true' : ''}" on-click={show.check = show.check ? false : true}></span>
-            <span on-click={show.check = show.check ? false : true}>同意并遵守</span><a href="#" target="_bank">《服务条款》</a>
-        </div>
+        <dl class="dl-line u-cb {error.agreeError ? 'u-verify-error' : ''}">
+            <dt class="dt-line">&nbsp;</dt>
+            <dd class="dd-line service">
+                <span class="checkbox {show.check ? 'checkbox-true' : ''}" on-click={this.checkAgree()}></span>
+                <span on-click={this.checkAgree()}>同意并遵守</span><a href="#" target="_bank">《服务条款》</a>
+            </dd>
+            <dd class="dd-line {error.agreeError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.agreeError}</span></dd>
+        </dl>
     </form>
 </div>

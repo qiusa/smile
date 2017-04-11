@@ -97,6 +97,9 @@
             margin-top: 2px;
             cursor: pointer;
         }
+        .x-pos{
+            right: 127px;
+        }
         .error-tip{
             padding-top: 16px;
             .error-icon{

@@ -28,6 +28,7 @@
         .dd-line{
             float: left;
             white-space:nowrap;
+            position: relative;
             .register-input{
                 width: 306px;
                 height: 38px;
@@ -42,9 +43,9 @@
             .send-btn{
                 width: 134px;
                 height: 38px;
+                font-size: 12px;
                 line-height: 38px;
                 margin-left: 12px;
-                cursor: pointer;
             }
             .verify-code{
                 display: inline-block;
@@ -70,11 +71,11 @@
         width: 320px;
         cursor: pointer;
         display: block;
-        margin: 36px auto 24px;
+        margin: 36px auto 0;
     }
     .service{
         width: 320px;
-        margin: 24px auto;
+        line-height: 40px;
         cursor: pointer;
         a{
             color: #548adc;

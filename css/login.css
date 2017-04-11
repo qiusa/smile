@@ -13,6 +13,7 @@
 .m-login .m-login-dialog .login-input{border:1px solid #dcdcdc;border-radius:3px;width:230px;height:36px;line-height:36px;padding-left:42px;}
 .m-login .m-login-dialog .verify-input{border:1px solid #dcdcdc;border-radius:3px;width:146px;height:34px;line-height:34px;padding-left:12px;display:inline-block;vertical-align:top;}
 .m-login .m-login-dialog .verify-code{display:inline-block;width:74px;height:29px;background:#eee;margin-top:2px;cursor:pointer;}
+.m-login .m-login-dialog .x-pos{right:127px;}
 .m-login .m-login-dialog .error-tip{padding-top:16px;}
 .m-login .m-login-dialog .error-tip .error-icon{background:url("../res/images/icon_enter_fail.png") left center no-repeat;height:18px;line-height:18px;padding-left:26px;font-size:12px;color:#d76360;}
 .m-login .m-login-dialog .remember{padding:16px 0 22px;color:#999;font-size:12px;}

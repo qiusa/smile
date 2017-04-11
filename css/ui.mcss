@@ -252,6 +252,15 @@
     }
 }
 //输入框错误
+.icon-x{
+    background: url(../res/images/X.png) no-repeat;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    display: inline-block;
+}
 .icon-right{
     background: url(../res/images/checkbox_b_on.png) no-repeat;
     width: 18px;
@@ -311,4 +320,7 @@
         border: 1px solid #d76369!important;
         background: #fbefef!important;
     }
+}
+.u-pointer{
+    cursor: pointer;
 }

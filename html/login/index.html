@@ -4,21 +4,24 @@
         <div class="input-pos">
             <span class="icon-account"></span>
             <input type="text" class="login-input" placeholder="请输入邮箱" r-model={user.email}>
+            <span class="icon-x" r-hide={!user.email} on-click={user.email=''}></span>
         </div>
         <div class="input-pos u-mgt16">
             <span class="icon-pwd"></span>
-            <input type="text" class="login-input" placeholder="请输入密码" r-model={user.pwd}>
+            <input type="password" class="login-input" placeholder="请输入密码" r-model={user.pwd}>
+            <span class="icon-x" r-hide={!user.pwd} on-click={user.pwd=''}></span>
         </div>
-        <div class="u-mgt16">
+        <div class="input-pos u-mgt16" r-hide={!show.isVerify}>
             <input class="verify-input" type="text" placeholder="请输入验证码" r-model={user.verifyCode}>
-            <span class="verify-code" on-click={this.getVerifyImg()}></span>
+            <span class="verify-code" on-click={this.getVerifyImg()}><img src="{show.imgCodeUrl}" width="74" height="29"></span>
+            <span class="icon-x x-pos" r-hide={!user.verifyCode} on-click={user.verifyCode=''}></span>
         </div>
         <div class="error-tip" r-hide={!show.errmsg}>
             <p class="error-icon">{show.errmsg}</p>
         </div>
         <div class="remember">
             <span class="checkbox {show.check ? 'checkbox-true' : ''}" on-click={show.check = show.check ? false : true}></span>
-            <span>记住登陆状态</span>
+            <span class="u-pointer" on-click={show.check = show.check ? false : true}>记住登陆状态</span>
             <a href="./resetpwd.html" class="u-ftr">忘记密码</a>
         </div>
         <div class="u-btn btn" on-click={this.loginClick()}>登 录</div>

@@ -1,4 +1,4 @@
-define(['jquery'], function($) {
+define(['jquery', '../../javascript/3rd/cookie.js'], function($, cookie) {
     var util = {
         getDomain: function() {
             var locationHost = {
@@ -116,6 +116,12 @@ define(['jquery'], function($) {
                 url: uri,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
+                beforeSend: function (xhr) {
+                    if (cookie.get('token') && cookie.get('uid')) {
+                        xhr.setRequestHeader("token", cookie.get('token'));
+                        xhr.setRequestHeader("uid", cookie.get('uid'));
+                    }
+               },
                 type: options.method || 'post',
                 data: options.method.toLowerCase() == 'post' ? JSON.stringify(options.param) : options.param
             }).done(function(data) {
@@ -124,8 +130,8 @@ define(['jquery'], function($) {
                     console.error('数据错误！');
                     return;
                 }
-                // 这里直接判断状态，如果非200则触发onerror.
-                if (data.code != 200) {
+                // 这里直接判断状态，如果非0则触发onerror.
+                if (data.code != 0) {
                     console.error('获取数据失败！', data);
                     fer ? fer.call(this, data) : 0;
                 } else {
@@ -134,7 +140,6 @@ define(['jquery'], function($) {
                 options.onend ? options.onend.call(this, data) : 0;
             }).fail(function(data) {
                 console.error('获取数据失败，请刷新重试！');
-                console.info(data)
                 fer ? fer.call(this, data || {}) : 0;
                 options.onend ? options.onend.call(this, data || {}) : 0;
             });

@@ -5,6 +5,7 @@
     left: 0;
     bottom: 0;
     text-align: center;
+    z-index: 11;
     .m-over{
         position: fixed;
         left: 0;

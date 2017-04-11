@@ -32,6 +32,7 @@
     .add-dialog-box{
         width: 290px;
         margin: 16px auto 0;
+        position: relative;
     }
     .add-dialog-input{
         width: 274px;

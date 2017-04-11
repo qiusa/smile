@@ -4,23 +4,23 @@ define(['jquery'], function($) {
      */
     var api = {
         USER: {
-            'getAccountInfo': './qyapi/getAccountInfo', //账户信息
-            'login': './qyapi/login', //账户登陆
-            'logout': './qyapi/logout', //账户登出
-            'checkIfEmailExists': './qyapi/checkIfEmailExists', //账户email是否存在
-            'register': './qyapi/register', //账户注册
-            'getImageCode': './qyapi/getImageCode', //获取图形验证码
-            'getSmsCode': './qyapi/getSmsCode', //获取短信验证码
-            'startResetPassword': './qyapi/startResetPassword', //重置密码step1
-            'sendResetPasswordVerifyCode': './qyapi/sendResetPasswordVerifyCode', //重置密码step2
-            'resetPasswordVerifyCode': './qyapi/resetPasswordVerifyCode', //重置密码step3
-            'setNewPassword': './qyapi/setNewPassword', //设置新密码
+            'getAccountInfo': './qyapi/user/getAccountInfo', //账户信息
+            'login': './qyapi/user/login', //账户登陆
+            'logout': './qyapi/user/logout', //账户登出
+            'checkIfEmailExists': './qyapi/user/checkIfEmailExists', //账户email是否存在
+            'register': './qyapi/user/register', //账户注册
+            'getImageCode': './qyapi/user/getImageCode', //获取图形验证码
+            'getSmsCode': './qyapi/user/getSmsCode', //获取短信验证码
+            'startResetPassword': './qyapi/user/startResetPassword', //重置密码step1
+            'sendResetPasswordVerifyCode': './qyapi/user/sendResetPasswordVerifyCode', //重置密码step2
+            'resetPasswordVerifyCode': './qyapi/user/resetPasswordVerifyCode', //重置密码step3
+            'setNewPassword': './qyapi/user/setNewPassword', //设置新密码
 
-            'getAlertInfo': './qyapi/getAlertInfo', //余额预警信息
-            'setAlertBalance': './qyapi/setAlertBalance', //余额预警阈值设置
-            'setAlertMobile': './qyapi/setAlertMobile', //余额预警手机设置
-            'removeAlertMobile': './qyapi/removeAlertMobile', //删除余额预警手机设置
-            'setAlertEmail': './qyapi/setAlertEmail' //余额预警邮件设置
+            'getAlertInfo': './qyapi/user/getAlertInfo', //余额预警信息
+            'setAlertBalance': './qyapi/user/setAlertBalance', //余额预警阈值设置
+            'setAlertMobile': './qyapi/user/setAlertMobile', //余额预警手机设置
+            'removeAlertMobile': './qyapi/user/removeAlertMobile', //删除余额预警手机设置
+            'setAlertEmail': './qyapi/user/setAlertEmail' //余额预警邮件设置
         },
         DEVICE: {
             'deleteDevice': './qyapi/device/deleteDevice', //删除设备
