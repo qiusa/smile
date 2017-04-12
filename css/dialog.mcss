@@ -68,6 +68,9 @@
             width: 290px;
         }
     }
+    .x-pos{
+        left: 137px;
+    }
     //弹出框
 .yj-text{
     width: 291px;
@@ -227,6 +230,12 @@
     .add-dialog-box{
         width: 290px;
         margin: 16px auto 0;
+        position: relative;
+    }
+    .add-dialog-box2{
+        width: 290px;
+        margin: 0 auto;
+        position: relative;
     }
     .add-dialog-input{
         width: 274px;

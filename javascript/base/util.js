@@ -1,4 +1,4 @@
-define(['jquery', '../../javascript/3rd/cookie.js'], function($, cookie) {
+define(['jquery', '../../javascript/3rd/cookie.js', '../../javascript/widget/tip.js'], function($, cookie, tip) {
     var util = {
         getDomain: function() {
             var locationHost = {
@@ -10,6 +10,13 @@ define(['jquery', '../../javascript/3rd/cookie.js'], function($, cookie) {
         },
         trim: function(str) { //删除左右两端的空格
             return str.replace(/(^\s*)|(\s*$)/g, "");
+        },
+        tip: function() {
+            if (!this.tipShow) {
+                this.tipShow = new tip();
+                this.tipShow.$inject('body');
+            }
+            return this.tipShow;
         },
         //滚动条在Y轴上的滚动距离
         getScrollTop: function() {
@@ -116,16 +123,16 @@ define(['jquery', '../../javascript/3rd/cookie.js'], function($, cookie) {
                 url: uri,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
-                beforeSend: function (xhr) {
+                beforeSend: function(xhr) {
                     if (cookie.get('token') && cookie.get('uid')) {
                         xhr.setRequestHeader("token", cookie.get('token'));
                         xhr.setRequestHeader("uid", cookie.get('uid'));
                     }
-               },
+                },
                 type: options.method || 'post',
                 data: options.method.toLowerCase() == 'post' ? JSON.stringify(options.param) : options.param
             }).done(function(data) {
-                console.info('成功', data, options)
+                console.info('成功111', data, options)
                 if (!data && typeof data === undefined) {
                     console.error('数据错误！');
                     return;
@@ -156,9 +163,9 @@ define(['jquery', '../../javascript/3rd/cookie.js'], function($, cookie) {
         },
         removeArray: function(arr, val) {
             var index = this.indexOfArray(arr, val);
-            console.info('jjj',index)
+            console.info('jjj', index)
             if (index > -1) {
-                console.info('iii',index)
+                console.info('iii', index)
                 arr.splice(index, 1);
             }
         },
@@ -172,8 +179,8 @@ define(['jquery', '../../javascript/3rd/cookie.js'], function($, cookie) {
         hideName: function(str, start, end, length) {
             var st = str.slice(0, start),
                 hide = '',
-                ed = str.slice(0-end);
-            for (var i = 0;i < length; i++) {
+                ed = str.slice(0 - end);
+            for (var i = 0; i < length; i++) {
                 hide += '*';
             }
             return st + hide + ed;
@@ -205,6 +212,19 @@ define(['jquery', '../../javascript/3rd/cookie.js'], function($, cookie) {
                 }
             }
         },
+        uuid: function() {
+            var s = [];
+            var hexDigits = "0123456789abcdef";
+            for (var i = 0; i < 36; i++) {
+                s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+            }
+            s[14] = "4"; // bits 12-15 of the time_hi_and_version field to 0010
+            s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1); // bits 6-7 of the clock_seq_hi_and_reserved to 01
+            s[8] = s[13] = s[18] = s[23] = "-";
+
+            var uuid = s.join("");
+            return uuid;
+        },
         /**
          * 校验账号密码输入
          * @param  {String} type  校验类型
@@ -216,7 +236,7 @@ define(['jquery', '../../javascript/3rd/cookie.js'], function($, cookie) {
             }
             var regPhone = /^1[3578]\d{9}$/, //匹配手机号
                 regEmail = /^([\w-_]+(?:\.[\w-_]+)*)@((?:[a-z0-9]+(?:-[a-zA-Z0-9]+)*)+\.[a-z]{2,6})$/i, //匹配邮箱
-                regPwd = /(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^.{6,16}$/;//匹配密码6-16位的数字、字母、特殊字符至少2种组合密码
+                regPwd = /(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^.{6,16}$/; //匹配密码6-16位的数字、字母、特殊字符至少2种组合密码
             if (type == 'phone') {
                 if (!regPhone.test(util.trim(value))) {
                     return true;

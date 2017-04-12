@@ -324,3 +324,15 @@
 .u-pointer{
     cursor: pointer;
 }
+.u-error-type{
+    padding-top: 16px;
+    .error-icon{
+        background: url(../res/images/icon_enter_fail.png) left center no-repeat;
+        height: 18px;
+        line-height: 18px;
+        padding-left: 26px;
+        font-size: 12px;
+        color: #d76360;
+        text-align: left;
+    }
+}

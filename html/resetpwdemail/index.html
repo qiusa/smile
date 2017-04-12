@@ -1,6 +1,5 @@
 <div class="m-resetpwdemail">
     <!-- 是否从其他验证方式进入 -->
-    {#if reset.other != 'yes'}
     <h2 class="head">青果企业帐号安全验证</h2>
     <p class="send-dialog-code-text1">为了保护帐号安全，需要验证邮箱有效性</p>
     <p class="send-dialog-code-text2">
@@ -11,14 +10,4 @@
     <div class="other-text">
         <a href="./resetpwdphone.html?type=phone&account={reset.account}&other=yes">换用其他验证方式</a>
     </div>
-    {#else}
-    <h2 class="head">青果企业帐号安全验证</h2>
-    <p class="send-dialog-code-text1">请选择验证方式：</p>
-    <p class="send-dialog-code-text4">通过安全邮箱接收验证邮件</p>
-    <p class="send-dialog-code-text2">验证您的企业邮箱</p>
-    <div class="u-btn btn" on-click={this.sendEmail()}>下一步</div>
-    <div class="other-text">
-        <a href="javascript:;" class="m-login-btn" on-click={this.goBack()()}>返回</a>
-    </div>
-    {/if}
 </div>

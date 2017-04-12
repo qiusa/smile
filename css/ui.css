@@ -49,3 +49,5 @@
 .u-verify-error .u-error-tip .register-icon{display:inline-block !important;}
 .u-verify-error input{border:1px solid #d76369 !important;background:#fbefef !important;}
 .u-pointer{cursor:pointer;}
+.u-error-type{padding-top:16px;}
+.u-error-type .error-icon{background:url("../res/images/icon_enter_fail.png") left center no-repeat;height:18px;line-height:18px;padding-left:26px;font-size:12px;color:#d76360;text-align:left;}

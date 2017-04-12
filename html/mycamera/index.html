@@ -62,7 +62,7 @@
                     <span class="device-id">设备ID</span>
                 </td>
                 <td class="td2">设备名称</td>
-                <td class="td3 j-select" on-click={this.onShow($event)}>
+                <td class="td3 u-pointer j-select" on-click={this.onShow($event)}>
                     状态<span class="icon-more icon-more-white"></span>
                     <ul class="index-list">
                         <li class="self">状态</li>
@@ -71,7 +71,7 @@
                         <li><span class="select-icon"></span>全部</li>
                     </ul>
                 </td>
-                <td class="td4 j-select" on-click={this.onShow($event)}>
+                <td class="td4 u-pointer j-select" on-click={this.onShow($event)}>
                     直播<span class="icon-more icon-more-white"></span>
                     <ul class="index-list">
                         <li class="self">直播</li>
@@ -80,7 +80,7 @@
                         <li><span class="select-icon"></span>全部</li>
                     </ul>
                 </td>
-                <td class="td5 j-select" on-click={this.onShow($event)}>
+                <td class="td5 u-pointer j-select" on-click={this.onShow($event)}>
                     夜视<span class="icon-more icon-more-white"></span>
                     <ul class="index-list">
                         <li class="self">夜视</li>
@@ -89,7 +89,7 @@
                         <li><span class="select-icon"></span>全部</li>
                     </ul>
                 </td>
-                <td class="td6 j-select" on-click={this.onShow($event)}>
+                <td class="td6 u-pointer j-select" on-click={this.onShow($event)}>
                     声音<span class="icon-more icon-more-white"></span>
                     <ul class="index-list">
                         <li class="self">声音</li>
@@ -98,7 +98,7 @@
                         <li><span class="select-icon"></span>全部</li>
                     </ul>
                 </td>
-                <td class="td7 j-select" on-click={this.onShow($event)}>
+                <td class="td7 u-pointer j-select" on-click={this.onShow($event)}>
                     清晰度<span class="icon-more icon-more-white"></span>
                     <ul class="index-list">
                         <li class="self">清晰度</li>
@@ -108,7 +108,15 @@
                         <li><span class="select-icon"></span>全部</li>
                     </ul>
                 </td>
-                <td class="td8">云存储</td>
+                <td class="td8 u-pointer j-select" on-click={this.onShow($event)}>
+                    云存储
+                    <span class="icon-more icon-more-white"></span>
+                    <ul class="index-list">
+                        <li class="self">云存储</li>
+                        <li><span class="select-icon"></span>开</li>
+                        <li><span class="select-icon"></span>关</li>
+                    </ul>
+                </td>
                 <td><p class="u-mgl64">操作</p></td>
             </tr>
         </thead>
@@ -118,15 +126,15 @@
             <tr>
                 <td class="td1">
                     <span class="checkbox {item.checkbox ? 'checkbox-true' : ''}" on-click={this.check(item_index)}></span>
-                    <span class="device-id">{item.id}</span></td>
+                    <span class="device-id">{item.deviceId}</span></td>
                 <td class="td2">
-                    <span class="device-name" on-click={this.edit($event)}>{item.name ? item.name : "空"}</span>
+                    <span class="device-name" on-click={this.edit($event, item.cameraName)}>{item.cameraName ? item.cameraName : "青果摄像机"}</span>
                     <div class="device-change" style="display: none;">
-                        <input type="text" class="device-input" r-model={item.name} on-blur={this.hide($event)}>
-                        <span class="close" on-click={item.name = ''}></span>  
+                        <input type="text" class="device-input" r-model={showParams.temp} on-blur={this.hide($event, item_index, showParams.temp)}>
+                        <span class="close" on-click={showParams.temp = ''}></span>  
                     </div>
                 </td>
-                <td class="td3">{item.status ? '在线' : '不在线'}</td>
+                <td class="td3">{item.Status ? '在线' : '不在线'}</td>
                 <td class="td4">
                     <p class="u-mgl8 icon-live {item.isPlay ? 'icon-live-on' : ''}"></p>
                 </td>

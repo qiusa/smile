@@ -16,7 +16,7 @@
             <span class="verify-code" on-click={this.getVerifyImg()}><img src="{show.imgCodeUrl}" width="74" height="29"></span>
             <span class="icon-x x-pos" r-hide={!user.verifyCode} on-click={user.verifyCode=''}></span>
         </div>
-        <div class="error-tip" r-hide={!show.errmsg}>
+        <div class="u-error-type" r-hide={!show.errmsg}>
             <p class="error-icon">{show.errmsg}</p>
         </div>
         <div class="remember">
