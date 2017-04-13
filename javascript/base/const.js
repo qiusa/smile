@@ -12,8 +12,8 @@ define(['jquery'], function($) {
             'getImageCode': './qyapi/user/getImageCode', //获取图形验证码
             'getSmsCode': './qyapi/user/getSmsCode', //获取短信验证码
             'startResetPassword': './qyapi/user/startResetPassword', //重置密码step1
-            'sendResetPasswordVerifyCode': './qyapi/user/sendResetPasswordVerifyCode', //重置密码step2
-            'resetPasswordVerifyCode': './qyapi/user/resetPasswordVerifyCode', //重置密码step3
+            'sendVerifyCode': './qyapi/user/sendVerifyCode', //重置密码step2
+            'verifyCode': './qyapi/user/verifyCode', //重置密码step3
             'setNewPassword': './qyapi/user/setNewPassword', //设置新密码
 
             'getAlertInfo': './qyapi/user/getAlertInfo', //余额预警信息
@@ -33,6 +33,19 @@ define(['jquery'], function($) {
             'stopPlay': './qyapi/device/stopPlay', //停止播放摄像机
             'deviceRecords': './qyapi/device/deviceRecords', //获取设备录像记录
             'deleteRecords': './qyapi/device/deleteRecords', //删除录像记录
+        },
+        COMPANY: {
+            'stats': './qyapi/company/stats', //企业信息详情
+            'stats': './qyapi/company/stats', //
+            'stats': './qyapi/company/stats', //
+            'stats': './qyapi/company/stats', //
+            'stats': './qyapi/company/stats', //
+            'stats': './qyapi/company/stats', //
+            'stats': './qyapi/company/stats', //
+            'stats': './qyapi/company/stats', //
+            'stats': './qyapi/company/stats', //
+            'stats': './qyapi/company/stats', //
+            'stats': './qyapi/company/stats' //
         }
     };
     return api;

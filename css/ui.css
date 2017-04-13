@@ -1,7 +1,7 @@
 .u-btn{width:118px;height:38px;line-height:38px;border-radius:3px;background:#12a76b;border:1px solid #0d945e;color:#fff;font-size:16px;text-align:center;display:inline-block;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
 .u-btn:hover{background:#0f9961;border:1px solid #0a8956;text-decoration:none;}
 .u-btn:active{background:#0c8957;border:1px solid #098050;}
-.u-btn-disabled{width:118px;height:38px;line-height:38px;border-radius:3px;border:1px solid #0d945e;color:#fff;font-size:16px;opacity:0.2;text-align:center;display:inline-block;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
+.u-btn-disabled{width:118px;height:38px;line-height:38px;border-radius:3px;background:#12a76b;border:1px solid #0d945e;color:#fff;font-size:16px;opacity:0.2;text-align:center;display:inline-block;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
 .u-white-btn{width:118px;height:38px;line-height:38px;border-radius:3px;border:1px solid #dcdcdc;background:#f7f7f7;color:#666;font-size:12px;text-align:center;display:inline-block;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
 .u-white-btn:hover{background:#ebebeb;border:1px solid #ccc;text-decoration:none;}
 .u-white-btn:active{background:#ccc;border:1px solid #b3b3b3;}

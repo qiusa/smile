@@ -1,4 +1,4 @@
-define(['jquery', '../../javascript/3rd/cookie.js', '../../javascript/widget/tip.js'], function($, cookie, tip) {
+define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascript/widget/tip.js'], function(Regular, $, cookie, tip) {
     var util = {
         getDomain: function() {
             var locationHost = {
@@ -337,5 +337,25 @@ define(['jquery', '../../javascript/3rd/cookie.js', '../../javascript/widget/tip
             f1(fnext);
         }
     };
+    /**
+     * 隐藏名称 中间部分以星号替代
+     * @param  {String} str    需要隐藏的名称
+     * @param  {Number} start  显示前几位
+     * @param  {Number} end    显示后几位
+     * @param  {Number} length 隐藏中间几位
+     */
+    Regular.filter("hideName", function(value, type){
+        if (!value) {
+            return value;
+        }
+        if (type == 'email') {
+            return util.hideName(value, 3, 10, 6);
+        } else if (type == 'mobile') {
+            return util.hideName(value, 3, 2, 8);
+        } else {
+            return value;
+        }
+    })
+
     return util;
 })
