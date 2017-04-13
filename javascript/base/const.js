@@ -20,7 +20,8 @@ define(['jquery'], function($) {
             'setAlertBalance': './qyapi/user/setAlertBalance', //余额预警阈值设置
             'setAlertMobile': './qyapi/user/setAlertMobile', //余额预警手机设置
             'removeAlertMobile': './qyapi/user/removeAlertMobile', //删除余额预警手机设置
-            'setAlertEmail': './qyapi/user/setAlertEmail' //余额预警邮件设置
+            'setAlertEmail': './qyapi/user/setAlertEmail', //余额预警邮件设置
+            'removeAlertEmail': './qyapi/user/removeAlertEmail' //删除余额预警手机设置
         },
         DEVICE: {
             'deleteDevice': './qyapi/device/deleteDevice', //删除设备

@@ -291,6 +291,7 @@
     .add-dialog-code-box{
         width: 290px;
         margin: 24px auto 0;
+        position: relative;
         .code-input{
             width: 144px;
             height: 38px;
@@ -307,7 +308,6 @@
             font-size: 14px;
             display: inline-block;
             margin-left: 12px;
-            cursor: pointer;
         }
     }    
 }

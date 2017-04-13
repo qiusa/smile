@@ -44,6 +44,6 @@
 .m-dialog .send-dialog-code-text3{color:#333;}
 .m-dialog .add-dialog-code-text1{width:290px;margin:96px auto 0;font-size:14px;line-height:14px;color:#666;text-align:left;}
 .m-dialog .add-dialog-code-text2{color:#333;}
-.m-dialog .add-dialog-code-box{width:290px;margin:24px auto 0;}
+.m-dialog .add-dialog-code-box{width:290px;margin:24px auto 0;position:relative;}
 .m-dialog .add-dialog-code-box .code-input{width:144px;height:38px;line-height:38px;border:1px solid #ccc;border-radius:3px;padding-left:14px;}
-.m-dialog .add-dialog-code-box .verify-btn{width:116px;height:38px;line-height:38px;text-align:center;font-size:14px;display:inline-block;margin-left:12px;cursor:pointer;}
+.m-dialog .add-dialog-code-box .verify-btn{width:116px;height:38px;line-height:38px;text-align:center;font-size:14px;display:inline-block;margin-left:12px;}

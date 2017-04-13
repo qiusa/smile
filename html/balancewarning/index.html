@@ -17,7 +17,7 @@
             <span class="company">
                 <p class="text1 u-cb">
                     <span class="u-ftl">手机号：</span>
-                    <span class="text3">{config.info.mobile|hideName:'mobile'}</span>
+                    <span class="text3">{config.info.mobile|hideName:'mobile'}{#if config.info.mobiles && config.info.mobiles.length}{#list config.info.mobiles as item}，{item|hideName:'mobile'}{/list}{/if}</span>
                 </p>
                 <p class="text2">预警提醒信息将发送到以上手机号，可设置最多5个号码</p>
             </span>
@@ -28,7 +28,7 @@
             <span class="company">
                 <p class="text1 u-cb">
                     <span class="u-ftl">邮箱：</span>
-                    <span class="text3">{config.info.email|hideName:'email'}</span>
+                    <span class="text3">{config.info.email|hideName:'email'}{#if config.info.emails && config.info.emails.length}{#list config.info.emails as item}，{item|hideName:'email'}{/list}{/if}</span>
                 </p>
                 <p class="text2">预警提醒信息将发送到以上邮箱，可设置最多5个邮箱</p>
             </span>

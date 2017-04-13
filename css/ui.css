@@ -34,7 +34,7 @@
 .operation-list .live{background:#ebebeb;border:1px solid #ccc;color:#4c4c4c;z-index:11;}
 .operation-list .live .detail-list{display:block;}
 .operation-list .light.live{border:1px solid #0d945e;background:#12a76b;color:#fff;}
-.icon-x{background:url("../res/images/X.png") no-repeat;width:14px;height:14px;position:absolute;right:10px;top:12px;display:inline-block;}
+.icon-x{background:url("../res/images/X.png") no-repeat;width:14px;height:14px;position:absolute;right:10px;top:12px;display:inline-block;cursor:pointer;}
 .icon-right{background:url("../res/images/checkbox_b_on.png") no-repeat;width:18px;height:18px;display:inline-block;vertical-align:middle;margin-left:5px;}
 .register-icon{display:none;width:18px;height:18px;vertical-align:middle;margin:11px 0 0 5px;float:left;}
 .icon-fail{background:url("../res/images/icon_enter_fail.png") no-repeat;}
