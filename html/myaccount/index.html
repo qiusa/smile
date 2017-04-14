@@ -3,22 +3,22 @@
     <ul class="list">
         <li class="u-cb">
             <span class="name">企业名：</span>
-            <span class="company">寂静都市</span>
+            <span class="company">{user.company}</span>
             <span class="disabled-btn">不可修改</span>
         </li>
         <li class="u-cb">
             <span class="name">账户名：</span>
-            <span class="company">寂静都市</span>
+            <span class="company">{user.email}</span>
             <span class="disabled-btn">不可修改</span>
         </li>
         <li class="u-cb">
             <span class="name">手机号码：</span>
-            <span class="company">寂静都市</span>
+            <span class="company">{user.mobile}</span>
             <span class="btn" on-click={this.setPhone()}>修改</span>
         </li>
         <li class="u-cb">
             <span class="name">设备数量：</span>
-            <span class="company">22个</span>
+            <span class="company">{user.deviceCount}个</span>
             <span class="disabled-btn">自动获取</span>
         </li>
     </ul>

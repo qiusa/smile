@@ -344,7 +344,7 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
      * @param  {Number} end    显示后几位
      * @param  {Number} length 隐藏中间几位
      */
-    Regular.filter("hideName", function(value, type){
+    Regular.filter("hideName", function(value, type) {
         if (!value) {
             return value;
         }
@@ -357,5 +357,32 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
         }
     })
 
+    Regular.filter("digital", function(str, type) {
+        console.info(2222, str)
+        if (typeof str == 'undefined') {
+            return str;
+        }
+        if (type == 1) {
+            str = (str / 100).toFixed(2);
+            str = str.split('.');
+            return str[0];
+        } else if (type == 2) {
+            str = (str / 100).toFixed(2);
+            str = str.split('.');
+            console.info(999,str)
+            return str[1];
+        } else if (type == 3) {
+            str = (str / 1024 / 1024 / 1024).toFixed(2);
+            str = str.split('.');
+            return str[0];
+        } else if (type == 4) {
+            str = (str / 1024 / 1024 / 1024).toFixed(2);
+            str = str.split('.');
+            console.info(999,str)
+            return str[1];
+        } else {
+            return str.toFixed(2);
+        }
+    })
     return util;
 })

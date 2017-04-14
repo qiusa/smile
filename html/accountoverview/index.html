@@ -8,7 +8,11 @@
                         <p class="info">账户余额</p>
                         <div class="detail">
                             <p class="money">
-                                <span>223</span><span class="spot">.333</span> <span class="decimal">元</span>
+                                {#if show.loadMsg}
+                                <span>{show.loadMsg}</span>
+                                {#else}
+                                <span>{config.data.remain|digital:1}</span><span class="spot">.{config.data.remain|digital:2}</span> <span class="decimal">元</span>
+                                {/if}
                             </p>
                         </div>
                             
@@ -19,11 +23,19 @@
                 <div>
                     <div class="list2">
                         <p>消耗总额</p>
-                        <p class="content">2342342元</p>
+                        {#if show.loadMsg}
+                        <p class="content">{show.loadMsg}</p>
+                        {#else}
+                        <p class="content">{config.data.spent|digital}元</p>
+                        {/if}
                     </div>
                     <div class="list2 u-mgl20">
                         <p>入资总额</p>
-                        <p class="content">2342342元</p>
+                        {#if show.loadMsg}
+                        <p class="content">{show.loadMsg}</p>
+                        {#else}
+                        <p class="content">{config.data.charge|digital}</p>
+                        {/if}
                     </div>
                 </div>
             </div>
@@ -36,7 +48,11 @@
                         <p class="info">昨日消耗</p>
                         <div class="detail">
                             <p class="money">
-                                <span>223</span><span class="spot">.3</span> <span class="decimal">元</span>
+                                {#if show.loadMsg}
+                                <span>{show.loadMsg}</span>
+                                {#else}
+                                <span>{#if config.data.consumeRecordList && config.data.consumeRecordList[0]}{config.data.consumeRecordList[0].spent|digital:1}{#else}0{/if}</span><span class="spot">.{#if config.data.consumeRecordList && config.data.consumeRecordList[0]}{config.data.consumeRecordList[0].spent|digital:2}{#else}00{/if}</span> <span class="decimal">元</span>
+                                {/if}
                             </p>
                         </div>
                     </div>
@@ -44,7 +60,11 @@
                         <p class="info">昨日流量</p>
                         <div class="detail">
                             <p class="money">
-                                <span>2232</span><span class="spot">.23</span> <span class="decimal">GB</span>
+                                {#if show.loadMsg}
+                                <span>{show.loadMsg}</span>
+                                {#else}
+                                <span>{#if config.data.consumeRecordList && config.data.consumeRecordList[0]}{config.data.consumeRecordList[0].traffic|digital:3}{#else}0{/if}</span><span class="spot">.{#if config.data.consumeRecordList && config.data.consumeRecordList[0]}{config.data.consumeRecordList[0].traffic|digital:4}{#else}00{/if}</span> <span class="decimal">GB</span>
+                                {/if}
                             </p>
                         </div>
                     </div>
@@ -53,11 +73,19 @@
                 <div>
                     <div class="list2">
                         <p>预计可用天数</p>
-                        <p class="content">5.5 天</p>
+                        {#if show.loadMsg}
+                        <p class="content">{show.loadMsg}</p>
+                        {#else}
+                        <p class="content">{#if config.data.remainDays == -1}{config.data.remainTraffic?'+∞':'0'}{#else}{config.data.remainDays}{/if} 天</p>
+                        {/if}
                     </div>
                     <div class="list2 u-mgl40">
                         <p>账户可用流量</p>
-                        <p class="content">2342342 GB</p>
+                        {#if show.loadMsg}
+                        <p class="content">{show.loadMsg}</p>
+                        {#else}
+                        <p class="content">{config.data.remainTraffic|digital} GB</p>
+                        {/if}
                     </div>
                 </div>
             </div>

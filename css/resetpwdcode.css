@@ -4,7 +4,7 @@
 .m-resetpwdcode .add-dialog-code-text1{width:290px;margin:96px auto 0;font-size:14px;line-height:14px;color:#666;text-align:left;}
 .m-resetpwdcode .add-dialog-code-text1-mg{margin-top:0px;}
 .m-resetpwdcode .add-dialog-code-text2{color:#333;}
-.m-resetpwdcode .add-dialog-code-box{width:290px;margin:24px auto 0;}
+.m-resetpwdcode .add-dialog-code-box{width:290px;margin:24px auto 0;position:relative;}
 .m-resetpwdcode .add-dialog-code-box .code-input{width:144px;height:38px;line-height:38px;border:1px solid #ccc;border-radius:3px;padding-left:14px;}
 .m-resetpwdcode .add-dialog-code-box .verify-btn{width:116px;height:38px;line-height:38px;font-size:14px;display:inline-block;margin-left:12px;}
 .m-resetpwdcode .btn{width:290px;height:38px;line-height:38px;display:block;margin:36px auto 0;cursor:pointer;}

@@ -2,11 +2,11 @@
     <h2 class="head">重置密码</h2>
     <p class="add-dialog-text add-dialog-text-mg">请输入您的新密码：</p>
     <div class="add-dialog-box {error.pwdError ? 'u-verify-error' : ''}">
-        <input type="text" class="add-dialog-input" placeholder="请输入新密码" r-model={reset.pwd}>
+        <input type="text" class="add-dialog-input" placeholder="请输入新密码" r-model={reset.pwd} on-focus={error.pwdError=""}>
         <div class="u-error-pos u-cb {error.pwdError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.pwdError}</span></div>
     </div>
     <div class="add-dialog-code-box {error.pwdSecondError ? 'u-verify-error' : ''}">
-        <input type="password" class="add-dialog-input" placeholder="请再次输入密码" r-model={reset.pwdSecond}>
+        <input type="password" class="add-dialog-input" placeholder="请再次输入密码" r-model={reset.pwdSecond} on-focus={error.pwdSecondError=""}>
         <div class="u-error-pos u-cb {error.pwdSecondError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.pwdSecondError}</span></div>
     </div>
     <p class="add-dialog-text3">密码长度6~16位，数字、字母、字符至少包含两种</p>

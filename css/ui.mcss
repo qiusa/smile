@@ -263,6 +263,9 @@
     display: inline-block;
     cursor: pointer;
 }
+.x-pos{
+    left: 137px;
+}
 .icon-right{
     background: url(../res/images/checkbox_b_on.png) no-repeat;
     width: 18px;

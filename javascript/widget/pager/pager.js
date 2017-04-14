@@ -9,7 +9,7 @@ define(['regularjs', 'jquery', '../../base/util', './pager.html'], function(Regu
             var show = data.show = Math.floor(count / 2);
             data.current = data.current || 1;
             data.total = data.total || 1;
-            data.jump = '';
+            data.jump = data.current;
             this.$watch(['current', 'total'], function(current, total) {
                 if (current < 5) {
                     data.begin = 2;
@@ -27,6 +27,7 @@ define(['regularjs', 'jquery', '../../base/util', './pager.html'], function(Regu
             });
         },
         nav: function(page) {
+            if (!page) return;
             console.info('pagepage',page, typeof page)
             page = parseInt(page);
             var data = this.data;

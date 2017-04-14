@@ -21,7 +21,8 @@ define(['jquery'], function($) {
             'setAlertMobile': './qyapi/user/setAlertMobile', //余额预警手机设置
             'removeAlertMobile': './qyapi/user/removeAlertMobile', //删除余额预警手机设置
             'setAlertEmail': './qyapi/user/setAlertEmail', //余额预警邮件设置
-            'removeAlertEmail': './qyapi/user/removeAlertEmail' //删除余额预警手机设置
+            'removeAlertEmail': './qyapi/user/removeAlertEmail', //删除余额预警手机设置
+            'setBindMobile': './qyapi/user/setBindMobile' //我的账户手机设置
         },
         DEVICE: {
             'deleteDevice': './qyapi/device/deleteDevice', //删除设备
@@ -34,6 +35,14 @@ define(['jquery'], function($) {
             'stopPlay': './qyapi/device/stopPlay', //停止播放摄像机
             'deviceRecords': './qyapi/device/deviceRecords', //获取设备录像记录
             'deleteRecords': './qyapi/device/deleteRecords', //删除录像记录
+        },
+        LIVEWEB: {
+            'get': './qyapi/liveWeb/get', //获取用户设备直播页信息
+            'addOrUpdate': './qyapi/liveWeb/addOrUpdate', //
+            'get': './qyapi/liveWeb/get', //
+            'get': './qyapi/liveWeb/get', //
+            'get': './qyapi/liveWeb/get', //
+            'get': './qyapi/liveWeb/get', //
         },
         COMPANY: {
             'stats': './qyapi/company/stats', //企业信息详情
