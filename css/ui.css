@@ -27,8 +27,8 @@
 .operation-list .detail-list{display:none;position:absolute;right:0;top:28px;border:1px solid #dcdcdc;width:122px;line-height:40px;text-align:center;box-shadow:0 6px 4px 0 rgba(0,0,0,0.1);color:#666;}
 .operation-list .detail-list li{height:40px;line-height:40px;background:#fff;padding:0;float:none;border:0;border-radius:0;position:relative;}
 .operation-list .detail-list li .select-icon{background:url("../res/images/icon_drop_select.png") no-repeat;width:10px;height:10px;position:absolute;left:14px;top:15px;display:none;}
-.operation-list .detail-list li:hover{background:#eee;}
-.operation-list .detail-list li:hover .select-icon{display:inline-block;}
+.operation-list .detail-list li:hover,.operation-list .detail-list .cur{background:#eee;}
+.operation-list .detail-list li:hover .select-icon,.operation-list .detail-list .cur .select-icon{display:inline-block;}
 .operation-list .detail-list .hr{height:1px;width:100%;background:#f0f0f0;overflow:hidden;position:absolute;bottom:0;left:0;border:0;}
 .operation-list .detail-list-wd{width:118px;}
 .operation-list .live{background:#ebebeb;border:1px solid #ccc;color:#4c4c4c;z-index:11;}

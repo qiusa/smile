@@ -51,7 +51,7 @@
                                 {#if show.loadMsg}
                                 <span>{show.loadMsg}</span>
                                 {#else}
-                                <span>{#if config.data.consumeRecordList && config.data.consumeRecordList[0]}{config.data.consumeRecordList[0].spent|digital:1}{#else}0{/if}</span><span class="spot">.{#if config.data.consumeRecordList && config.data.consumeRecordList[0]}{config.data.consumeRecordList[0].spent|digital:2}{#else}00{/if}</span> <span class="decimal">元</span>
+                                <span>{#if renderConfig.yesterday.spent}{renderConfig.yesterday.spent|digital:1}{#else}0{/if}</span><span class="spot">.{#if renderConfig.yesterday.spent}{renderConfig.yesterday.spent|digital:2}{#else}00{/if}</span> <span class="decimal">元</span>
                                 {/if}
                             </p>
                         </div>
@@ -63,7 +63,7 @@
                                 {#if show.loadMsg}
                                 <span>{show.loadMsg}</span>
                                 {#else}
-                                <span>{#if config.data.consumeRecordList && config.data.consumeRecordList[0]}{config.data.consumeRecordList[0].traffic|digital:3}{#else}0{/if}</span><span class="spot">.{#if config.data.consumeRecordList && config.data.consumeRecordList[0]}{config.data.consumeRecordList[0].traffic|digital:4}{#else}00{/if}</span> <span class="decimal">GB</span>
+                                <span>{#if renderConfig.yesterday.traffic}{renderConfig.yesterday.traffic|digital:3}{#else}0{/if}</span><span class="spot">.{#if renderConfig.yesterday.traffic}{renderConfig.yesterday.traffic|digital:4}{#else}00{/if}</span> <span class="decimal">GB</span>
                                 {/if}
                             </p>
                         </div>
@@ -94,14 +94,14 @@
     <div class="chart">
         <span class="head">最近七天统计</span>
         <ul class="operation-list">
-            <li class="live" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
-                金额（元）
+            <li on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                {renderConfig.type == "spent" ? "金额（元）" : "流量（GB）"}
                 <span class="icon-more"></span>
                 <ul class="detail-list">
-                    <li>
-                        金额（元）
+                    <li class={renderConfig.type == "spent" ? "cur" : ""} on-click={this.renderChart('spent')}>
+                        <span class="select-icon"></span>金额（元）
                         <hr class="hr"></li>
-                    <li>流量（GB）</li>
+                    <li class={renderConfig.type == "traffic" ? "cur" : ""} on-click={this.renderChart('traffic')}><span class="select-icon"></span>流量（GB）</li>
                 </ul>
             </li>
         </ul>

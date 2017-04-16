@@ -217,7 +217,7 @@
                 display: none;
             }
         }
-        li:hover{
+        li:hover, .cur{
             background: #eee;
             .select-icon{
                 display: inline-block;

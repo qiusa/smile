@@ -4,18 +4,18 @@
         <span class="u-ftl">选择日期：</span>
         <input type="text" id="timeConfig" class="time-input">
         <ul class="time-list">
-            <li class="{navIndex == 1 ? 'cur' : ''}" on-click={this.selectTime('week')}>最近一周</li>
-            <li class="{navIndex == 2 ? 'cur' : ''}" on-click={this.selectTime('month')}>最近一月</li>
+            <li class="{show.navIndex == 1 ? 'cur' : ''}" on-click={this.selectTime('week')}>最近一周</li>
+            <li class="{show.navIndex == 2 ? 'cur' : ''}" on-click={this.selectTime('month')}>最近一月</li>
         </ul>
         <ul class="operation-list">
-            <li class="live" on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
-                金额（元）
+            <li on-mouseover={this.onShow($event)} on-mouseout={this.onHide($event)}>
+                {renderConfig.type == "spent" ? "金额（元）" : "流量（GB）"}
                 <span class="icon-more"></span>
                 <ul class="detail-list">
-                    <li>
-                        金额（元）
+                    <li class={renderConfig.type == "spent" ? "cur" : ""} on-click={this.renderChart('spent')}>
+                        <span class="select-icon"></span>金额（元）
                         <hr class="hr"></li>
-                    <li>流量（GB）</li>
+                    <li class={renderConfig.type == "traffic" ? "cur" : ""} on-click={this.renderChart('traffic')}><span class="select-icon"></span>流量（GB）</li>
                 </ul>
             </li>
         </ul>
@@ -31,12 +31,12 @@
             </tr>
         </thead>
         <tbody>
-            {#if dataList.length}
-            {#list dataList as item}
+            {#if renderConfig.listData.xAxis.length}
+            {#list renderConfig.listData.xAxis as item}
             <tr>
-                <td>{item.a}</td>
-                <td>{item.b}</td>
-                <td>{item.a}</td>
+                <td>{item}</td>
+                <td>{renderConfig.listData.seriesTraffic[item_index]}</td>
+                <td>{renderConfig.listData.seriesSpent[item_index]}</td>
             </tr>
             {/list}
             {#else}

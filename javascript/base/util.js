@@ -132,7 +132,7 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
                 type: options.method || 'post',
                 data: options.method.toLowerCase() == 'post' ? JSON.stringify(options.param) : options.param
             }).done(function(data) {
-                console.info('成功111', data, options)
+                console.info('callback', data, options)
                 if (!data && typeof data === undefined) {
                     console.error('数据错误！');
                     return;
@@ -194,6 +194,14 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
             var r = window.location.search.substr(1).match(reg);
             if (r != null) return (r[2]);
             return null;
+        },
+        /**
+         * 时间戳转换为年月日
+         * @param  {string} nS 时间戳
+         */
+        getLocalTime: function(nS) {
+            var date = new Date(nS);
+            return (date.getMonth() + 1) + "-" + date.getDate();
         },
         /**
          * 合并JSON
@@ -358,7 +366,6 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
     })
 
     Regular.filter("digital", function(str, type) {
-        console.info(2222, str)
         if (typeof str == 'undefined') {
             return str;
         }
@@ -369,7 +376,6 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
         } else if (type == 2) {
             str = (str / 100).toFixed(2);
             str = str.split('.');
-            console.info(999,str)
             return str[1];
         } else if (type == 3) {
             str = (str / 1024 / 1024 / 1024).toFixed(2);
@@ -378,7 +384,6 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
         } else if (type == 4) {
             str = (str / 1024 / 1024 / 1024).toFixed(2);
             str = str.split('.');
-            console.info(999,str)
             return str[1];
         } else {
             return str.toFixed(2);
