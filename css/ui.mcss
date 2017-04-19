@@ -152,6 +152,7 @@
         border: 1px solid #0d945e;
         background: #12a76b;
         color: #fff;
+        z-index: 11;
         .icon-more-white{
             background: url(../res/images/icon_more_white.png) no-repeat;
             background-size: contain;

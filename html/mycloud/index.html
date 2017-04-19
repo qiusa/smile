@@ -1,9 +1,76 @@
 <div class="m-mycloud">
     <ul class="nav">
-        <li class="{show.nav == 1 ? 'cur' : ''}" on-click={this.nav(1)}>云存储查看</li>
-        <li class="{show.nav == 2 ? 'cur' : ''}" on-click={this.nav(2)}>服务购买</li>
+        <li class="{show.nav == 1 ? 'cur' : ''}" on-click={this.nav(1)}>摄像机设置</li>
+        <li class="{show.nav == 2 ? 'cur' : ''}" on-click={this.nav(2)}>云存储查看</li>
     </ul>
     <div r-hide={show.nav != 1}>
+         <div class="camera-set">
+            <h2 class="title">设备信息</h2>
+            <dl class="dl-line u-pdt21 u-cb">
+                <dt>设备名：</dt>
+                <dd>{config.cameraName}</dd>
+            </dl>
+            <dl class="dl-line u-cb">
+                <dt>设备ID：</dt>
+                <dd>{config.deviceId}</dd>
+            </dl>
+            <h2 class="title2">
+                <span>摄像机设置</span>
+                <span class="title-text">所有修改需点击“保存设置”后方能生效</span>
+            </h2>
+            <div class="set">
+                <dl class="dl-set u-cb">
+                    <dt>运行开关：</dt>
+                    <dd>
+                        <ul class="operation-list">
+                            <li class="first {config.switchRun == 1 ? 'light' : ''}" on-click={config.switchRun = 1}>开启</li>
+                            <li class="third {config.switchRun == 0 ? 'light' : ''}" on-click={config.switchRun = 0}>关闭</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="dl-set u-cb">
+                    <dt>夜视模式：</dt>
+                    <dd>
+                        <ul class="operation-list">
+                            <li class="first {config.switchNight == 2 ? 'light' : ''}" on-click={config.switchNight = 2}>开启</li>
+                            <li class="second {config.switchNight == 0 ? 'light' : ''}" on-click={config.switchNight = 0}>关闭</li>
+                            <li class="third {config.switchNight == 1 ? 'light' : ''}" on-click={config.switchNight = 1}>自动</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="dl-set u-cb">
+                    <dt>声音开关：</dt>
+                    <dd>
+                        <ul class="operation-list">
+                            <li class="first {config.switchVoice == 1 ? 'light' : ''}" on-click={config.switchVoice = 1}>开启</li>
+                            <li class="third {config.switchVoice == 0 ? 'light' : ''}" on-click={config.switchVoice = 0}>关闭</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="dl-set u-cb">
+                    <dt>画面清晰度：</dt>
+                    <dd>
+                        <ul class="operation-list">
+                            <li class="first {config.switchPic == 2 ? 'light' : ''}" on-click={config.switchPic = 2}>开启</li>
+                            <li class="second {config.switchPic == 0 ? 'light' : ''}" on-click={config.switchPic = 0}>关闭</li>
+                            <li class="third {config.switchPic == 1 ? 'light' : ''}" on-click={config.switchPic = 1}>自动</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="dl-set dl-set-last u-cb">
+                    <dt>画面颠倒：</dt>
+                    <dd>
+                        <ul class="operation-list">
+                            <li class="first {config.switchRotate == 1 ? 'light' : ''}" on-click={config.switchRotate = 1}>开启</li>
+                            <li class="third {config.switchRotate == 0 ? 'light' : ''}" on-click={config.switchRotate = 0}>关闭</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div class="u-btn set-btn" on-click={this.setDeviceConfig()}>保存设置</div>
+        </div>
+    </div>
+    <div r-hide={show.nav != 2}>
         <div class="device">
             <div class="play-box">
                 
@@ -12,29 +79,28 @@
                 <h2 class="title">设备信息</h2>
                 <dl class="dl-line u-cb">
                     <dt>设备名：</dt>
-                    <dd>外围</dd>
+                    <dd>{config.cameraName}</dd>
                 </dl>
                 <dl class="dl-line u-cb">
                     <dt>设备ID：</dt>
-                    <dd>外围</dd>
+                    <dd>{config.deviceId}</dd>
                 </dl>
                 <dl class="dl-line u-cb">
                     <dt>开通时间：</dt>
-                    <dd>外围</dd>
+                    <dd>xxx</dd>
                 </dl>
                 <dl class="dl-line u-cb">
                     <dt>有效期至：</dt>
-                    <dd>外围</dd>
+                    <dd>xxx</dd>
                 </dl>
                 <dl class="dl-on u-cb">
                     <dt>云存储：</dt>
                     <dd>
-                        <div class="switch u-cb" on-click={show.switch = show.switch ? 0 : 1}>
-                            <span class="u-pdl9" r-hide={!show.switch}>开启</span>
-                            <span class="switch-icon {!show.switch ? 'switch-pos' : ''}"></span>
-                            <span class="switch-text" r-hide={show.switch}>关闭</span>
-                        </div>
-                        <a href="javascript:;" class="u-blue-a cloud-link" on-click={this.nav(2)}>如何开通？</a>
+                        <ul class="operation-list">
+                            <li class="first {config.switch ? 'light' : ''}" on-click={config.switch = true}>开启</li>
+                            <li class="third {!config.switch ? 'light' : ''}" on-click={config.switch = false}>关闭</li>
+                        </ul>
+                        <a href="javascript:;" class="u-blue-a cloud-link" on-click={this.showAgreement()}>如何开通？</a>
                     </dd>
                 </dl>
             </div>
@@ -45,61 +111,61 @@
             <span>云录像片段</span>
             <span class="cloud-text">您当前拥有的是7天云录像服务，青果只对动态画面进行录制，连续静态画面不进行录制。</span>
         </div>
-        <div class="cloud-list cloud-show">
-            <div class="list-title">
-                <span class="cloud-list-icon"></span>
-                <span>2016年3月11日</span>
-                <span class="list-text">19:00-20:00</span>
-                <span class="shrink" on-click={this.showCloud($event)}>
-                    <span class="show-list">收起</span>
-                    <span class="hide-list">展开</span>
-                    <span class="more-icon"></span>
-                </span>
-            </div>
-            <ul class="record-list u-cb">
-            {#list record as item}
-                <li>
-                    <div class="record-box" on-click={this.renderVideo()}>
-                        <div class="record" style="background: url(https://nos.netease.com/smartcamera/163161607301111_cover_img_1491025113.h264?NOSAccessKeyId=1faa1d9d8a7b427788c2c44af518cf3c&Expires=1506577408&Signature=Z6783%2BZ74yMV%2FWrjjWyoRgGCEe7iCwOv56H%2FJ3vNrf4%3D&vframe=1&resize=320x180) no-repeat #666;background-size: contain;"></div>
-                        <span class="record-icon"></span>
+        <div class="">
+            {#if show.myRecordList.noRecord}
+                <div class="u-norecord">
+                    <div class="u-norecord-icon u-dsib"></div>
+                    <div class="u-norecord-tip1 u-dsib">暂无录像内容</div>
+                    <p>可能您的云录像开关还没有开启</p>
+                    <p>或者您的动态录像还没有生成</p>
+                </div>  
+            {#elseif show.myRecordList.noPower}
+                <div class="u-norecord">
+                    <div class="u-norecord-icon u-dsib"></div>
+                    <div class="u-norecord-tip1 u-dsib">您无权限查看录像</div>
+                </div>      
+            {#else}
+                {#list show.recordListPerHour as listObj}
+                <div class="cloud-list cloud-show" style="{listObj_index == 0 ? 'margin-top: 18px;' : ''}">
+                    <div class="list-title">
+                        <span class="cloud-list-icon"></span>
+                        <span>{listObj.yearAndMonth|parseMonthDayHour}</span>
+                        <span class="list-text">{listObj.yearAndMonth|parseTimeSection}</span>
+                        <span class="shrink" on-click={this.showCloud($event, listObj.valueList.length)}>
+                            <span class="show-list">收起</span>
+                            <span class="hide-list">展开</span>
+                            <span class="more-icon"></span>
+                        </span>
                     </div>
-                        
-                    <p class="record-text">{item.time}</p>
-                </li>
-            {/list}
-            </ul>
+                    <ul class="record-list u-cb" style="height: {Math.ceil(listObj.valueList.length / 4) * 138}px;">
+                    {#list listObj.valueList as item}
+                        <li>
+                            <div class="record-box" on-click={this.renderVideo(item.url)}>
+                                <div class="record" style="background: url({item.prevImgUrl?(item.prevImgUrl|coverFile|http2https):(item.url|coverFileRec|http2https)}) no-repeat #666;background-size: contain;"></div>
+                                <span class="record-icon"></span>
+                            </div>
+                            <p class="record-text">
+                                <span class="u-n1">{item.from|parseHour}</span>&nbsp;-&nbsp;<span class="u-n2">{item.to|parseHour}</span>
+                            </p>
+                        </li>
+                    {/list}
+                    </ul>
+                </div>
+                {/list}
+            {/if}
         </div>
+        {#if show.myRecordList.loadStatus && show.myRecordList.record.length!=0}
+        <div class="u-tips">
+            <img src={img.load} alt="..." width="20px"><span class="img-span-align">正在加载</span>
+        </div>
+        {/if}
+        {#if !show.myRecordList.more && show.myRecordList.record.length!=0}
+        <div class="u-tips">
+            <i></i>
+            <span>没有更多了</span>
+        </div>
+        {/if}
     </div>
+
     <!-- 收费标准及说明 -->
-    <div class="buy-agreement" r-hide={show.nav != 2}>
-        <h2 class="title">收费标准及说明</h2>
-        <p class="text">尊敬的青果用户：</p>
-        <p class="text">云存储为单独付费项目，收费标准及服务说明如下</p>
-        <table class="price-say">
-            <thead>
-                <th>服务内容</th>
-                <th>价格</th>
-                <th>期限</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>7天循环云存储</td>
-                    <td>109元/台</td>
-                    <td>1年</td>
-                </tr>
-                <tr>
-                    <td>30天循环云存储</td>
-                    <td>289元/台</td>
-                    <td>1年</td>
-                </tr>
-            </tbody>
-        </table>
-        <h2 class="title">服务说明：</h2>
-        <p class="text"> 青果云存储服务，可实时侦测识别摄制过程中的动态画面，并将动态画面以录像形式安全地存储在网易云端。</p>
-        <p class="text">青果同时提供7天/30天的循环录制两种服务，方便管理者随时回溯、查看和下载近7天/30天的动态录像。</p>
-        <h2 class="title title2">欢迎洽询客服，按需选择7天或30天云存储服务：</h2>
-        <p class="text">电话：0571-89852694</p>
-        <p class="text">Q Q：237087854</p>
-        <p class="text">感谢您对青果的支持和信赖，我们竭诚为您提供更贴心的服务，谢谢！</p>
-    </div>
 </div>

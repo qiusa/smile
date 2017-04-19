@@ -1,0 +1,1 @@
+define(['regularjs', '../html/play/index.js'], function(Regular, page) {    require('../css/reset.css');    require('../css/animate.css');    require('../css/common.css');    require('../css/flash.css');    var main = new page({});    main.$inject('#app');});

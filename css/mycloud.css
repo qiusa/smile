@@ -3,6 +3,20 @@
 .m-mycloud .nav{height:40px;border-bottom:1px solid #dcdcdc;}
 .m-mycloud .nav li{float:left;margin-right:8px;width:120px;height:39px;line-height:39px;border-radius:3px 3px 0 0;font-size:14px;color:#666;border:1px solid #dcdcdc;border-bottom:0;text-align:center;cursor:pointer;}
 .m-mycloud .nav .cur{border-bottom:1px solid #fff;color:#12a76b;}
+.m-mycloud .camera-set .title{font-size:16px;line-height:16px;padding:24px 0 24px 16px;font-weight:normal;border-bottom:1px solid #ebebeb;}
+.m-mycloud .camera-set .dl-line{font-size:12px;line-height:20px;}
+.m-mycloud .camera-set .dl-line dt{width:66px;text-align:right;float:left;}
+.m-mycloud .camera-set .dl-line dd{float:left;padding-left:34px;width:160px;}
+.m-mycloud .camera-set .title2{font-size:16px;line-height:16px;padding:57px 0 20px 16px;font-weight:normal;border-bottom:1px solid #ebebeb;}
+.m-mycloud .camera-set .title2 .title-text{font-size:12px;padding-left:24px;color:#999;}
+.m-mycloud .camera-set .set{width:488px;background:#f7f7f7;padding:0 14px;margin-top:24px;}
+.m-mycloud .camera-set .set .dl-set{border-bottom:1px dashed #dedede;padding:20px 0 20px 10px;color:#666;}
+.m-mycloud .camera-set .set .dl-set dt{width:96px;font-size:12px;float:left;line-height:30px;}
+.m-mycloud .camera-set .set .dl-set dd{float:left;}
+.m-mycloud .camera-set .set .dl-set .operation-list{float:left;}
+.m-mycloud .camera-set .set .dl-set .operation-list li{padding:0 20px;}
+.m-mycloud .camera-set .set .dl-set-last{padding-bottom:32px;border-bottom:0;}
+.m-mycloud .camera-set .set-btn{margin:40px 0 0 72px;width:178px;height:38px;line-height:38px;font-size:16px;}
 .m-mycloud .device{margin-top:24px;height:336px;}
 .m-mycloud .device .play-box{width:600px;height:336px;float:left;background:#eee;}
 .m-mycloud .device .info{width:280px;height:336px;background:#f7f7f7;float:left;}
@@ -10,18 +24,20 @@
 .m-mycloud .device .info .dl-line{margin-top:24px;font-size:12px;color:#666;}
 .m-mycloud .device .info .dl-line dt{float:left;width:80px;line-height:12px;text-align:right;}
 .m-mycloud .device .info .dl-line dd{float:left;margin-left:42px;width:146px;height:12px;line-height:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.m-mycloud .device .info .dl-on{margin-top:18px;margin-top:24px;font-size:12px;color:#666;}
-.m-mycloud .device .info .dl-on dt{float:left;width:80px;line-height:24px;text-align:right;}
-.m-mycloud .device .info .dl-on dd{float:left;margin-left:42px;width:146px;height:24px;line-height:24px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.m-mycloud .device .info .dl-on{margin-top:18px;font-size:12px;color:#666;}
+.m-mycloud .device .info .dl-on dt{float:left;width:80px;line-height:30px;text-align:right;}
+.m-mycloud .device .info .dl-on dd{float:left;margin-left:42px;width:146px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.m-mycloud .device .info .dl-on .operation-list{float:none;}
+.m-mycloud .device .info .dl-on .operation-list li{padding:0 20px;}
 .m-mycloud .device .switch{width:58px;height:22px;line-height:22px;border-radius:12px;background:#12a76b;border:1px solid #0d945e;color:#fff;font-size:12px;display:inline-block;position:relative;cursor:pointer;}
 .m-mycloud .device .switch .switch-text{float:right;padding-right:9px;}
 .m-mycloud .device .switch .switch-icon{width:20px;height:20px;border-radius:50%;background:#fff;display:inline-block;position:absolute;top:1px;left:37px;-webkit-transition:0.2s ease;-moz-transition:0.2s ease;-ms-transition:0.2s ease;-o-transition:0.2s ease;transition:0.2s ease;}
 .m-mycloud .device .switch .switch-pos{left:1px;}
-.m-mycloud .device .cloud-link{vertical-align:top;margin-left:10px;}
+.m-mycloud .device .cloud-link{margin:12px 0 0 72px;display:inline-block;}
 .m-mycloud .cloud-title{padding-top:36px;height:28px;line-height:28px;font-size:16px;color:#666;}
 .m-mycloud .cloud-title .cloud-icon{background:url("../res/images/icon_live_on.png") left center no-repeat;width:28px;height:28px;display:inline-block;margin-right:2px;float:left;}
 .m-mycloud .cloud-title .cloud-text{padding-left:30px;font-size:14px;}
-.m-mycloud .cloud-list{margin-top:18px;font-size:14px;color:#666;}
+.m-mycloud .cloud-list{margin-top:45px;font-size:14px;color:#666;}
 .m-mycloud .cloud-list .list-title{line-height:14px;}
 .m-mycloud .cloud-list .list-title .cloud-list-icon{background:url("../res/images/icon_mycamare_dian.png") no-repeat;width:10px;height:10px;display:inline-block;vertical-align:top;margin:1px 6px 0 0;}
 .m-mycloud .cloud-list .list-title .list-text{padding:0 38px 0 16px;}
@@ -29,7 +45,7 @@
 .m-mycloud .cloud-list .list-title .show-list{display:none;}
 .m-mycloud .cloud-list .list-title .hide-list{display:inline-block;}
 .m-mycloud .cloud-list .list-title .more-icon{background:url("../res/images/icon_more.png") no-repeat;width:8px;height:8px;display:inline-block;vertical-align:top;margin:3px 0 0 8px;-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0);-webkit-transition:all 0.5s ease-in-out;-moz-transition:all 0.5s ease-in-out;-ms-transition:all 0.5s ease-in-out;-o-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;}
-.m-mycloud .cloud-list .record-list{margin-left:-15px;display:none;}
+.m-mycloud .cloud-list .record-list{margin-left:-15px;-webkit-transition:height 0.5s ease-in-out;-moz-transition:height 0.5s ease-in-out;-ms-transition:height 0.5s ease-in-out;-o-transition:height 0.5s ease-in-out;transition:height 0.5s ease-in-out;overflow:hidden;}
 .m-mycloud .cloud-list .record-list li{margin:24px 0 0 25px;width:156px;float:left;}
 .m-mycloud .cloud-list .record-list li .record-box{position:relative;overflow:hidden;cursor:pointer;}
 .m-mycloud .cloud-list .record-list li .record-box .record{width:156px;height:88px;background:#666;-webkit-transition:all 0.5s ease-in-out;-moz-transition:all 0.5s ease-in-out;-ms-transition:all 0.5s ease-in-out;-o-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;}
@@ -39,11 +55,11 @@
 .m-mycloud .cloud-list .record-list li .record-text{padding-top:12px;font-size:14px;line-height:14px;}
 .m-mycloud .cloud-show .show-list{display:inline-block !important;}
 .m-mycloud .cloud-show .hide-list{display:none !important;}
-.m-mycloud .cloud-show .record-list{display:block !important;}
 .m-mycloud .cloud-show .more-icon{-webkit-transform:rotate(180deg) !important;-moz-transform:rotate(180deg) !important;-ms-transform:rotate(180deg) !important;-o-transform:rotate(180deg) !important;transform:rotate(180deg) !important;}
-.m-mycloud .buy-agreement .title,.m-mycloud .buy-agreement .title2{padding:24px 0 18px;font-size:16px;font-weight:normal;line-height:16px;color:#666;}
-.m-mycloud .buy-agreement .title2{padding-top:48px;}
-.m-mycloud .buy-agreement .text{font-size:12px;line-height:24px;color:#666;}
-.m-mycloud .buy-agreement .price-say{width:480px;margin:18px 0 36px;border:1px solid #dcdcdc;border-right:0;}
-.m-mycloud .buy-agreement .price-say thead{background:#f7f7f7;}
-.m-mycloud .buy-agreement .price-say th,.m-mycloud .buy-agreement .price-say td{width:158px;height:40px;border-right:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;text-align:center;}
+.buy-agreement{padding:0 0 30px 30px;text-align:left;}
+.buy-agreement .title,.buy-agreement .title2{padding-bottom:18px;font-size:16px;font-weight:normal;line-height:16px;color:#666;}
+.buy-agreement .title2{padding-top:48px;}
+.buy-agreement .text{font-size:12px;line-height:24px;color:#666;}
+.buy-agreement .price-say{width:480px;margin:18px 0 36px;border:1px solid #dcdcdc;border-right:0;}
+.buy-agreement .price-say thead{background:#f7f7f7;}
+.buy-agreement .price-say th,.buy-agreement .price-say td{width:158px;height:40px;border-right:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;text-align:center;}

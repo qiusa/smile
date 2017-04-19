@@ -22,19 +22,24 @@
     }
     //头部信息
     .head{
-        padding: 24px 0;
+        padding-top: 24px;
         .search{
             position: relative;
             float: left;
+            height: 30px;
             .search-input{
                 font-size: 12px;
                 color: #999;
-                padding-left: 14px;
-                width: 224px;
+                padding: 0 54px 0 14px;
+                width: 170px;
                 height: 28px;
                 line-height: 28px;
                 border: 1px solid #dedede;
                 border-radius: 3px;
+            }
+            .pos{
+                top: 9px;
+                right: 40px;
             }
             .search-icon{
                 position: absolute;
@@ -53,6 +58,18 @@
             font-size: 14px;
             color: #666;
             line-height: 30px;
+        }
+    }
+    .subtitle{
+        font-size: 12px;
+        color: #999;
+        line-height: 12px;
+        padding: 14px;
+        font-weight: normal;
+        border-bottom: 1px solid #dcdcdc;
+        margin-bottom: 24px;
+        .text{
+            color: #12a76b;
         }
     }
     //设备列表
@@ -74,30 +91,29 @@
             }
         }
         .td1{
-            padding-left: 16px;
-            width: 122px;
+            padding-left: 14px;
+            width: 200px;
         }
 
         .td2{
-            width: 104px;
+            width: 108px;
+            text-align: center;
         }
         .td3{
-            width: 72px;
+            width: 130px;
+            text-align: center;
         }
         .td4{
-            width: 72px;
+            width: 54px;
+            text-align: center;
         }
         .td5{
-            width: 72px;
+            width: 128px;
+            text-align: center;
         }
         .td6{
-            width: 72px;
-        }
-        .td7{
-            width: 72px;
-        }
-        .td8{
-            width: 86px;
+            width: 40px;
+            text-align: center;
         }
         .icon-more{
             display: inline-block;
@@ -109,8 +125,7 @@
         }
         .device-id{
             display: inline-block;
-            width: 60px;
-            padding-left: 16px;
+            width: 140px;
             white-space:nowrap;
             overflow:hidden;
             text-overflow:ellipsis;
@@ -135,27 +150,14 @@
             border-radius: 3px;
         }
         .close {
-            position: absolute;
-            right: 15px;
-            top: 4px;
-            display: inline-block;
-            background: #999;
-            color: #fff;
-            border-radius: 12px;
-            line-height: 14px;
-            text-align: center;
-            height: 14px;
-            width: 14px;
-            font-size: 12px;
-        }
-        .close:before {
-            content: "\2716";
+            right: 4px;
+            top: 5px;
         }
         .index-list{
             display: none;
             position: absolute;
             top: 0;
-            left: -24px;
+            left: 14px;
             border: 1px solid #dcdcdc;
             width: 86px;
             line-height: 36px;

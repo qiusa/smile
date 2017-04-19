@@ -23,6 +23,79 @@
             color: #12a76b;
         }
     }
+    //摄像机设置
+    .camera-set{
+        .title{
+            font-size: 16px;
+            line-height: 16px;
+            padding: 24px 0 24px 16px;
+            font-weight: normal;
+            border-bottom: 1px solid #ebebeb;
+        }
+        .dl-line{
+            font-size: 12px;
+            line-height: 20px;
+            dt{
+                width: 66px;
+                text-align: right;
+                float: left;
+            }
+            dd{
+                float: left;
+                padding-left: 34px;
+                width: 160px;
+            }
+        }
+        .title2{
+            font-size: 16px;
+            line-height: 16px;
+            padding: 57px 0 20px 16px;
+            font-weight: normal;
+            border-bottom: 1px solid #ebebeb;
+            .title-text{
+                font-size: 12px;
+                padding-left: 24px;
+                color: #999;
+            }
+        }
+        .set{
+            width: 488px;
+            background: #f7f7f7;
+            padding: 0 14px;
+            margin-top: 24px;
+            .dl-set{
+                border-bottom: 1px dashed #dedede;
+                padding: 20px 0 20px 10px;
+                color: #666;
+                dt{
+                    width: 96px;
+                    font-size: 12px;
+                    float: left;
+                    line-height: 30px;
+                }
+                dd{
+                    float: left;
+                }
+                .operation-list{
+                    float: left;
+                    li{
+                        padding: 0 20px;
+                    }
+                }
+            }
+            .dl-set-last{
+                padding-bottom: 32px;
+                border-bottom: 0;
+            }
+        }
+        .set-btn{
+            margin: 40px 0 0 72px;
+            width: 178px;
+            height: 38px;
+            line-height: 38px;
+            font-size: 16px;
+        }
+    }
     //设备信息
     .device{
         margin-top: 24px;
@@ -69,24 +142,27 @@
             }
             .dl-on{
                 margin-top: 18px;
-                margin-top: 24px;
                 font-size: 12px;
                 color: #666;
                 dt{
                     float: left;
                     width: 80px;
-                    line-height: 24px;
+                    line-height: 30px;
                     text-align: right;  
                 }
                 dd{
                     float: left;
                     margin-left: 42px;
                     width: 146px;
-                    height: 24px;
-                    line-height: 24px;
                     white-space:nowrap;
                     overflow:hidden;
                     text-overflow:ellipsis;
+                }
+                .operation-list{
+                    float: none;
+                    li{
+                        padding: 0 20px;
+                    }
                 }
             }
         }
@@ -126,8 +202,8 @@
             }
         }
         .cloud-link{
-            vertical-align: top;
-            margin-left: 10px;
+            margin: 12px 0 0 72px;
+            display: inline-block;
         }
     }
     .cloud-title{
@@ -151,7 +227,7 @@
     }
     //云录像片段
     .cloud-list{
-        margin-top: 18px;
+        margin-top: 45px;
         font-size: 14px;
         color: #666;
         .list-title{
@@ -197,7 +273,12 @@
         }
         .record-list{
             margin-left: -15px;
-            display: none;
+            -webkit-transition: height 0.5s ease-in-out;
+               -moz-transition: height 0.5s ease-in-out;
+                -ms-transition: height 0.5s ease-in-out;
+                 -o-transition: height 0.5s ease-in-out;
+                    transition: height 0.5s ease-in-out;
+            overflow: hidden;
             li{
                 margin: 24px 0 0 25px;
                 width: 156px;
@@ -258,9 +339,6 @@
         .hide-list{
             display: none!important;
         }
-        .record-list{
-            display: block!important;
-        }
         .more-icon{
             -webkit-transform: rotate(180deg)!important;
                -moz-transform: rotate(180deg)!important;
@@ -269,37 +347,40 @@
                     transform: rotate(180deg)!important;
         }
     }
-    .buy-agreement{
-        .title, .title2{
-            padding: 24px 0 18px;
-            font-size: 16px;
-            font-weight: normal;
-            line-height: 16px;
-            color: #666;
+}
+//服务购买
+.buy-agreement{
+    padding: 0 0 30px 30px;
+    text-align: left;
+    .title, .title2{
+        padding-bottom: 18px;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 16px;
+        color: #666;
+    }
+    .title2{
+        padding-top: 48px;
+    }
+    .text{
+        font-size: 12px;
+        line-height: 24px;
+        color: #666;
+    }
+    .price-say{
+        width: 480px;
+        margin: 18px 0 36px;
+        border: 1px solid #dcdcdc;
+        border-right: 0;
+        thead{
+            background: #f7f7f7;
         }
-        .title2{
-            padding-top: 48px;
-        }
-        .text{
-            font-size: 12px;
-            line-height: 24px;
-            color: #666;
-        }
-        .price-say{
-            width: 480px;
-            margin: 18px 0 36px;
-            border: 1px solid #dcdcdc;
-            border-right: 0;
-            thead{
-                background: #f7f7f7;
-            }
-            th, td{
-                width: 158px;
-                height: 40px;
-                border-right: 1px solid #dcdcdc;
-                border-bottom: 1px solid #dcdcdc;
-                text-align: center;
-            }
+        th, td{
+            width: 158px;
+            height: 40px;
+            border-right: 1px solid #dcdcdc;
+            border-bottom: 1px solid #dcdcdc;
+            text-align: center;
         }
     }
 }

@@ -21,7 +21,8 @@
         </ul>
     </div>
     <div id="chart" class="chart-box"></div>
-    <h2 class="title">数据明细</h2>
+    <h2 class="title u-cb">数据明细<span class="u-white-btn down-btn" on-click={this.download()}>下载报告</span></h2>
+    <iframe style="display:none;" id="hidden_iframe" name="hidden_iframe"></iframe>
     <table width="100%" class="data-list">
         <thead>
             <tr>

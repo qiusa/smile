@@ -41,14 +41,25 @@ a:focus{outline:none;}
     font-size: 12px;
     font-family: "SimSUn";
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
 @import './com.css';
 @import './ui.css';
 
 .u-pdl4{padding-left:4px;}
 .u-pdl9{padding-left:9px;}
+.u-pdl15{padding-left:15px;}
+.u-pdl34{padding-left:34px;}
+.u-pdl45{padding-left:45px;}
 .u-pdt4{padding-top:4px;}
 .u-pdt15{padding-top:15px;}
-.u-pdl15{padding-left:15px;}
+.u-pdt18{padding-top:18px;}
+.u-pdt21{padding-top:21px;}
 .u-pdr15{padding-right:15px;}
 .u-pdb15{padding-bottom:15px;}
 .u-mgt15{margin-top:15px;}

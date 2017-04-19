@@ -23,7 +23,7 @@
     position: relative;
     width: 100%;
     height: 600px;
-    background: #eee;
+    background: url(../res/images/img_login.jpg) center top no-repeat;
     a{
         color: #999;
     }

@@ -38,15 +38,14 @@ define(['jquery'], function($) {
         },
         LIVEWEB: {
             'get': './qyapi/liveWeb/get', //获取用户设备直播页信息
-            'addOrUpdate': './qyapi/liveWeb/addOrUpdate', //
-            'get': './qyapi/liveWeb/get', //
-            'get': './qyapi/liveWeb/get', //
-            'get': './qyapi/liveWeb/get', //
-            'get': './qyapi/liveWeb/get', //
+            'addOrUpdate': './qyapi/liveWeb/addOrUpdate', //新增或修改用户设备直播页信息
+            'pause': './qyapi/liveWeb/pause', //暂停用户设备直播页信息
+            'upload': './qyapi/liveWeb/upload', //封面图上传
+            'play': './qyapi/liveWeb/play' //播放直播页
         },
         COMPANY: {
             'stats': './qyapi/company/stats', //企业信息详情
-            'stats': './qyapi/company/stats', //
+            'download': './qyapi/company/stats.xls', //
             'stats': './qyapi/company/stats', //
             'stats': './qyapi/company/stats', //
             'stats': './qyapi/company/stats', //

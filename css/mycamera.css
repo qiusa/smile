@@ -5,32 +5,32 @@
 .m-mycamera ::-moz-placeholder{color:#999;}
 .m-mycamera :-ms-input-placeholder{color:#999;}
 .m-mycamera .title{font-size:16px;font-weight:normal;color:#666;line-height:16px;}
-.m-mycamera .head{padding:24px 0;}
-.m-mycamera .head .search{position:relative;float:left;}
-.m-mycamera .head .search .search-input{font-size:12px;color:#999;padding-left:14px;width:224px;height:28px;line-height:28px;border:1px solid #dedede;border-radius:3px;}
+.m-mycamera .head{padding-top:24px;}
+.m-mycamera .head .search{position:relative;float:left;height:30px;}
+.m-mycamera .head .search .search-input{font-size:12px;color:#999;padding:0 54px 0 14px;width:170px;height:28px;line-height:28px;border:1px solid #dedede;border-radius:3px;}
+.m-mycamera .head .search .pos{top:9px;right:40px;}
 .m-mycamera .head .search .search-icon{position:absolute;right:12px;top:7px;display:inline-block;background:url("../res/images/icon_search.png") no-repeat;background-size:contain;width:20px;height:20px;cursor:pointer;}
 .m-mycamera .head .operation-text{float:right;font-size:14px;color:#666;line-height:30px;}
+.m-mycamera .subtitle{font-size:12px;color:#999;line-height:12px;padding:14px;font-weight:normal;border-bottom:1px solid #dcdcdc;margin-bottom:24px;}
+.m-mycamera .subtitle .text{color:#12a76b;}
 .m-mycamera .camera-list{font-size:12px;color:#999;}
 .m-mycamera .camera-list thead{background:#f7f7f7;}
 .m-mycamera .camera-list thead td{height:36px;position:relative;}
 .m-mycamera .camera-list tbody{background:#fff;}
 .m-mycamera .camera-list tbody td{height:60px;border-bottom:1px solid #dcdcdc;}
-.m-mycamera .camera-list .td1{padding-left:16px;width:122px;}
-.m-mycamera .camera-list .td2{width:104px;}
-.m-mycamera .camera-list .td3{width:72px;}
-.m-mycamera .camera-list .td4{width:72px;}
-.m-mycamera .camera-list .td5{width:72px;}
-.m-mycamera .camera-list .td6{width:72px;}
-.m-mycamera .camera-list .td7{width:72px;}
-.m-mycamera .camera-list .td8{width:86px;}
+.m-mycamera .camera-list .td1{padding-left:14px;width:200px;}
+.m-mycamera .camera-list .td2{width:108px;text-align:center;}
+.m-mycamera .camera-list .td3{width:130px;text-align:center;}
+.m-mycamera .camera-list .td4{width:54px;text-align:center;}
+.m-mycamera .camera-list .td5{width:128px;text-align:center;}
+.m-mycamera .camera-list .td6{width:40px;text-align:center;}
 .m-mycamera .camera-list .icon-more{display:inline-block;background:url("../res/images/icon_more.png") no-repeat;background-size:contain;width:8px;height:8px;margin-left:5px;}
-.m-mycamera .camera-list .device-id{display:inline-block;width:60px;padding-left:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.m-mycamera .camera-list .device-id{display:inline-block;width:140px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .m-mycamera .camera-list .device-name{display:inline-block;width:68px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .m-mycamera .camera-list .device-change{position:relative;}
 .m-mycamera .camera-list .device-input{width:74px;height:22px;line-height:22px;margin-left:-12px;padding:0 16px 0 12px;border:1px solid #dedede;border-radius:3px;}
-.m-mycamera .camera-list .close{position:absolute;right:15px;top:4px;display:inline-block;background:#999;color:#fff;border-radius:12px;line-height:14px;text-align:center;height:14px;width:14px;font-size:12px;}
-.m-mycamera .camera-list .close:before{content:"\2716";}
-.m-mycamera .camera-list .index-list{display:none;position:absolute;top:0;left:-24px;border:1px solid #dcdcdc;width:86px;line-height:36px;text-align:center;box-shadow:0 2px 2px 0 rgba(0,0,0,0.08);color:#666;}
+.m-mycamera .camera-list .close{right:4px;top:5px;}
+.m-mycamera .camera-list .index-list{display:none;position:absolute;top:0;left:14px;border:1px solid #dcdcdc;width:86px;line-height:36px;text-align:center;box-shadow:0 2px 2px 0 rgba(0,0,0,0.08);color:#666;}
 .m-mycamera .camera-list .index-list li{line-height:36px;background:#fff;padding:0;float:none;cursor:pointer;position:relative;}
 .m-mycamera .camera-list .index-list li .select-icon{background:url("../res/images/icon_drop_select.png") no-repeat;width:10px;height:10px;position:absolute;left:14px;top:15px;display:none;}
 .m-mycamera .camera-list .index-list li:hover{color:#12a76b;}

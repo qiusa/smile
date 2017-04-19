@@ -2,65 +2,19 @@
     <h2 class="title">全部设备</h2>
     <div class="head u-cb">
         <div class="search">
-            <input type="text" class="search-input" placeholder="请输入设备ID搜索">
+            <input type="text" class="search-input" placeholder="请输入设备ID搜索" r-model={showParams.searchValue}>
+            <span class="icon-x pos" r-hide={!showParams.searchValue} on-click={showParams.searchValue=""}></span>
             <span class="search-icon"></span>
         </div>
-        <ul class="operation-list">
-            <li class="first j-select" on-click={this.onShow($event)}>
-                夜视
-                <span class="icon-more icon-more-white"></span>
-                <ul class="detail-list detail-list-wd">
-                    <li>
-                        <span class="select-icon"></span>开启夜视
-                        <hr class="hr"></li>
-                    <li><span class="select-icon"></span>关闭夜视</li>
-                </ul>
-            </li>
-            <li class="second j-select" on-click={this.onShow($event)}>
-                声音
-                <span class="icon-more icon-more-white"></span>
-                <ul class="detail-list detail-list-wd">
-                    <li>
-                        <span class="select-icon"></span>开启声音
-                        <hr class="hr"></li>
-                    <li><span class="select-icon"></span>关闭声音</li>
-                </ul>
-            </li>
-            <li class="third j-select" on-click={this.onShow($event)}>
-                清晰度
-                <span class="icon-more icon-more-white"></span>
-                <ul class="detail-list detail-list-wd">
-                    <li>
-                        <span class="select-icon"></span>开启直播
-                        <hr class="hr"></li>
-                    <li><span class="select-icon"></span>关闭直播</li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="operation-list u-mgr24 u-mgl26">
-            <li class="light j-select" on-click={this.onShow($event)}>
-                直播
-                <span class="icon-more icon-more-white"></span>
-                <ul class="detail-list">
-                    <li>
-                        <span class="select-icon"></span>流畅
-                        <hr class="hr"></li>
-                    <li>
-                        <span class="select-icon"></span>标清
-                        <hr class="hr"></li>
-                    <li><span class="select-icon"></span>高清</li>
-                </ul>
-            </li>
-        </ul>
-        <span class="operation-text">摄像机操作：</span>
     </div>
+    <h3 class="subtitle">
+        <span>全部设备&nbsp;>&nbsp;</span>
+        <span class="text">青果摄像机</span>
+    </h3>
     <table width="100%" class="camera-list">
         <thead>
             <tr>
-                <td class="td1">
-                    <span class="checkbox {showParams.checkboxAll ? 'checkbox-true' : ''}" on-click={showParams.checkboxAll = showParams.checkboxAll ? false : true}></span>
-                    <span class="device-id">设备ID</span>
-                </td>
+                <td class="td1"><span class="u-pdl34">设备ID</span></td>
                 <td class="td2">设备名称</td>
                 <td class="td3 u-pointer j-select" on-click={this.onShow($event)}>
                     状态<span class="icon-more icon-more-white"></span>
@@ -71,53 +25,10 @@
                         <li><span class="select-icon"></span>全部</li>
                     </ul>
                 </td>
-                <td class="td4 u-pointer j-select" on-click={this.onShow($event)}>
-                    直播<span class="icon-more icon-more-white"></span>
-                    <ul class="index-list">
-                        <li class="self">直播</li>
-                        <li><span class="select-icon"></span>开</li>
-                        <li><span class="select-icon"></span>关</li>
-                        <li><span class="select-icon"></span>全部</li>
-                    </ul>
-                </td>
-                <td class="td5 u-pointer j-select" on-click={this.onShow($event)}>
-                    夜视<span class="icon-more icon-more-white"></span>
-                    <ul class="index-list">
-                        <li class="self">夜视</li>
-                        <li><span class="select-icon"></span>开</li>
-                        <li><span class="select-icon"></span>关</li>
-                        <li><span class="select-icon"></span>全部</li>
-                    </ul>
-                </td>
-                <td class="td6 u-pointer j-select" on-click={this.onShow($event)}>
-                    声音<span class="icon-more icon-more-white"></span>
-                    <ul class="index-list">
-                        <li class="self">声音</li>
-                        <li><span class="select-icon"></span>开</li>
-                        <li><span class="select-icon"></span>关</li>
-                        <li><span class="select-icon"></span>全部</li>
-                    </ul>
-                </td>
-                <td class="td7 u-pointer j-select" on-click={this.onShow($event)}>
-                    清晰度<span class="icon-more icon-more-white"></span>
-                    <ul class="index-list">
-                        <li class="self">清晰度</li>
-                        <li><span class="select-icon"></span>流畅</li>
-                        <li><span class="select-icon"></span>标清</li>
-                        <li><span class="select-icon"></span>高清</li>
-                        <li><span class="select-icon"></span>全部</li>
-                    </ul>
-                </td>
-                <td class="td8 u-pointer j-select" on-click={this.onShow($event)}>
-                    云存储
-                    <span class="icon-more icon-more-white"></span>
-                    <ul class="index-list">
-                        <li class="self">云存储</li>
-                        <li><span class="select-icon"></span>开</li>
-                        <li><span class="select-icon"></span>关</li>
-                    </ul>
-                </td>
-                <td><p class="u-mgl64">操作</p></td>
+                <td class="td4 u-pointer">运行开关</td>
+                <td class="td5 u-pointer">清晰度</td>
+                <td class="td6 u-pointer">云存储</td>
+                <td align="center">操作</td>
             </tr>
         </thead>
         <tbody>
@@ -125,29 +36,37 @@
             {#list dataList as item}
             <tr>
                 <td class="td1">
-                    <span class="checkbox {item.checkbox ? 'checkbox-true' : ''}" on-click={this.check(item_index)}></span>
-                    <span class="device-id">{item.deviceId}</span></td>
+                    <span class="device-id">{item.deviceId}</span>
+                </td>
                 <td class="td2">
                     <span class="device-name" on-click={this.edit($event, item.cameraName)}>{item.cameraName ? item.cameraName : "青果摄像机"}</span>
                     <div class="device-change" style="display: none;">
                         <input type="text" class="device-input" r-model={showParams.temp} on-blur={this.hide($event, item_index, showParams.temp)}>
-                        <span class="close" on-click={showParams.temp = ''}></span>  
+                        <span class="icon-x close" on-click={this.close($event)} r-hide={!showParams.temp}></span>  
                     </div>
                 </td>
                 <td class="td3">{item.Status ? '在线' : '不在线'}</td>
                 <td class="td4">
                     <p class="u-mgl8 icon-live {item.isPlay ? 'icon-live-on' : ''}"></p>
                 </td>
-                <td class="td5"><p class="u-mgl6">{item.night ? '开' : '关'}</p></td>
-                <td class="td6"><p class="u-mgl6">{item.voice ? '开' : '关'}</p></td>
-                <td class="td7"><p class="u-mgl8">{item.resolution}</p></td>
-                <td class="td8">
+                <td class="td5">
+                    <p class="u-mgl8">
+                        {#if item.bitRate <= 3}
+                            流畅
+                        {#elseif item.bitRate > 3 && item.bitRate <= 5}
+                            标清
+                        {#else}
+                            高清
+                        {/if}
+                    </p>
+                </td>
+                <td class="td6">
                     <span class="u-mgl8 icon-cloud {item.cloud ? 'icon-cloud-on' : ''}"></span>
                 </td>
-                <td>
-                    <a href="./mycloud.html" class="u-blue-a">云存储管理</a>
+                <td class="u-pdl45">
+                    <a href="./mycloud.html?id={item.deviceId|base64}&name={item.cameraName|base64}" class="u-blue-a">设备管理</a>
                     <span class="vertical-line"></span>
-                    <a href="./liveaddress.html" class="u-blue-a">生成直播链接</a>
+                    <a href="./liveaddress.html?id={item.deviceId|base64}&name={item.cameraName|base64}" class="u-blue-a">生成直播链接</a>
                 </td>
             </tr>
             {/list}

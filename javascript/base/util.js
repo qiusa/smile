@@ -1,4 +1,4 @@
-define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascript/widget/tip.js'], function(Regular, $, cookie, tip) {
+define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascript/widget/tip.js', '../../javascript/3rd/base64.js'], function(Regular, $, cookie, tip, Base64) {
     var util = {
         getDomain: function() {
             var locationHost = {
@@ -204,6 +204,44 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
             return (date.getMonth() + 1) + "-" + date.getDate();
         },
         /**
+         *  timeStr:时间，格式可为："September 16,2016 14:15:05、
+ "September 16,2016"、"2016/09/16 14:15:05"、"2016/09/16"、
+ '2014-04-23T18:55:49'和毫秒
+ dateSeparator：年、月、日之间的分隔符，默认为"-"，
+ timeSeparator：时、分、秒之间的分隔符，默认为":"
+         * @param  {[type]} timeStr       [description]
+         * @param  {[type]} dateSeparator [description]
+         * @param  {[type]} timeSeparator [description]
+         * @return {[type]}               [description]
+         */
+        getFormatDate: function(timeStr, bool, dateSeparator, timeSeparator) {
+            dateSeparator = dateSeparator ? dateSeparator : "-";
+            timeSeparator = timeSeparator ? timeSeparator : ":";
+            var date = new Date(timeStr),
+                year = date.getFullYear(), // 获取完整的年份(4位,1970)
+                month = date.getMonth(), // 获取月份(0-11,0代表1月,用的时候记得加上1)
+                day = date.getDate(), // 获取日(1-31)
+                hour = date.getHours(), // 获取小时数(0-23)
+                minute = date.getMinutes(), // 获取分钟数(0-59)
+                seconds = date.getSeconds(), // 获取秒数(0-59)
+                Y = year + dateSeparator,
+                M = ((month + 1) > 10 ? (month + 1) : ('0' + (month + 1))) + dateSeparator,
+                D = (day > 10 ? day : ('0' + day)) + ' ',
+                h = (hour > 10 ? hour : ('0' + hour)) + timeSeparator,
+                m = (minute > 10 ? minute : ('0' + minute)) + timeSeparator,
+                s = (seconds > 10 ? seconds : ('0' + seconds)),
+                formatDate = !bool ? Y + M + D + h + m + s : h + m + s;
+            return formatDate;
+        },
+        /**
+         * 时间戳转换为年月日
+         * @param  {string} nS 时间戳
+         */
+        formatTime: function(nS) {
+            var date = new Date(nS);
+            return (date.getMonth() + 1) + "-" + date.getDate();
+        },
+        /**
          * 合并JSON
          */
         mergeRecursive: function(obj1, obj2) {
@@ -242,8 +280,10 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
             if (!util.trim(value)) {
                 return true;
             }
+            // regexp: /^([\w\.-]+)@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.([a-zA-Z]{2,6})$/,
+            //inner: /(^163\.com$)|(^126\.com$)|(^yeah\.net$)|(^vip.163\.com$)|(^vip.126\.com$)|(^188\.com$)/,
             var regPhone = /^1[3578]\d{9}$/, //匹配手机号
-                regEmail = /^([\w-_]+(?:\.[\w-_]+)*)@((?:[a-z0-9]+(?:-[a-zA-Z0-9]+)*)+\.[a-z]{2,6})$/i, //匹配邮箱
+                regEmail = /^([\w\.-]+)@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.([a-zA-Z]{2,6})$/i, //匹配邮箱
                 regPwd = /(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^.{6,16}$/; //匹配密码6-16位的数字、字母、特殊字符至少2种组合密码
             if (type == 'phone') {
                 if (!regPhone.test(util.trim(value))) {
@@ -353,18 +393,23 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
      * @param  {Number} length 隐藏中间几位
      */
     Regular.filter("hideName", function(value, type) {
-        if (!value) {
-            return value;
-        }
-        if (type == 'email') {
-            return util.hideName(value, 3, 10, 6);
-        } else if (type == 'mobile') {
-            return util.hideName(value, 3, 2, 8);
-        } else {
-            return value;
-        }
-    })
-
+            if (!value) {
+                return value;
+            }
+            if (type == 'email') {
+                return util.hideName(value, 3, 10, 6);
+            } else if (type == 'mobile') {
+                return util.hideName(value, 3, 2, 8);
+            } else {
+                return value;
+            }
+        })
+        /**
+         * 格式化数据
+         * @param  {[type]} str   [description]
+         * @param  {[type]} type) {                   if (typeof str [description]
+         * @return {[type]}       [description]
+         */
     Regular.filter("digital", function(str, type) {
         if (typeof str == 'undefined') {
             return str;
@@ -389,5 +434,12 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
             return str.toFixed(2);
         }
     })
+    Regular.filter("base64", function(value) {
+        if (!value) {
+            return value;
+        }
+        return Base64.encode(value)
+    })
+
     return util;
 })

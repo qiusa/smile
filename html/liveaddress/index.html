@@ -7,11 +7,11 @@
                 <p>设备ID：</p>
             </dt>
             <dd class="dd-list1">
-                <p class="text2">企业一号机</p>
-                <p class="text2">add32342342345</p>
+                <p class="text2">{config.cameraName}</p>
+                <p class="text2">{config.deviceId}</p>
             </dd>
             <dd class="dd-list2">
-                <span class="u-btn info-btn" on-click={this.setPhone()}>暂停直播</span>
+                <span class="u-btn info-btn" on-click={this.play()}>{config.delFlag ? '恢复直播' : '暂停直播'}</span>
             </dd>
         </dl>
     </div>
@@ -19,7 +19,7 @@
     <div class="info">
         <p class="text3">直播源地址HLS：支持网页端直接播放</p>
         <div class="info-line u-cb">
-            <input type="text" id="foo" class="info-input" readonly="true" value="http:ewewew.jh">
+            <input type="text" id="foo" class="info-input" readonly="true" value={config.url}>
             <span class="u-white-btn info-btn2" id="copyAddress" data-clipboard-action="copy" data-clipboard-target="#foo">复制地址</span>
         </div>
         <p class="text4">下方设置保存后，内容会即时更新，地址不会变化</p>
@@ -34,7 +34,7 @@
                 <p class="text6">标题：</p>
             </dt>
             <dd class="dd-list1">
-                <input type="text" class="info-input info-input2" value="http:ewewew.jh" placeholder="请输入不超过20字的标题">
+                <input type="text" class="info-input info-input2" r-model={config.title} placeholder="请输入不超过20字的标题">
             </dd>
             <dd class="dd-list3 {error.titleError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.titleError}</span></dd>
         </dl>
@@ -60,7 +60,7 @@
                 <p class="text6">简介：</p>
             </dt>
             <dd class="dd-list1">
-                <textarea class="info-textarea" placeholder="请输入不超过200字的简介"></textarea>
+                <textarea class="info-textarea" placeholder="请输入不超过200字的简介" r-model={config.description}></textarea>
             </dd>
             <dd class="dd-list3 {error.infoError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.infoError}</span></dd>
         </dl>
@@ -69,16 +69,16 @@
                 <p class="text6">播放密码：</p>
             </dt>
             <dd class="dd-list1 text6">
-                <span class="radio radio-pos {show.radioCheck ? 'radio-true' : ''}" on-click={show.radioCheck = true}></span>
-                <span class="text10" on-click={show.radioCheck = true}>无密码</span>
-                <span class="radio radio-pos {!show.radioCheck ? 'radio-true' : ''}" on-click={show.radioCheck = false}></span>
-                <span class="text10" on-click={show.radioCheck = false}>需要密码</span>
+                <span class="radio radio-pos {!config.isEncrypt ? 'radio-true' : ''}" on-click={config.isEncrypt = false}></span>
+                <span class="text10" on-click={config.isEncrypt = false}>无密码</span>
+                <span class="radio radio-pos {config.isEncrypt ? 'radio-true' : ''}" on-click={config.isEncrypt = true}></span>
+                <span class="text10" on-click={config.isEncrypt = true}>需要密码</span>
             </dd>
         </dl>
         <dl class="dl-line u-cb {error.pwdError.msg ? 'u-error-tip' : ''}">
             <dt>&nbsp;</dt>
             <dd class="dd-list1">
-                <input type="password" class="info-input info-input2" placeholder="请输入不超过6位的纯数字密码" r-model={config.pwd}>
+                <input type="password" class="info-input info-input2" placeholder="请输入不超过6位的纯数字密码" r-model={config.password}>
             </dd>
             <dd class="dd-list3 {error.pwdError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.pwdError}</span></dd>
         </dl>
