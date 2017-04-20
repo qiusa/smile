@@ -98,6 +98,7 @@
     font-size: 16px;
     color: #666;
     text-decoration: none;
+    cursor: pointer;
 }
 .u-a:hover{
     text-decoration: underline;
@@ -112,6 +113,7 @@
 .u-a-disabled:hover, .u-a-disabled:active{
     color: #ccc;
     text-decoration: none;
+    cursor: default;
 }
 //蓝色链接
 .u-blue-a{
@@ -322,13 +324,21 @@
             display: inline-block!important;  
         }   
     }
-    input{
+    input, textarea{
         border: 1px solid #d76369!important;
         background: #fbefef!important;
     }
 }
+.u-disabled{
+    input, textarea{
+        pointer-events: none;
+    }
+}
 .u-pointer{
     cursor: pointer;
+}
+.u-default{
+    cursor: default!important;
 }
 .u-error-type{
     padding-top: 16px;

@@ -9,6 +9,7 @@
         .play{
             width: 100%;
             height: 100%;
+            background: #eee;
         }
         .pwd{
             background: #343434;

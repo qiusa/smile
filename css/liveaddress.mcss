@@ -37,6 +37,7 @@
     }
     .text5{
         padding-left: 12px;
+        cursor: pointer;
     }
     .text6{
         line-height: 40px;
@@ -99,7 +100,6 @@
             line-height: 38px;
             font-size: 12px;
             display: inline-block;
-            cursor: pointer;
         }
         .info-btn2{
             width: 98px;
@@ -107,12 +107,10 @@
             line-height: 38px;
             font-size: 12px;
             display: inline-block;
-            cursor: pointer;
         }
         .info-btn3{
             width: 178px;
             display: inline-block;
-            cursor: pointer;
         }
         .info-line{
             padding: 20px 0 0 12px;
@@ -151,7 +149,6 @@
         }
         .info-clear{
             padding-left: 46px;
-            cursor: pointer;
         }
         li{
             border-bottom: 1px dashed #dcdcdc;

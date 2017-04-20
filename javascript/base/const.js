@@ -41,6 +41,7 @@ define(['jquery'], function($) {
             'addOrUpdate': './qyapi/liveWeb/addOrUpdate', //新增或修改用户设备直播页信息
             'pause': './qyapi/liveWeb/pause', //暂停用户设备直播页信息
             'upload': './qyapi/liveWeb/upload', //封面图上传
+            'init': './qyapi/liveWeb/init', //获取直播页面信息
             'play': './qyapi/liveWeb/play' //播放直播页
         },
         COMPANY: {

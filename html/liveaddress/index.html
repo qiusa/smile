@@ -11,7 +11,7 @@
                 <p class="text2">{config.deviceId}</p>
             </dd>
             <dd class="dd-list2">
-                <span class="u-btn info-btn" on-click={this.play()}>{config.delFlag ? '恢复直播' : '暂停直播'}</span>
+                <span class="u-btn info-btn" on-click={this.playStatus()}>{config.delFlag ? '恢复直播' : '暂停直播'}</span>
             </dd>
         </dl>
     </div>
@@ -25,16 +25,16 @@
         <p class="text4">下方设置保存后，内容会即时更新，地址不会变化</p>
     </div>
     <h2 class="title">
-        <span class="checkbox-big ve-bottom {show.check ? 'checkbox-big-true' : ''}" on-click={show.check = show.check ? false : true}></span>
-        <span class="text5">直播设置（可选）</span>
+        <span class="checkbox-big ve-bottom {show.check ? 'checkbox-big-true' : ''} {config.delFlag ? 'u-default' : ''}" on-click={show.check = !config.delFlag ? (show.check ? false : true) : ''}></span>
+        <span class="text5 {(!show.check || config.delFlag) ? 'u-default' : ''}" on-click={show.check = !config.delFlag ? (show.check ? false : true) : ''}>直播设置（可选）</span>
     </h2>
-    <div class="info">
-        <dl class="dl-line u-cb {error.titleError.msg ? 'u-error-tip' : ''}">
+    <div class="info {(!show.check || config.delFlag) ? 'u-disabled' : ''}">
+        <dl class="dl-line u-cb {error.titleError ? 'u-verify-error' : ''}">
             <dt>
                 <p class="text6">标题：</p>
             </dt>
             <dd class="dd-list1">
-                <input type="text" class="info-input info-input2" r-model={config.title} placeholder="请输入不超过20字的标题">
+                <input type="text" class="info-input info-input2" r-model={config.title} on-focus={error.titleError=''}  placeholder="请输入不超过20字的标题" maxlength="20">
             </dd>
             <dd class="dd-list3 {error.titleError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.titleError}</span></dd>
         </dl>
@@ -43,7 +43,7 @@
                 <p class="text6">封面：</p>
             </dt>
             <dd class="dd-list1">
-                <div class="upload" id="upload" on-click={this.upload()}>
+                <div class="upload {(!show.check || config.delFlag) ? 'u-default' : ''}" id="upload" on-click={this.upload()}>
                     <p class="text8">点击这里上传</p>
                 </div>
                 <div id="uploadForm" style="display: none;">
@@ -55,12 +55,12 @@
                 <p class="text9">支持大小： 200k以内</p>
             </dd>
         </dl>
-        <dl class="dl-line u-cb {error.infoError.msg ? 'u-error-tip' : ''}">
+        <dl class="dl-line u-cb {error.infoError ? 'u-verify-error' : ''}">
             <dt>
                 <p class="text6">简介：</p>
             </dt>
             <dd class="dd-list1">
-                <textarea class="info-textarea" placeholder="请输入不超过200字的简介" r-model={config.description}></textarea>
+                <textarea class="info-textarea" placeholder="请输入不超过200字的简介" r-model={config.description} on-focus={error.infoError=''} ></textarea>
             </dd>
             <dd class="dd-list3 {error.infoError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.infoError}</span></dd>
         </dl>
@@ -69,24 +69,24 @@
                 <p class="text6">播放密码：</p>
             </dt>
             <dd class="dd-list1 text6">
-                <span class="radio radio-pos {!config.isEncrypt ? 'radio-true' : ''}" on-click={config.isEncrypt = false}></span>
-                <span class="text10" on-click={config.isEncrypt = false}>无密码</span>
-                <span class="radio radio-pos {config.isEncrypt ? 'radio-true' : ''}" on-click={config.isEncrypt = true}></span>
-                <span class="text10" on-click={config.isEncrypt = true}>需要密码</span>
+                <span class="radio radio-pos {!config.isEncrypt ? 'radio-true' : ''} {(!show.check || config.delFlag) ? 'u-default' : ''}" on-click={(!show.check || config.delFlag) ? '' : config.isEncrypt = 0}></span>
+                <span class="text10 {(!show.check || config.delFlag) ? 'u-default' : ''}" on-click={(!show.check || config.delFlag) ? '' : config.isEncrypt = 0}>无密码</span>
+                <span class="radio radio-pos {config.isEncrypt ? 'radio-true' : ''} {(!show.check || config.delFlag) ? 'u-default' : ''}" on-click={(!show.check || config.delFlag) ? '' : config.isEncrypt = 1}></span>
+                <span class="text10 {(!show.check || config.delFlag) ? 'u-default' : ''}" on-click={(!show.check || config.delFlag) ? '' : config.isEncrypt = 1}>需要密码</span>
             </dd>
         </dl>
-        <dl class="dl-line u-cb {error.pwdError.msg ? 'u-error-tip' : ''}">
+        <dl class="dl-line u-cb {error.pwdError ? 'u-verify-error' : ''}">
             <dt>&nbsp;</dt>
             <dd class="dd-list1">
-                <input type="password" class="info-input info-input2" placeholder="请输入不超过6位的纯数字密码" r-model={config.password}>
+                <input type="password" class="info-input info-input2" placeholder="请输入不超过6位的纯数字密码" r-model={config.password} on-focus={error.pwdError=''} >
             </dd>
             <dd class="dd-list3 {error.pwdError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.pwdError}</span></dd>
         </dl>
         <dl class="dl-line u-cb">
             <dt>&nbsp;</dt>
             <dd class="dd-list1">
-                <span class="u-btn info-btn3" on-click={this.save()}>保存设置</span>
-                <span class="info-clear u-a">清除设置</span>
+                <span class="u-btn info-btn3 {(!show.check || config.delFlag) ? 'u-btn-disabled' : ''}" on-click={this.save('save')}>保存设置</span>
+                <span class="info-clear u-a {(!show.check || config.delFlag) ? 'u-a-disabled' : ''}" on-click={this.save('clear')}>清除设置</span>
             </dd>
             <dd class="dd-list2">
             </dd>

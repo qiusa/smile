@@ -25,7 +25,7 @@
                 设置密码
             </dt>
             <dd class="dd-line">
-                <input type="text" class="register-input" placeholder="请输入6-16位的数字、字母组合密码" r-model={user.pwd} on-focus={error.pwdError=''} on-blur={this.verifyPwd(true)}>
+                <input type="password" class="register-input" placeholder="请输入6-16位的数字、字母组合密码" r-model={user.pwd} on-focus={error.pwdError=''} on-blur={this.verifyPwd(true)}>
                 <span class="icon-x" r-hide={!user.pwd} on-click={user.pwd=''}></span>
             </dd>
             <dd class="dd-line {error.pwdError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.pwdError}</span></dd>

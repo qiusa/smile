@@ -1,15 +1,15 @@
 <div class="m-play">
     <div class="pc-play">
         <div class="play"></div>
-        <div class="pwd">
+        <div class="pwd" r-hide={!config.isEncrypt}>
             <span class="icon-pwd"></span>
             <p class="pwd-text">本直播已加密，请输入密码</p>
             <div class="pwd-box u-cb">
-                <input type="password" class="pwd-input">
+                <input type="password" class="pwd-input" r-model={config.password}>
                 <div class="u-btn pwd-btn">确定</div>
             </div>
         </div>
     </div>
     <p class="pc-title">直播介绍</p>
-    <p class="pc-text">山东龙口粉丝电风扇地方。</p>
+    <p class="pc-text">{config.description||'暂时没有简介'}</p>
 </div>

@@ -138,11 +138,11 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
                     return;
                 }
                 // 这里直接判断状态，如果非0则触发onerror.
-                if (data.code != 0) {
+                if (data.code == 0 || data.code == 200) {
+                    fld ? fld.call(this, data) : 0;
+                } else {
                     console.error('获取数据失败！', data);
                     fer ? fer.call(this, data) : 0;
-                } else {
-                    fld ? fld.call(this, data) : 0;
                 }
                 options.onend ? options.onend.call(this, data) : 0;
             }).fail(function(data) {
@@ -194,6 +194,21 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
             var r = window.location.search.substr(1).match(reg);
             if (r != null) return (r[2]);
             return null;
+        },
+        /**
+         * 获取文字长度，一个汉字等于2个字节
+         * @param  {String} str 需要计算的字符串长度
+         */
+        getBytesLength: function(str) {
+            if (!str) {
+                return 0;
+            }
+            var count = 0;
+            for (var i = 0; i < str.length; i++) {
+                var c = str.charAt(i);
+                /^[\u0000-\u00ff]$/.test(c) ? count++ : count += 2;
+            }
+            return Math.round(count / 2);
         },
         /**
          * 时间戳转换为年月日

@@ -6,11 +6,11 @@
 .u-white-btn:hover{background:#ebebeb;border:1px solid #ccc;text-decoration:none;}
 .u-white-btn:active{background:#ccc;border:1px solid #b3b3b3;}
 .u-white-btn-disabled{width:118px;height:38px;line-height:38px;border-radius:3px;border:1px solid #dcdcdc;background:#f7f7f7;color:#666;font-size:16px;opacity:0.2;text-align:center;display:inline-block;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
-.u-a{font-size:16px;color:#666;text-decoration:none;}
+.u-a{font-size:16px;color:#666;text-decoration:none;cursor:pointer;}
 .u-a:hover{text-decoration:underline;}
 .u-a:active{color:#444;text-decoration:underline;}
 .u-a-disabled{color:#ccc;}
-.u-a-disabled:hover,.u-a-disabled:active{color:#ccc;text-decoration:none;}
+.u-a-disabled:hover,.u-a-disabled:active{color:#ccc;text-decoration:none;cursor:default;}
 .u-blue-a{font-size:12px;color:#4aaff8;text-decoration:none;}
 .u-blue-a:hover{text-decoration:underline;}
 .operation-list{float:right;height:30px;}
@@ -48,7 +48,9 @@
 .u-verify-error .u-error-pos{display:block;position:absolute;top:0;left:290px;}
 .u-verify-error .u-error-tip{display:block;color:#d76360;white-space:nowrap;}
 .u-verify-error .u-error-tip .register-icon{display:inline-block !important;}
-.u-verify-error input{border:1px solid #d76369 !important;background:#fbefef !important;}
+.u-verify-error input,.u-verify-error textarea{border:1px solid #d76369 !important;background:#fbefef !important;}
+.u-disabled input,.u-disabled textarea{pointer-events:none;}
 .u-pointer{cursor:pointer;}
+.u-default{cursor:default !important;}
 .u-error-type{padding-top:16px;}
 .u-error-type .error-icon{background:url("../res/images/icon_enter_fail.png") left center no-repeat;height:18px;line-height:18px;padding-left:26px;font-size:12px;color:#d76360;text-align:left;}
