@@ -23,8 +23,8 @@
                     <dt>运行开关：</dt>
                     <dd>
                         <ul class="operation-list">
-                            <li class="first {config.switchRun == 1 ? 'light' : ''}" on-click={config.switchRun = 1}>开启</li>
-                            <li class="third {config.switchRun == 0 ? 'light' : ''}" on-click={config.switchRun = 0}>关闭</li>
+                            <li class="first {config.switchRun == 0 ? 'light' : ''}" on-click={config.switchRun = 0}>开启</li>
+                            <li class="third {config.switchRun == -1 ? 'light' : ''}" on-click={config.switchRun = -1}>关闭</li>
                         </ul>
                     </dd>
                 </dl>
@@ -67,7 +67,7 @@
                     </dd>
                 </dl>
             </div>
-            <div class="u-btn set-btn" on-click={this.setDeviceConfig()}>保存设置</div>
+            <div class="u-btn set-btn {show.load ? 'u-btn-disabled' : ''}" on-click={this.setDeviceConfig()}>保存设置</div>
         </div>
     </div>
     <div r-hide={show.nav != 2}>
@@ -97,10 +97,10 @@
                     <dt>云存储：</dt>
                     <dd>
                         <ul class="operation-list">
-                            <li class="first {config.switch ? 'light' : ''}" on-click={config.switch = true}>开启</li>
-                            <li class="third {!config.switch ? 'light' : ''}" on-click={config.switch = false}>关闭</li>
+                            <li class="first {config.switch ? 'light' : ''}" on-click={this.uploadSwitch(1)}>开启</li>
+                            <li class="third {!config.switch ? 'light' : ''}" on-click={this.uploadSwitch(0)}>关闭</li>
                         </ul>
-                        <a href="javascript:;" class="u-blue-a cloud-link" on-click={this.showAgreement()}>如何开通？</a>
+                        <a href="javascript:;" class="u-blue-a cloud-link" on-click={this.showAgreement()} r-hide={!config.switch}>如何开通？</a>
                     </dd>
                 </dl>
             </div>
@@ -109,7 +109,7 @@
         <div class="cloud-title u-cb">
             <span class="cloud-icon"></span>
             <span>云录像片段</span>
-            <span class="cloud-text">您当前拥有的是7天云录像服务，青果只对动态画面进行录制，连续静态画面不进行录制。</span>
+            <span class="cloud-text">您当前拥有的是{show.a}天云录像服务，青果只对动态画面进行录制，连续静态画面不进行录制。</span>
         </div>
         <div class="">
             {#if show.myRecordList.noRecord}

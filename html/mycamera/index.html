@@ -45,7 +45,7 @@
                         <span class="icon-x close" on-click={this.close($event)} r-hide={!showParams.temp}></span>  
                     </div>
                 </td>
-                <td class="td3">{item.Status ? '在线' : '不在线'}</td>
+                <td class="td3">{item.status == 0 ? '在线' : '不在线'}</td>
                 <td class="td4">
                     <p class="u-mgl8 icon-live {item.isPlay ? 'icon-live-on' : ''}"></p>
                 </td>
