@@ -2,17 +2,17 @@
 .m-fplayer{
     .m-liveplayer{
         position: relative;
-        width: 760px;
-        height: 428px;
+        width: 600px;
+        height: 360px;
         background: #000;
         .m-loading{
             position: absolute;
             top: 0;
             left: 0;
-            width: 760px;
-            height: 428px;
-            background: url(/live/res/pc/loading.png) no-repeat;
-            background-size: 760px 428px;
+            width: 600px;
+            height: 360px;
+            background: url(../../images/loading.png) no-repeat;
+            background-size: 600px 360px;
         }
         .u-load-pos{
             position: absolute;

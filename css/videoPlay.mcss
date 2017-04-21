@@ -21,7 +21,7 @@
 
         display: inline-block;
 
-        width: 760px;
+        width: 600px;
         color: #ccc;
         border-radius: 3px;
         background: #303030;
@@ -46,8 +46,8 @@
         top: 40px;
         left: 0;
 
-        width: 760px;
-        height: 426px;
+        width: 600px;
+        height: 336px;
 
         background: rgba(0, 0, 0, .8);
         z-index: 100;

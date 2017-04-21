@@ -1,10 +1,9 @@
-.m-channel{min-width:1014px;}
-.m-channel .m-channel-play{padding-top:30px;background:#444;}
+.m-channel .m-channel-play{background:#444;}
 .m-channel .m-channel-play .adds-list{margin-top:30px;}
-.m-channel .m-channel-play .m-playmain{position:relative;margin:10px auto 0;width:1020px;}
-.m-channel .m-channel-play .m-livemain{position:relative;float:left;width:760px;overflow:visible;}
-.m-channel .m-channel-play .m-flashplayer{width:760px;height:428px;}
-.m-channel .m-channel-play .m-err{position:absolute;top:0px;left:0px;width:760px;height:428px;background:#000;z-index:10;}
+.m-channel .m-channel-play .m-playmain{position:relative;margin:0 auto;width:1020px;}
+.m-channel .m-channel-play .m-livemain{position:relative;float:left;width:600px;overflow:visible;}
+.m-channel .m-channel-play .m-flashplayer{width:600px;height:336px;}
+.m-channel .m-channel-play .m-err{position:absolute;top:0px;left:0px;width:600px;height:336px;background:#000;z-index:10;}
 .m-channel .m-channel-play .n-section-verify{text-align:center;background:url("/live/res/pc/common/verify.png") no-repeat;font-size:0;z-index:20;}
 .m-channel .m-channel-play .n-section-verify .lockIcon1{margin-top:125px;display:inline-block;width:40px;height:50px;background:url("/live/res/pc/common/verify1.png") no-repeat;background-size:100%;margin:auto;}
 .m-channel .m-channel-play .n-section-verify .lockIcon2{margin-top:115px;display:inline-block;width:46px;height:40px;background:url("/live/res/pc/common/verify3.png") no-repeat;background-size:100%;margin:auto;}
@@ -12,7 +11,7 @@
 .m-channel .m-channel-play .n-section-verify .verify-message3{font-size:14px;font-family:"Microsoft YaHei" !important;color:#fff;text-align:center;}
 .m-channel .m-channel-play .n-section-verify .verify-btn{margin-top:30px;width:100%;cursor:pointer;}
 .m-channel .m-channel-play .n-section-verify .verify-btn span{display:inline-block;height:30px;width:120px;margin:auto;line-height:30px;font-size:14px;border-radius:2px;color:#fff;background:#12a76b;}
-.m-channel .m-channel-play .v-section-verify-chat{margin:auto;position:relative;width:260px;height:428px;padding:0;box-sizing:border-box;overflow:hidden;background-color:#303030;text-align:center;}
+.m-channel .m-channel-play .v-section-verify-chat{margin:auto;position:relative;width:260px;height:336px;padding:0;box-sizing:border-box;overflow:hidden;background-color:#303030;text-align:center;}
 .m-channel .m-channel-play .v-section-verify-chat .cTitle{height:40px;width:100%;font-size:14px;font-weight:bold;line-height:40px;text-align:center;color:#fff;background-color:#242424;box-sizing:border-box;}
 .m-channel .m-channel-play .v-section-verify-chat .lockIcon2{margin-top:125px;display:inline-block;width:24px;height:32px;background:url("/live/res/pc/common/verify2.png") no-repeat;background-size:100%;margin:auto;}
 .m-channel .m-channel-play .v-section-verify-chat .verify-message2{margin-top:20px;font-size:12px;font-family:"SimSun";color:#ccc;}
@@ -101,7 +100,7 @@
 .m-channel .m-channel-play .m-livechat{float:left;}
 .m-channel .m-channel-other{position:relative;margin:auto;width:1020px;}
 .m-channel .m-channel-other .m-liveinfo{position:relative;margin-top:31px;width:100%;color:#fff;}
-.m-channel .m-channel-other .m-liveinfo .n-liveinfo-left{float:left;width:760px;height:60px;}
+.m-channel .m-channel-other .m-liveinfo .n-liveinfo-left{float:left;width:600px;height:60px;}
 .m-channel .m-channel-other .m-liveinfo .n-liveinfo-left .avatar{float:left;height:60px;width:60px;margin-right:15px;border-radius:50%;overflow:hidden;}
 .m-channel .m-channel-other .m-liveinfo .n-liveinfo-left .avatar .goNowAnchorInfo{height:60px;width:60px;display:block;}
 .m-channel .m-channel-other .m-liveinfo .n-liveinfo-left .n-name{float:left;width:640px;height:25px;line-height:25px;margin-top:4px;font-size:18px;font-weight:bold;color:#333;}

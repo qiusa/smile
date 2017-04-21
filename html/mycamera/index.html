@@ -61,10 +61,10 @@
                     </p>
                 </td>
                 <td class="td6">
-                    <span class="u-mgl8 icon-cloud {item.cloud ? 'icon-cloud-on' : ''}"></span>
+                    <span class="u-mgl8 icon-cloud {item.uploadSwitch ? 'icon-cloud-on' : ''}"></span>
                 </td>
                 <td class="u-pdl45">
-                    <a href="./mycloud.html?id={item.deviceId|base64}&name={item.cameraName|base64}" class="u-blue-a">设备管理</a>
+                    <a href="./mycloud.html?id={item.deviceId|base64}&name={item.cameraName|base64}#set" class="u-blue-a">设备管理</a>
                     <span class="vertical-line"></span>
                     <a href="./liveaddress.html?id={item.deviceId|base64}&name={item.cameraName|base64}" class="u-blue-a">生成直播链接</a>
                 </td>

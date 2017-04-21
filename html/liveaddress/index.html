@@ -11,7 +11,7 @@
                 <p class="text2">{config.deviceId}</p>
             </dd>
             <dd class="dd-list2">
-                <span class="u-btn info-btn" on-click={this.playStatus()}>{config.delFlag ? '恢复直播' : '暂停直播'}</span>
+                <span class="u-btn info-btn {show.loadStatus ? 'u-btn-disabled' : ''}" on-click={this.playStatus()}>{config.delFlag ? '恢复直播' : '暂停直播'}</span>
             </dd>
         </dl>
     </div>
@@ -26,7 +26,7 @@
     </div>
     <h2 class="title">
         <span class="checkbox-big ve-bottom {show.check ? 'checkbox-big-true' : ''} {config.delFlag ? 'u-default' : ''}" on-click={show.check = !config.delFlag ? (show.check ? false : true) : ''}></span>
-        <span class="text5 {(!show.check || config.delFlag) ? 'u-default' : ''}" on-click={show.check = !config.delFlag ? (show.check ? false : true) : ''}>直播设置（可选）</span>
+        <span class="text5 {config.delFlag ? 'u-default' : ''}" on-click={show.check = !config.delFlag ? (show.check ? false : true) : ''}>直播设置（可选）</span>
     </h2>
     <div class="info {(!show.check || config.delFlag) ? 'u-disabled' : ''}">
         <dl class="dl-line u-cb {error.titleError ? 'u-verify-error' : ''}">
@@ -34,7 +34,7 @@
                 <p class="text6">标题：</p>
             </dt>
             <dd class="dd-list1">
-                <input type="text" class="info-input info-input2" r-model={config.title} on-focus={error.titleError=''}  placeholder="请输入不超过20字的标题" maxlength="20">
+                <input type="text" class="info-input info-input2" r-model={config.title} on-focus={error.titleError=''}  placeholder="请输入不超过20字的标题">
             </dd>
             <dd class="dd-list3 {error.titleError ? 'u-error-tip' : ''}"><span class="register-icon icon-fail"></span><span class="fail-text">{error.titleError}</span></dd>
         </dl>
@@ -45,6 +45,12 @@
             <dd class="dd-list1">
                 <div class="upload {(!show.check || config.delFlag) ? 'u-default' : ''}" id="upload" on-click={this.upload()}>
                     <p class="text8">点击这里上传</p>
+                    <div class="progress-bar" r-hide={!show.upload.status}>
+                        <span class="progress" style="width: {show.upload.progress}%;"></span>
+                    </div>
+                    <div class="success-load" style="background: url({config.snapshotUrl}) center center no-repeat #fff;background-size: contain;" r-hide={!config.snapshotUrl || show.upload.status}>
+                        <div class="upload-again">重新上传</div>
+                    </div>
                 </div>
                 <div id="uploadForm" style="display: none;">
                     <input id="file" type="file" accept="image/jpg,image/jpeg,image/png" hidden="hidden" on-change={this.imgChange($event)}>
@@ -85,8 +91,8 @@
         <dl class="dl-line u-cb">
             <dt>&nbsp;</dt>
             <dd class="dd-list1">
-                <span class="u-btn info-btn3 {(!show.check || config.delFlag) ? 'u-btn-disabled' : ''}" on-click={this.save('save')}>保存设置</span>
-                <span class="info-clear u-a {(!show.check || config.delFlag) ? 'u-a-disabled' : ''}" on-click={this.save('clear')}>清除设置</span>
+                <span class="u-btn info-btn3 {(!show.check || config.delFlag || show.saveStatus) ? 'u-btn-disabled' : ''}" on-click={this.save('save')}>保存设置</span>
+                <span class="info-clear u-a {(!show.check || config.delFlag || show.saveStatus) ? 'u-a-disabled' : ''}" on-click={this.save('clear')}>清除设置</span>
             </dd>
             <dd class="dd-list2">
             </dd>

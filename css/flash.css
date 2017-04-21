@@ -1,5 +1,5 @@
-.m-fplayer .m-liveplayer{position:relative;width:760px;height:428px;background:#000;}
-.m-fplayer .m-liveplayer .m-loading{position:absolute;top:0;left:0;width:760px;height:428px;background:url("/live/res/pc/loading.png") no-repeat;background-size:760px 428px;}
+.m-fplayer .m-liveplayer{position:relative;width:600px;height:336px;background:#000;}
+.m-fplayer .m-liveplayer .m-loading{position:absolute;top:0;left:0;width:600px;height:336px;background:url("../res/images/loading.png") no-repeat;background-size:600px 336px;}
 .m-fplayer .m-liveplayer .u-load-pos{position:absolute;top:204px;left:364px;}
 .m-fplayer .m-liveplayer .danmaku{font-size:24px;}
 .m-fplayer .m-liveplayer .danmaku .emoji{width:30px;height:30px;}

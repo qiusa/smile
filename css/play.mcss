@@ -1,11 +1,11 @@
 @charset 'UTF-8';
 .m-play{
-    width: 760px;
+    width: 600px;
     margin: 190px auto 0;
     .pc-play{
         position: relative;
-        width: 760px;
-        height: 430px;
+        width: 600px;
+        height: 360px;
         .play{
             width: 100%;
             height: 100%;

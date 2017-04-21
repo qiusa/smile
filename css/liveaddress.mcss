@@ -146,6 +146,26 @@
             border-radius: 3px;
             background: url(../res/images/icon_mycamare_update.png) center 56px no-repeat;
             cursor: pointer;
+            position: relative;
+            .success-load{
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                .upload-again{
+                    width: 112px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #fff;
+                    background: rgba(0, 0, 0, 0.75);
+                    margin: 75px auto 0;
+                    border-radius: 3px;
+                    cursor: pointer;
+                }
+            }
         }
         .info-clear{
             padding-left: 46px;
@@ -188,6 +208,26 @@
                 line-height: 60px;
                 padding-right: 28px;
             }
+        }
+    }
+    .progress-bar{
+        width: 160px;
+        height: 6px;
+        overflow: hidden;
+        border-radius: 3px;
+        background: #dcdcdc;
+        margin: 10px auto 0;
+        .progress{
+            background: #12a76b;
+            height: 6px;
+            width: 10%;
+            border-radius: 3px;
+            display: block;
+            -webkit-transition: all 0.2s ease-in-out;
+               -moz-transition: all 0.2s ease-in-out;
+                -ms-transition: all 0.2s ease-in-out;
+                 -o-transition: all 0.2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
         }
     }
 }

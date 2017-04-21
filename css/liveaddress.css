@@ -27,10 +27,14 @@
 .m-liveaddress .info .info-input{width:358px;height:38px;line-height:38px;color:#959595;border:1px solid #dcdcdc;border-radius:3px;padding:0 6px 0 12px;margin-right:16px;}
 .m-liveaddress .info .info-input2{width:300px;margin-right:0;}
 .m-liveaddress .info .info-textarea{width:296px;min-height:91px;color:#666;border:1px solid #dcdcdc;border-radius:3px;padding:12px;resize:vertical;}
-.m-liveaddress .info .upload{width:318px;height:178px;border:1px solid #dcdcdc;border-radius:3px;background:url("../res/images/icon_mycamare_update.png") center 56px no-repeat;cursor:pointer;}
+.m-liveaddress .info .upload{width:318px;height:178px;border:1px solid #dcdcdc;border-radius:3px;background:url("../res/images/icon_mycamare_update.png") center 56px no-repeat;cursor:pointer;position:relative;}
+.m-liveaddress .info .upload .success-load{position:absolute;left:0;top:0;right:0;bottom:0;}
+.m-liveaddress .info .upload .success-load .upload-again{width:112px;height:30px;line-height:30px;text-align:center;font-size:12px;color:#fff;background:rgba(0,0,0,0.75);margin:75px auto 0;border-radius:3px;cursor:pointer;}
 .m-liveaddress .info .info-clear{padding-left:46px;}
 .m-liveaddress .info li{border-bottom:1px dashed #dcdcdc;}
 .m-liveaddress .info li .name{font-size:14px;float:left;height:60px;line-height:60px;width:80px;text-align:right;color:#666;overflow:hidden;}
 .m-liveaddress .info li .company{font-size:14px;color:#333;float:left;line-height:60px;padding-left:76px;}
 .m-liveaddress .info li .btn{width:72px;height:30px;line-height:30px;border-radius:3px;border:1px solid #dcdcdc;color:#666;background:#f7f7f7;text-align:center;margin:14px 18px 0 0;float:right;cursor:pointer;}
 .m-liveaddress .info li .disabled-btn{float:right;color:#999;line-height:60px;padding-right:28px;}
+.m-liveaddress .progress-bar{width:160px;height:6px;overflow:hidden;border-radius:3px;background:#dcdcdc;margin:10px auto 0;}
+.m-liveaddress .progress-bar .progress{background:#12a76b;height:6px;width:10%;border-radius:3px;display:block;-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-ms-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}
