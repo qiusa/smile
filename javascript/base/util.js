@@ -18,6 +18,17 @@ define(['regularjs', 'jquery', '../../javascript/3rd/cookie.js', '../../javascri
             }
             return this.tipShow;
         },
+        /**
+         * 是否是pc
+         * @return {Boolean} [description]
+         */
+        isPc: function() {
+            if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+                return 0;
+            } else {
+                return 1;//pc
+            }
+        },
         //滚动条在Y轴上的滚动距离
         getScrollTop: function() {
             var scrollTop = 0,

@@ -1,0 +1,78 @@
+@charset 'UTF-8';
+/**计算rem布局换算公式**/
+$size = ($px){
+    @return $px / 75 + rem; 
+}
+.m-wap-play{
+    .wap-play{
+        position: relative;
+        width: 100%;
+        height: $size(384);
+        .play{
+            width: 100%;
+            height: 100%;
+            background: #eee;
+        }
+        .pwd{
+            background: #242424;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            .icon-pwd{
+                background: url(../res/images/icon_mycamera_lock_web.png) no-repeat;
+                background-size: contain;
+                width: $size(48);
+                height: $size(48);
+                display: inline-block;
+                margin-top: $size(80);
+            }
+            .pwd-text{
+                padding: $size(28) 0 $size(60);
+                font-size: $size(26);
+                color: #ccc;
+                text-align: center;
+                line-height: $size(26);
+            }
+            .pwd-box{
+                width: $size(320);
+                height: $size(64);
+                margin: 0 auto;
+                .pwd-input{
+                    padding-left: $size(18);
+                    width: $size(182);
+                    height: $size(64);
+                    border: 0 none;
+                    background: #fff;
+                    border-radius: $size(3) 0 0 $size(3);
+                    color: #000;
+                    float: left;
+                }
+                .pwd-btn{
+                    width: $size(118);
+                    height: $size(62);
+                    line-height: $size(62);
+                    color: #fff;
+                    font-size: $size(25);
+                    text-align: center;
+                    margin-left: -1px;
+                    float: left;
+                }
+            }
+        }
+    }
+    .wap-title{
+        font-size: $size(32);
+        line-height: $size(32);
+        color: #666;
+        padding: $size(36) 0 $size(17) $size(36);
+    }
+    .wap-text{
+        font-size: $size(26);
+        color: #666;
+        line-height: $size(33);
+        padding: 0 $size(36)
+    }
+}
