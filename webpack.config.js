@@ -44,7 +44,7 @@ module.exports = {
             loader: "raw"
         }, {
             test: /\.(png|jpg|gif)$/,
-            loader: 'url?limit=400&name=images/[name].[ext]?[hash:10]'
+            loader: 'url?limit=8900&name=images/[name].[ext]?[hash:10]'
         }, {
             test: /\.rgl$/,
             loader: 'rgl'
