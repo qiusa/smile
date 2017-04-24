@@ -248,13 +248,14 @@ define([
                 },
                 onerror: function(data) {
                     console.info('失败', data);
+                    self.data.playStatus = 400;
+                    self.$update();
                 }
             });
         },
         /**
          * 设置播放器
-         * @param  {[Number]} deviceid 设备id
-         * @return {[type]}
+         * @param  {Number} deviceid 设备id
          */
         setFlashPlayer: function(rtmpUrl, type) {
             //rtmpUrl = "rtmp://x.smartcamera.163.com/qingguo-public/163021505003753?wsHost=x.smartcamera.163.com"

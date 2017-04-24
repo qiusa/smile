@@ -5,6 +5,7 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var OpenBrowserPlugin = require('open-browser-webpack-plugin'); //打开浏览器
 var TransferWebpackPlugin = require('transfer-webpack-plugin'); //拷贝文件
+var SpritesmithPlugin = require('webpack-spritesmith');
 var prod = process.env.NODE_ENV === 'production' ? true : false;
 
 //需要用到glob模块 
@@ -30,7 +31,7 @@ module.exports = {
         path: path.join(__dirname, "build"),
         //path: __dirname,
         //publicPath: 'http://ww.baidu.com',
-        filename: '[name].[hash].js'
+        filename: 'js/[name].[hash].js'
     },
     resolve: {
         alias: {
@@ -44,7 +45,7 @@ module.exports = {
             loader: "raw"
         }, {
             test: /\.(png|jpg|gif)$/,
-            loader: 'url?limit=400&name=images/[name].[ext]?[hash:10]'
+            loader: 'url?limit=400&name=/images/[name].[ext]?[hash:10]'
         }, {
             test: /\.rgl$/,
             loader: 'rgl'
@@ -57,11 +58,30 @@ module.exports = {
         }]
     },
     plugins: [
+        /*new SpritesmithPlugin({
+            // 目标小图标
+            src: {
+                cwd: path.resolve(__dirname, './res/images/icons'),
+                glob: '*.png'
+            },
+            // 输出雪碧图文件及样式文件
+            target: {
+                image: path.resolve(__dirname, './build/images/sprite.png'),
+                css: path.resolve(__dirname, './build/css/sprite.css')
+            },
+            // 样式文件中调用雪碧图地址写法
+            apiOptions: {
+                cssImageRef: '../images/sprite.png'
+            },
+            spritesmithOptions: {
+                algorithm: 'top-down'
+            }
+        }),*/
         //这个使用uglifyJs压缩你的js代码
         //new webpack.optimize.UglifyJsPlugin({minimize: false}),
         //把入口文件里面的数组打包成verdors.js
         //new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
-        new ExtractTextPlugin("[name].css?[hash:10]"), //合成css文件 对应不同的html模板
+        new ExtractTextPlugin("css/[name].css?[hash:10]"), //合成css文件 对应不同的html模板
         new CleanWebpackPlugin(['build'], {
             root: __dirname,
             verbose: true,
@@ -76,11 +96,14 @@ module.exports = {
 };
 //根据enter创建同名html
 pageArr.forEach(function(page) {
-    console.info('$page页面', page,__dirname)
+    console.info('$page页面', page, __dirname)
     var htmlPlugin = new HtmlwebpackPlugin({
         filename: page + '.html',
         template: path.resolve(__dirname, 'template/' + page + '.html'),
-        chunks: [page, 'vendors']
+        chunks: [page, 'vendors'],
+        minify:{    //压缩HTML文件
+            removeComments:true  //移除HTML中的注释
+        }
     });
     module.exports.plugins.push(htmlPlugin);
 });
