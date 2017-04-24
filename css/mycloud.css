@@ -56,6 +56,10 @@
 .m-mycloud .cloud-show .show-list{display:inline-block !important;}
 .m-mycloud .cloud-show .hide-list{display:none !important;}
 .m-mycloud .cloud-show .more-icon{-webkit-transform:rotate(180deg) !important;-moz-transform:rotate(180deg) !important;-ms-transform:rotate(180deg) !important;-o-transform:rotate(180deg) !important;transform:rotate(180deg) !important;}
+.m-mycloud .u-norecord{margin:60px auto 0px;width:210px;height:220px;text-align:center;}
+.m-mycloud .u-norecord .u-norecord-icon{width:220px;height:115px;background:url("../res/images/no_record.png") no-repeat center;}
+.m-mycloud .u-norecord .u-norecord-tip1{margin-top:20px;font-size:20px;color:#333;}
+.m-mycloud .u-norecord p{margin-top:7px;font-size:14px;color:#999;}
 .buy-agreement{padding:0 0 30px 30px;text-align:left;}
 .buy-agreement .title,.buy-agreement .title2{padding-bottom:18px;font-size:16px;font-weight:normal;line-height:16px;color:#666;}
 .buy-agreement .title2{padding-top:48px;}

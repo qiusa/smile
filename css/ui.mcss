@@ -148,7 +148,7 @@
     li:hover{
         background: #ebebeb;
         border-color: #ccc;
-        z-index: 11;
+        //z-index: 11;
     }
     .light{
         border: 1px solid #0d945e;
@@ -339,6 +339,9 @@
 }
 .u-default{
     cursor: default!important;
+}
+.u-hidden{
+    visibility: hidden;
 }
 .u-error-type{
     padding-top: 16px;

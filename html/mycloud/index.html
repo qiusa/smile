@@ -23,8 +23,8 @@
                     <dt>运行开关：</dt>
                     <dd>
                         <ul class="operation-list">
-                            <li class="first {config.switchRun == 0 ? 'light' : ''}" on-click={config.switchRun = 0}>开启</li>
-                            <li class="third {config.switchRun == -1 ? 'light' : ''}" on-click={config.switchRun = -1}>关闭</li>
+                            <li class="first {config.switchRun == 1 ? 'light' : ''}" on-click={config.switchRun = 1}>开启</li>
+                            <li class="third {config.switchRun == 0 ? 'light' : ''}" on-click={config.switchRun = 0}>关闭</li>
                         </ul>
                     </dd>
                 </dl>
@@ -70,7 +70,7 @@
             <div class="u-btn set-btn {show.load ? 'u-btn-disabled' : ''}" on-click={this.setDeviceConfig()}>保存设置</div>
         </div>
     </div>
-    <div r-hide={show.nav != 2}>
+    <div class="{show.nav !=2 ? 'u-hidden' : ''}">
         <div class="device">
             <div class="play-box" ref=playHere>
                 
@@ -109,7 +109,7 @@
         <div class="cloud-title u-cb">
             <span class="cloud-icon"></span>
             <span>云录像片段</span>
-            <span class="cloud-text">您当前拥有的是{show.a}天云录像服务，青果只对动态画面进行录制，连续静态画面不进行录制。</span>
+            <span class="cloud-text">您当前拥有的是{config.recordPkg}天云录像服务，青果只对动态画面进行录制，连续静态画面不进行录制。</span>
         </div>
         <div class="">
             {#if show.myRecordList.noRecord}

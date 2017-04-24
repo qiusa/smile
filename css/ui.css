@@ -15,7 +15,7 @@
 .u-blue-a:hover{text-decoration:underline;}
 .operation-list{float:right;height:30px;}
 .operation-list li{background:#f7f7f7;border:1px solid #dcdcdc;border-radius:3px;font-size:12px;color:#666;height:28px;line-height:28px;position:relative;z-index:9;padding:0 28px 0 14px;float:left;cursor:pointer;}
-.operation-list li:hover{background:#ebebeb;border-color:#ccc;z-index:11;}
+.operation-list li:hover{background:#ebebeb;border-color:#ccc;}
 .operation-list .light{border:1px solid #0d945e;background:#12a76b;color:#fff;z-index:11;}
 .operation-list .light .icon-more-white{background:url("../res/images/icon_more_white.png") no-repeat;background-size:contain;}
 .operation-list .light:hover{border:1px solid #0a8956;background:#0f9961;}
@@ -52,5 +52,6 @@
 .u-disabled input,.u-disabled textarea{pointer-events:none;}
 .u-pointer{cursor:pointer;}
 .u-default{cursor:default !important;}
+.u-hidden{visibility:hidden;}
 .u-error-type{padding-top:16px;}
 .u-error-type .error-icon{background:url("../res/images/icon_enter_fail.png") left center no-repeat;height:18px;line-height:18px;padding-left:26px;font-size:12px;color:#d76360;text-align:left;}

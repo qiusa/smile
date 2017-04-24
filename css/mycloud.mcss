@@ -347,6 +347,27 @@
                     transform: rotate(180deg)!important;
         }
     }
+    .u-norecord{
+        margin: 60px auto 0px;
+        width: 210px;
+        height: 220px;
+        text-align: center;
+        .u-norecord-icon{
+            width: 220px;
+            height: 115px;
+            background: url(../res/images/no_record.png) no-repeat center;
+        }
+        .u-norecord-tip1{
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        p{
+            margin-top: 7px;
+            font-size: 14px;
+            color: #999;
+        }
+    }
 }
 //服务购买
 .buy-agreement{

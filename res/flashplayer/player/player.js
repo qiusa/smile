@@ -73,7 +73,7 @@ define([
             this.clearErrorTip();
             this.cameraRemove();
             this.initPlayer();
-            this.cameraPlay(this.data.deviceId);
+            this.cameraPlay();
             this.initWatchFlashStatus();
         },
         destroy: function() {
@@ -81,6 +81,7 @@ define([
             this.clearTimerInterval();
         },
         exportInterface: function(Type, param) {
+            console.info('Type, param',Type, param)
             switch (Type) {
                 case 'CLEARERROR':
                     this.data.regularObj.clearErrorTip();
@@ -100,7 +101,7 @@ define([
          * @return {[type]}
          */
         setPlayAgain: function() {
-            this.initPage(this.data.deviceId);
+            this.initPage();
             this.data.danmuObj.firstTime = true;
         },
 
@@ -125,7 +126,7 @@ define([
                 var canScreenShot = false;
                 //服务端接口的返回码
                 if (param == 100) return;
-                if (param == 200) {
+                if (param == 200 || param == 0) {
                     //canScreenShot = true;
                     self.clearErrorTip();
                 } else {
@@ -229,21 +230,20 @@ define([
 
         /**
          * 播放器play
-         * @param  {[Number]} deviceid 设备id
          * @return {[type]}
          */
-        cameraPlay: function(deviceId) {
-            var self = this;
-            util.rest(api.DEVICE.playDevice, {
-                param: {
-                    deviceId: deviceId
-                },
+        cameraPlay: function() {
+            var self = this,
+                url = this.data.url ? this.data.url : api.DEVICE.playDevice;
+                console.info('url',url,this)
+            util.rest(url, {
+                param: this.data.param,
                 method: 'post',
                 onload: function(data) {
                     console.info('成功playDevice', data);
                     self.data.playStatus = data.code;
                     self.data.videoData.rtmpUrl = data.rtmpUrl;
-                    self.setFlashPlayer(data.rtmpUrl);
+                    self.setFlashPlayer(data.rtmpUrl, 'private');
                     self.$update();
                 },
                 onerror: function(data) {
@@ -255,7 +255,6 @@ define([
         },
         /**
          * 设置播放器
-         * @param  {Number} deviceid 设备id
          */
         setFlashPlayer: function(rtmpUrl, type) {
             //rtmpUrl = "rtmp://x.smartcamera.163.com/qingguo-public/163021505003753?wsHost=x.smartcamera.163.com"
@@ -342,6 +341,7 @@ define([
          * @return {[type]}
          */
         getCaptionType: function() {
+            return;
             var self = this;
             var parms = {};
             rest.getCaptionType(parms, function(data) {
@@ -371,11 +371,11 @@ define([
             }
         },
         /**
-         * 心跳检测
+         * 心跳检测 主要检测权限判断
          * @return {[type]}
          */
         ajaxHeart: function(type) {
-            return
+            return;//第一期暂时隐藏不处理
             var self = this;
             self.data.timerHandle.heart = setInterval(function() {
                 if ('private' == type) {
