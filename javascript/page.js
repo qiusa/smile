@@ -1,1 +1,0 @@
-define(['regularjs', '../html/page/page.js'], function(Regular, page) {    require('../css/reset.css');    require('../css/animate.css');    require('../css/common.css');    require('../css/flash.css');    require('../css/page.css');    var main = new page({});    main.$inject('#main');});
