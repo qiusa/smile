@@ -19,7 +19,7 @@
                 <span class="title-text">所有修改需点击“保存设置”后方能生效</span>
             </h2>
             <div class="set">
-                <dl class="dl-set u-cb">
+                <dl class="dl-set u-cb" r-hide={config.switchRun == -1}>
                     <dt>运行开关：</dt>
                     <dd>
                         <ul class="operation-list">
@@ -28,7 +28,7 @@
                         </ul>
                     </dd>
                 </dl>
-                <dl class="dl-set u-cb">
+                <dl class="dl-set u-cb" r-hide={config.switchNight == -1}>
                     <dt>夜视模式：</dt>
                     <dd>
                         <ul class="operation-list">
@@ -38,7 +38,7 @@
                         </ul>
                     </dd>
                 </dl>
-                <dl class="dl-set u-cb">
+                <dl class="dl-set u-cb" r-hide={config.switchVoice == -1}>
                     <dt>声音开关：</dt>
                     <dd>
                         <ul class="operation-list">
@@ -57,7 +57,7 @@
                         </ul>
                     </dd>
                 </dl>
-                <dl class="dl-set dl-set-last u-cb">
+                <dl class="dl-set dl-set-last u-cb" r-hide={config.switchRotate == -1}>
                     <dt>画面颠倒：</dt>
                     <dd>
                         <ul class="operation-list">

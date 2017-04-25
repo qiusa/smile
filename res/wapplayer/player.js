@@ -22,11 +22,11 @@ define([
                 commentFlag: 0, //0不能评论 1可评论
                 //设置相应的显示效果
                 idotmsg: "在线", // 提示消息(离线、在线)
-                idotimg: "/live/res/wap/channel/icon_online_dot.png",
-                idotOnlineimg: "/live/res/wap/channel/icon_online_dot.png",
-                idotOfflineimg: "/live/res/wap/channel/icon_offline_dot.png",
+                idotimg: "./images/icon_online_dot.png",
+                idotOnlineimg: "./images/icon_online_dot.png",
+                idotOfflineimg: "./images/icon_offline_dot.png",
                 //摄像机失效页面
-                unValidimg: "/live/res/wap/channel/uvalid.png",
+                unValidimg: "./images/uvalid.png",
             },
             //浏览器类型检测，如果是PC的话禁止播放，自动切换到PC版对应页面
             platForm: {
@@ -57,13 +57,13 @@ define([
                 flag: true, //播放控制状态
                 bgimg: "", // 读取摄像机detail时加载
                 bgimgShow:"",
-                loading_bgimg:"/live/res/wap/channel/loadingbgimg.jpg",
-                defaultimg :"/live/res/wap/common/load.png",
-                playimg: "/live/res/wap/channel/icon_play.png",
-                pausedimg: "/live/res/wap/channel/icon_paused.png",
-                loadingimg: "/live/res/wap/channel/icon_loading.png",
-                startloading: "/live/res/wap/channel/loading.png",
-                videoGif: "/live/res/wap/channel/video.gif",
+                loading_bgimg:"./images/loadingbgimg.jpg",
+                defaultimg :"./images/load.png",
+                playimg: "./images/icon_play.png",
+                pausedimg: "./images/icon_paused.png",
+                loadingimg: "./images/icon_loading.png",
+                startloading: "./images/loading.png",
+                videoGif: "./images/video.gif",
                 status: 0
             },
             //  视频展示数据
@@ -119,11 +119,19 @@ define([
             }
         },
         init: function(){
+            this.initCtrol();
             this.initPlatform();//初始化UA
             this.initData();
             //this.initAdDate();//初始化广告数据
             this.initVideoData(1);
             this.$update();
+        },
+        /**
+         * 初始化控件
+         */
+        initCtrol: function() {
+            //提示框
+            this.tip = util.tip();
         },
         // 初始化 分发new传入的data数据regCameraDetail
         initData: function(){
@@ -151,9 +159,8 @@ define([
 
             this.data.control.flag = true;
             this.data.control.status = 0;
-            /*this.data.control.bgimg = this.data.regCameraDetail.data.cameraData.cameraDetail.coverFileName;
-            this.data.control.bgimgShow = this.data.regCameraDetail.data.cameraData.cameraDetail.coverFileName;*/
-
+            this.data.control.bgimg = this.data.snapshotUrl;
+            this.data.control.bgimgShow = this.data.snapshotUrl;
             this.data.videoData.flag = true;
             this.data.videoData.firstFlag = true;
             /*this.data.videoData.playUrl = this.data.videoData.urlReg.replace(/(deviceId)/,this.data.deviceId);
@@ -181,11 +188,11 @@ define([
                 case 2:op='关闭_';break;
                 case 3:op='点击_';break;
             }
-            if(/(channel\?)/.test(location.hash)){
+            /*if(/(channel\?)/.test(location.hash)){
                 _gaq.push(['_trackEvent','wap_AD','wap_AD_' + op + this.data.adDate.ads.id, 'wap_channel_' + this.data.deviceId]);
             }else if(/(talent\?)/.test(location.hash)){
                 _gaq.push(['_trackEvent','wap_AD','wap_AD_' + op + this.data.adDate.ads.id, 'wap_talent_' + this.data.deviceId]);
-            }
+            }*/
         },
         //关闭广告
         closeAd : function(){
@@ -514,7 +521,7 @@ define([
                     }else{
                         var playType = 'wap_watchTime>30min';
                     }
-                    _gaq.push(['_trackEvent','wap_live',playType, 'watchTime']);
+                    //_gaq.push(['_trackEvent','wap_live',playType, 'watchTime']);
                     maidian.startTime = 0;// 设置为0,表示暂停之后没有开始播放
                 }
             }
@@ -550,7 +557,7 @@ define([
                     self.initVideoData();
                 }
             }
-            errmsg ? self.tipshow(errmsg) : 0;
+            errmsg ? self.tip.showErrorTip(errmsg) : 0;
             self.$update();
         },
         toolStopPlaying2: function(errmsg) {
@@ -572,7 +579,7 @@ define([
                     self.initVideoData();
                 }
             }
-            errmsg ? self.tipshow(errmsg) : 0;
+            errmsg ? self.tip.showErrorTip(errmsg) : 0;
             self.$update();
         },
         /***********************************************************************
@@ -601,7 +608,7 @@ define([
              * 1、直接播放没有加载动画（适用于被浏览器播放器劫持，无法获取状态）
              * 2、没有被浏览器劫持，启动时候有加载loading
              */
-            // self.tipshow(navigator.userAgent);
+            // self.tip.showErrorTip(navigator.userAgent);
             if(platForm.isIOS){
                 if(platForm.isQQBrowser || platForm.isUCBrowser){
                     if(video.paused) video.play();
@@ -802,8 +809,7 @@ define([
                     'reconnectCount':videoState.reconnectCount,
                     'lastErrormsg':videoState.lastErrormsg
                 };
-                 self.console(videoObj);
-                 console.info(99999999999)
+                 //self.console(videoObj);
                 // **************************************************
                 if(videoState.clickwantplay) {
                     if (n.currentTimeO == undefined) {
@@ -886,6 +892,7 @@ define([
                 }
                 // 播放时,如果有错误,则停止播放
                 if (videoState.clickwantplay && videoState.lastErrormsg.length != 0) {
+                    alert(9)
                     self.toolStopPlaying(videoState.lastErrormsg);
                 }
                 var n = self.$refs.vdoxxx;
@@ -1186,7 +1193,7 @@ define([
         clearHeartdata:function(){
             var self = this;
             //主动弹一次错误提示
-            self.tipshow(self.data.videoState.lastErrormsg);
+            self.tip.showErrorTip(self.data.videoState.lastErrormsg);
             self.data.videoState.lastErrormsg = '';
             self.toolStopPlaying();//此时不会重新拉取play
             self.data.videoData.hlsUrl = "";
@@ -1215,7 +1222,7 @@ define([
             self.destroy();
             if(!self.data.page.test('channel?'))
                 return;
-            // self.tipshow("摄像机状态发生变化，无法继续观看了，2s后自动刷新当前页面！。");
+            // self.tip.showErrorTip("摄像机状态发生变化，无法继续观看了，2s后自动刷新当前页面！。");
             if(platForm.isAndroid && platForm.inWeixin){
                 setTimeout(function(){
                     var random = new Date().getTime();

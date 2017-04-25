@@ -2,7 +2,7 @@
     <h2 class="title">数据走势</h2>
     <div class="head u-cb">
         <span class="u-ftl">选择日期：</span>
-        <input type="text" id="timeConfig" class="time-input">
+        <input type="text" id="timeConfig" class="time-input" ref=timeConfig>
         <ul class="time-list">
             <li class="{show.navIndex == 1 ? 'cur' : ''}" on-click={this.selectTime('week')}>最近一周</li>
             <li class="{show.navIndex == 2 ? 'cur' : ''}" on-click={this.selectTime('month')}>最近一月</li>
@@ -20,7 +20,7 @@
             </li>
         </ul>
     </div>
-    <div id="chart" class="chart-box"></div>
+    <div class="chart-box" ref=chart style="width: 880px;height: 405px;"></div>
     <h2 class="title u-cb">数据明细<span class="u-white-btn down-btn" on-click={this.download()}>下载报告</span></h2>
     <iframe style="display:none;" id="hidden_iframe" name="hidden_iframe"></iframe>
     <table width="100%" class="data-list">
