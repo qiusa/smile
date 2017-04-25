@@ -4,7 +4,7 @@
         <div class="search">
             <input type="text" class="search-input" placeholder="请输入设备ID搜索" r-model={showParams.searchValue}>
             <span class="icon-x pos" r-hide={!showParams.searchValue} on-click={showParams.searchValue=""}></span>
-            <span class="search-icon"></span>
+            <span class="search-icon" on-click={this.search()}></span>
         </div>
     </div>
     <h3 class="subtitle">
@@ -20,9 +20,9 @@
                     状态<span class="icon-more icon-more-white"></span>
                     <ul class="index-list">
                         <li class="self">状态</li>
-                        <li><span class="select-icon"></span>开</li>
-                        <li><span class="select-icon"></span>关</li>
-                        <li><span class="select-icon"></span>全部</li>
+                        <li on-click={this.order(1)}><span class="select-icon"></span>开</li>
+                        <li on-click={this.order(2)}><span class="select-icon"></span>关</li>
+                        <li on-click={this.order(0)} class="cur"><span class="select-icon"></span>全部</li>
                     </ul>
                 </td>
                 <td class="td4 u-pointer">运行开关</td>

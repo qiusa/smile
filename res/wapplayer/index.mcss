@@ -1,0 +1,168 @@
+// 播放器样式全局通用
+.wap-play{
+  position: relative;
+  padding-bottom: 56.25%;
+  .ncontain{overflow: hidden;position: absolute;left: 0px;top: 0px;width: 100%;}
+  .videoAd{
+    position: absolute;
+    width: 100%;
+    font-size: 0;
+    left: 0px;
+    top: 0px;
+    z-index: 110;//z-index设置必须比抽屉导航的200小,但是必须覆盖播放器相关所有东西
+    img{
+        width: 100%;
+    }
+    .ad-countdown{
+        display: inline-block;
+        font-size: 12px;
+        position: absolute;
+        padding: 0 8px;
+        box-sizing:border-box;
+        width: 46px;
+        height: 28px;
+        right: 98px;
+        top : 8px;
+        background: url(/live/res/wap/adIcon.png) no-repeat 0 0;
+        background-size: 139px;
+        line-height: 28px;
+        color:#fff;
+        span{
+            color: #ff0000;
+        }
+    }
+    .ad-close{
+        display: inline-block;
+        font-size: 12px;
+        position: absolute;
+        padding-left: 10px;
+        box-sizing:border-box;
+        width: 85px;
+        height: 28px;
+        background: url(/live/res/wap/adIcon.png) no-repeat -54px 0;
+        background-size: 139px;
+        line-height: 28px;
+        color:#fff;
+        right: 12px;
+        top: 8px;
+    }
+    .ad-more{
+        display: inline-block;
+        font-size: 12px;
+        position: absolute;
+        padding-left: 10px;
+        box-sizing:border-box;
+        width: 85px;
+        height: 28px;
+        background: url(/live/res/wap/adIcon.png) no-repeat 0 -42px;
+        background-size: 139px;
+        line-height: 28px;
+        color:#fff;
+        height: 28px;
+        right: 12px;
+        bottom: 8px;
+    }
+  }
+  .videoc{position: absolute;width:100%;left: 0px;top: 0px;}
+  @-webkit-keyframes rotate{0%{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);}
+  100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);}
+  }
+  @-moz-keyframes rotate{0%{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);}
+  100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);}
+  }
+  @-o-keyframes rotate{0%{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);}
+  100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);}
+  }
+  @keyframes rotate{0%{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);}
+  100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);}
+  }
+  .loading{
+    -webkit-animation-name:rotate;
+    -moz-animation-name:rotate;
+    animation-name:rotate;
+    -webkit-animation-duration:1.5s;
+    -moz-animation-duration:1.5s;
+    animation-duration:1.5s;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    -moz-animation-timing-function:linear;
+    animation-timing-function:linear;
+  }
+  .control{
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0;
+      bottom: 0;z-index: 1;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
+      img{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+      }
+      .ico1{width: 80px;position: absolute;left: 50%;top:50%;margin-left: -40px;margin-top: -50px;}
+      .ico2{width: 60px;position: absolute;left: 50%;top:50%;margin-left: -30px;margin-top: -50px;}
+      .ico_load{
+        width: 120px;
+        height:120px;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        margin-left: -60px;
+        margin-top: -60px;
+        background:url("/live/res/wap/channel/loading.png");
+        background-size:cover;
+      }
+  }
+  /*不能播放*/
+  .control.s-1 .play{display: none;}
+  .control.s-1 .paused{display: none;}
+  .control.s-1 .loading{display: none;}
+  /*未进行播放，显示播放按钮*/
+  .control.s0 .play{display: block;}
+  .control.s0 .paused{display: none;}
+  .control.s0 .loading{display: none;}
+  /*尝试播放，即加载状态*/
+  .control.s1 .play{display: none;}
+  .control.s1 .paused{display: block;}
+  .control.s1 .loading{display: block;}
+  /*正在播放*/
+  .control.s2 .play{display: none;}
+  .control.s2 .paused{display: block;}
+  .control.s2 .loading{display: none;}
+  /*.vdo{display: block;opacity: 0;$transition:1s;}*/
+  .vdo{
+    display:block;
+    opacity:0;
+    -webkit-transition:1s;
+    -moz-transition:1s;
+    transition:1s;
+  }
+  .atv{opacity: 1;}
+  .offline{
+    display:inline-block;
+    vertical-align:baseline;
+    zoom:1;
+    *display:inline;
+    *vertical-align:auto;
+    padding:3px;
+    border-radius:3px;
+    position:absolute;
+    left:10px;top:10px;
+    font-size:10px;
+    background: rgba(0,0,0,.1);
+    color:#fff;
+    z-index: 100;
+    img{
+      width:10px;
+      height:10px;
+      margin-right:4px;
+    }
+  }
+}

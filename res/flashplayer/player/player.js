@@ -242,8 +242,8 @@ define([
                 onload: function(data) {
                     console.info('成功playDevice', data);
                     self.data.playStatus = data.code;
-                    self.data.videoData.rtmpUrl = data.rtmpUrl;
-                    self.setFlashPlayer(data.rtmpUrl, 'private');
+                    self.data.videoData.rtmpUrl = data.rtmpUrl || data.playUrl;//2个url返回参数格式不一样 这里做下兼容
+                    self.setFlashPlayer(self.data.videoData.rtmpUrl, 'private');
                     self.$update();
                 },
                 onerror: function(data) {

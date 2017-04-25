@@ -1,0 +1,23 @@
+<div class="ncontain" id="ncontain">
+    <!-- 广告容器 -->
+    <!-- 播放器容器 -->
+    <div>
+        <div class="videoc atv" id="videoc" width="100%" ref=videoc>
+            <video preload="auto" webkit-playsinline src={videoData.hlsUrl} width="100%"  class="vdo atv" controls="false"  id="vdoxxx" ref=vdoxxx>
+                <source type="application/x-mpegURL" src={videoData.hlsUrl} id="vdosource">
+                <source type="application/x-mpegURL" src={videoData.rtmpUrl} type="video/mp4">
+                <source src="" type="video/mp4">您的浏览器不支持 video 标签。
+            </video>
+        </div>
+        <div class="control s0" id="controls">
+            <img class="" src={control.defaultimg} alt="">
+            <img class="" src={control.bgimgShow} alt="">
+            <img class="ico1 play" src={control.playimg} alt="" on-click={this.toolStartPlaying()} ref=play>
+            <img class="ico2 paused" src={control.pausedimg} alt="">
+            <img class="ico2 loading" src={control.loadingimg} alt="" on-click={this.toolStopPlaying()}>
+        </div>
+        <span class="offline"><img src={deviceState.idotimg}/>{deviceState.idotmsg}</span>
+    </div>
+    <!-- 容器占位图片 -->
+    <img id="imgc" ref="imgc" style="width:100%;" src={control.videoGif}/>
+</div>
